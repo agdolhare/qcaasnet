@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Program | QCAASNET</title>
+
+    <!-- Keep this path if your favicon is stored here -->
+    <link rel="icon" type="image/png" href="images/qcaasnet-logo.png">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            min-height: 100%;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #e8eef8;
+            background:
+                linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px),
+                #030914;
+            background-size: 74px 74px;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .nav {
+            min-height: 74px;
+            padding: 0 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            background: rgba(3,9,20,0.88);
+        }
+
+        .brand {
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            white-space: nowrap;
+        }
+
+        .brand span {
+            color: #7dd3fc;
+        }
+
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 18px;
+            font-size: 14px;
+            color: #aebbd0;
+        }
+
+        .links a:hover {
+            color: #ffffff;
+        }
+
+        .hero {
+            min-height: calc(100vh - 74px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .content {
+            width: min(850px, 100%);
+        }
+
+        .eyebrow {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 8px 14px;
+            border: 1px solid rgba(125,211,252,0.35);
+            border-radius: 999px;
+            color: #7dd3fc;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(44px, 7vw, 82px);
+            line-height: 1.05;
+            letter-spacing: -2px;
+        }
+
+        .line {
+            width: 90px;
+            height: 3px;
+            margin: 28px auto;
+            background: #7dd3fc;
+            border-radius: 10px;
+        }
+
+        .description {
+            max-width: 720px;
+            margin: 0 auto;
+            color: #b8c5d8;
+            font-size: 20px;
+            line-height: 1.75;
+        }
+
+        .coming {
+            margin: 38px auto 0;
+            width: min(620px, 100%);
+            padding: 24px 28px;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 14px;
+            background: rgba(10,20,36,0.72);
+            box-shadow: 0 20px 70px rgba(0,0,0,0.3);
+        }
+
+        .coming strong {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 18px;
+            color: #ffffff;
+        }
+
+        .coming p {
+            margin: 0;
+            color: #8999b0;
+            line-height: 1.6;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 34px;
+            padding: 12px 20px;
+            border: 1px solid rgba(255,255,255,0.16);
+            border-radius: 8px;
+            color: #dce7f5;
+            transition: 0.2s ease;
+        }
+
+        .back:hover {
+            border-color: #7dd3fc;
+            color: #7dd3fc;
+        }
+
+        @media (max-width: 800px) {
+            .nav {
+                padding: 18px 5%;
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .links {
+                justify-content: flex-start;
+                gap: 12px;
+            }
+
+            .hero {
+                min-height: calc(100vh - 130px);
+                padding-top: 50px;
+            }
+
+            .description {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav">
+        <a class="brand" href="index.html">QCAAS<span>NET</span></a>
+
+        <div class="links">
+            <a href="fundamentals.html">Fundamentals</a>
+            <a href="latest-research.html">Latest Research</a>
+            <a href="deep-learning.html">Deep Learning</a>
+            <a href="be-quantum-ready.html">Be Quantum Ready</a>
+            <a href="feedback-program.html">Feedback Program</a>
+        </div>
+    </nav>
+
+    <main class="hero">
+        <section class="content">
+            <div class="eyebrow">HELP SHAPE QCAASNET</div>
+
+            <h1>Feedback Program</h1>
+
+            <div class="line"></div>
+
+            <p class="description">QCAASNET is being built to make complex technology easier to understand. Your honest feedback will help improve the content, explanations, and learning experience.</p>
+
+            <div class="coming">
+                <strong>Coming Soon</strong>
+                <p>The feedback program will open soon. Thank you for helping us build something useful.</p>
+            </div>
+
+            <a class="back" href="fundamentals.html">← Back to Fundamentals</a>
+        </section>
+    </main>
+</body>
+</html>
