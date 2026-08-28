@@ -1,0 +1,307 @@
+/* =========================================================
+   FUNDAMENTALS OF QUANTUM COMPUTING
+   ========================================================= */
+
+:root {
+    --bg: #050b16;
+    --text: #e8f0fa;
+    --muted: #8191a8;
+    --accent: #18c8c3;
+    --line: #1a3a5c;
+}
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background:
+        radial-gradient(
+            circle at 75% 15%,
+            rgba(24, 200, 195, 0.07),
+            transparent 32%
+        ),
+        var(--bg);
+
+    color: var(--text);
+    font-family: Arial, sans-serif;
+}
+
+/* =========================================================
+   BACKGROUND GRID
+   ========================================================= */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 128px 128px;
+}
+
+/* =========================================================
+   PAGE CONTAINER
+   ========================================================= */
+
+.site-shell {
+    width: min(100% - 64px, 1500px);
+    margin: 0 auto;
+}
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.site-shell > main {
+    padding: 65px 0 120px;
+}
+
+/* =========================================================
+   PAGE TITLE
+   ========================================================= */
+
+.site-shell > main > h1 {
+    max-width: 900px;
+
+    margin: 0 0 55px;
+
+    font-size: clamp(3.5rem, 5vw, 5.5rem);
+    line-height: 0.98;
+
+    letter-spacing: -0.045em;
+    font-weight: 800;
+
+    color: var(--text);
+}
+
+/* =========================================================
+   CONTENT AREA
+   ========================================================= */
+
+.fundamentals-section {
+    width: min(100%, 820px);
+}
+
+/* =========================================================
+   SECTION HEADINGS
+   ========================================================= */
+
+.fundamentals-content h2,
+.fundamentals-section h2 {
+    margin: 0 0 24px;
+
+    font-size: 2rem;
+    line-height: 1.25;
+
+    letter-spacing: -0.02em;
+    font-weight: 700;
+
+    color: var(--text);
+}
+
+.fundamentals-content h3,
+.fundamentals-section h3 {
+    margin: 44px 0 16px;
+
+    font-size: 1.5rem;
+    line-height: 1.3;
+
+    letter-spacing: -0.015em;
+    font-weight: 700;
+
+    color: var(--text);
+}
+
+/* =========================================================
+   PARAGRAPHS
+   ========================================================= */
+
+.fundamentals-section p {
+    margin: 0 0 24px;
+
+    font-size: 1.08rem;
+    line-height: 1.75;
+
+    color: var(--text);
+}
+
+/* =========================================================
+   LISTS
+   ========================================================= */
+
+.fundamentals-section ul,
+.fundamentals-section ol {
+    margin: 20px 0 32px;
+    padding-left: 28px;
+}
+
+.fundamentals-section li {
+    margin-bottom: 14px;
+
+    font-size: 1.08rem;
+    line-height: 1.7;
+
+    color: var(--text);
+}
+
+/* =========================================================
+   EMPHASIS
+   ========================================================= */
+
+.fundamentals-section strong {
+    font-weight: 700;
+    color: var(--text);
+}
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+.fundamentals-section a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.fundamentals-section a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .site-shell {
+        width: min(100% - 40px, 980px);
+    }
+
+    .site-shell > main {
+        padding-top: 50px;
+    }
+
+    .site-shell > main > h1 {
+        margin-bottom: 55px;
+    }
+
+    .fundamentals-section p,
+    .fundamentals-section li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .site-shell {
+        width: calc(100% - 28px);
+    }
+
+    .site-shell > main {
+        padding-top: 35px;
+        padding-bottom: 80px;
+    }
+
+    .site-shell > main > h1 {
+        font-size: clamp(3.2rem, 15vw, 5rem);
+        line-height: 0.95;
+        margin-bottom: 45px;
+    }
+
+    .fundamentals-section h2 {
+        font-size: 2rem;
+        margin-bottom: 24px;
+    }
+
+    .fundamentals-section h3 {
+        font-size: 1.5rem;
+        margin-top: 42px;
+    }
+
+    .fundamentals-section p,
+    .fundamentals-section li {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+}
+/* =========================================================
+   QUANTUM COMPUTER IMAGE
+   ========================================================= */
+
+.fundamentals-page {
+    position: relative;
+}
+
+.fundamentals-hero-image {
+    position: absolute;
+    top: 320px;
+    right: 70px;
+    width: 330px;
+    margin: 0;
+}
+
+.fundamentals-hero-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Tunnel Falls image */
+
+.tunnel-falls-image {
+    position: absolute;
+    top: 800px;
+    right: 80px;
+
+    width: 250px;
+    height: auto;
+
+    object-fit: contain;
+}
+
+/* Omega image */
+
+.fundamentals-approach-image {
+    position: absolute;
+    top: 1050px;
+    right: 80px;
+
+    width: 250px;
+    height: auto;
+
+    object-fit: contain;
+}
+
+/* willow image */
+
+.willow-image {
+    position: absolute;
+    top: 1300px;
+    right: 80px;
+
+    width: 250px;
+    height: auto;
+
+    object-fit: contain;
+}
