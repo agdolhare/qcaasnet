@@ -570,3 +570,96 @@ footer {
     }
 
 }
+/* =========================================================
+   MOBILE — REMOVE DUPLICATE HERO ACTIONS
+   ========================================================= */
+
+@media screen and (max-width: 720px) {
+
+    .hero-actions {
+        display: none !important;
+    }
+
+}
+/* =========================================================
+   MOBILE TOPIC MENU
+   ========================================================= */
+
+.mobile-topic-menu {
+    display: none;
+}
+
+@media screen and (max-width: 720px) {
+
+    /* Hide desktop tab row */
+    .content-tabs {
+        display: none !important;
+    }
+
+    /* Mobile menu */
+    .mobile-topic-menu {
+        display: block;
+        margin-bottom: 35px;
+        border: 1px solid #1a3a5c;
+        border-radius: 18px;
+        overflow: hidden;
+        background: rgba(5, 11, 22, 0.92);
+    }
+
+    .mobile-topic-menu summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 18px 20px;
+
+        color: var(--text);
+
+        font-size: 1rem;
+        font-weight: 700;
+
+        cursor: pointer;
+        list-style: none;
+    }
+
+    .mobile-topic-menu summary::-webkit-details-marker {
+        display: none;
+    }
+
+    .mobile-topic-arrow {
+        color: var(--accent);
+        font-size: 1.2rem;
+        transition: transform 0.2s ease;
+    }
+
+    .mobile-topic-menu[open] .mobile-topic-arrow {
+        transform: rotate(180deg);
+    }
+
+    .mobile-topic-links {
+        border-top: 1px solid #1a3a5c;
+    }
+
+    .mobile-topic-links a {
+        display: block;
+
+        padding: 16px 20px;
+
+        color: var(--text);
+        text-decoration: none;
+
+        font-size: 0.95rem;
+        line-height: 1.35;
+
+        border-bottom: 1px solid rgba(26, 58, 92, 0.6);
+    }
+
+    .mobile-topic-links a:last-child {
+        border-bottom: none;
+    }
+
+    .mobile-topic-links a:active {
+        background: rgba(24, 200, 195, 0.08);
+    }
+
+}
