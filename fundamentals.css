@@ -312,8 +312,6 @@ body::before {
 
 @media (max-width: 768px) {
 
-    /* Main quantum computer */
-
     .fundamentals-hero-image {
         position: relative;
         top: auto;
@@ -321,8 +319,6 @@ body::before {
         width: min(100%, 270px);
         margin: 0 auto 30px;
     }
-
-    /* Intel — Tunnel Falls */
 
     .tunnel-falls-image {
         position: relative;
@@ -334,8 +330,6 @@ body::before {
         margin: 20px auto 30px;
     }
 
-    /* PsiQuantum — Omega */
-
     .fundamentals-approach-image {
         position: relative;
         top: auto;
@@ -346,8 +340,6 @@ body::before {
         margin: 20px auto 30px;
     }
 
-    /* Google — Willow */
-
     .willow-image {
         position: relative;
         top: auto;
@@ -356,6 +348,12 @@ body::before {
         height: auto;
         display: block;
         margin: 20px auto 30px;
+    }
+
+    .site-shell > main > h1 {
+        font-size: clamp(2.7rem, 12vw, 4rem);
+        line-height: 1;
+        margin-bottom: 40px;
     }
 
 }
