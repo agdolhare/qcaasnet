@@ -305,3 +305,19 @@ body::before {
 
     object-fit: contain;
 }
+/* =========================================
+   MOBILE ONLY
+   DO NOT MODIFY DESKTOP STYLES
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .fundamentals-hero-image {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: min(100%, 330px);
+        margin: 0 auto 35px;
+    }
+
+}
