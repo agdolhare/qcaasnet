@@ -312,12 +312,50 @@ body::before {
 
 @media (max-width: 768px) {
 
+    /* Main quantum computer */
+
     .fundamentals-hero-image {
         position: relative;
         top: auto;
         right: auto;
-        width: min(100%, 270x);
-        margin: 0 auto 35px;
+        width: min(100%, 270px);
+        margin: 0 auto 30px;
+    }
+
+    /* Intel — Tunnel Falls */
+
+    .tunnel-falls-image {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: min(100%, 250px);
+        height: auto;
+        display: block;
+        margin: 20px auto 30px;
+    }
+
+    /* PsiQuantum — Omega */
+
+    .fundamentals-approach-image {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: min(100%, 250px);
+        height: auto;
+        display: block;
+        margin: 20px auto 30px;
+    }
+
+    /* Google — Willow */
+
+    .willow-image {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: min(100%, 250px);
+        height: auto;
+        display: block;
+        margin: 20px auto 30px;
     }
 
 }
