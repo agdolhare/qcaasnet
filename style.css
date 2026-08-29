@@ -466,6 +466,9 @@ footer {
     .nav-links {
         display: none
     }
+        .content-tabs {
+        display: none;
+    }
 
     .nav-cta {
         padding: 9px 14px;
