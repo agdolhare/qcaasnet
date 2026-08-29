@@ -559,3 +559,14 @@ footer {
         display: none !important;
     }
 }
+/* =========================================================
+   MOBILE — TIGHTEN HERO SPACING
+   ========================================================= */
+
+@media screen and (max-width: 720px) {
+
+    .hero {
+        padding-top: 45px !important;
+    }
+
+}
