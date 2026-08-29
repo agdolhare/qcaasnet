@@ -316,7 +316,7 @@ body::before {
         position: relative;
         top: auto;
         right: auto;
-        width: min(100%, 330px);
+        width: min(100%, 270x);
         margin: 0 auto 35px;
     }
 
