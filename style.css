@@ -550,3 +550,12 @@ footer {
     color: #ffffff;
     background: #0d9f9f;
 }
+/* =========================================================
+   MOBILE — HIDE SECONDARY CONTENT TABS
+   ========================================================= */
+
+@media screen and (max-width: 720px) {
+    .content-tabs {
+        display: none !important;
+    }
+}
