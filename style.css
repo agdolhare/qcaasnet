@@ -663,3 +663,14 @@ footer {
     }
 
 }
+/* =========================================================
+   MOBILE — REDUCE SPACE AFTER TOPIC MENU
+   ========================================================= */
+
+@media screen and (max-width: 720px) {
+
+    .mobile-topic-menu {
+        margin-bottom: 10px !important;
+    }
+
+}
