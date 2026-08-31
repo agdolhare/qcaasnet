@@ -10,6 +10,7 @@
     --line: #1a3a5c;
 }
 
+
 /* =========================================================
    RESET
    ========================================================= */
@@ -36,6 +37,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
+
 /* =========================================================
    BACKGROUND GRID
    ========================================================= */
@@ -61,6 +63,7 @@ body::before {
     background-size: 128px 128px;
 }
 
+
 /* =========================================================
    PAGE CONTAINER
    ========================================================= */
@@ -70,6 +73,7 @@ body::before {
     margin: 0 auto;
 }
 
+
 /* =========================================================
    MAIN CONTENT
    ========================================================= */
@@ -77,6 +81,7 @@ body::before {
 .site-shell > main {
     padding: 65px 0 120px;
 }
+
 
 /* =========================================================
    PAGE TITLE
@@ -96,6 +101,7 @@ body::before {
     color: var(--text);
 }
 
+
 /* =========================================================
    CONTENT AREA
    ========================================================= */
@@ -103,6 +109,7 @@ body::before {
 .fundamentals-section {
     width: min(100%, 820px);
 }
+
 
 /* =========================================================
    SECTION HEADINGS
@@ -134,6 +141,7 @@ body::before {
     color: var(--text);
 }
 
+
 /* =========================================================
    PARAGRAPHS
    ========================================================= */
@@ -146,6 +154,7 @@ body::before {
 
     color: var(--text);
 }
+
 
 /* =========================================================
    LISTS
@@ -166,6 +175,7 @@ body::before {
     color: var(--text);
 }
 
+
 /* =========================================================
    EMPHASIS
    ========================================================= */
@@ -174,6 +184,7 @@ body::before {
     font-weight: 700;
     color: var(--text);
 }
+
 
 /* =========================================================
    LINKS
@@ -187,6 +198,7 @@ body::before {
 .fundamentals-section a:hover {
     text-decoration: underline;
 }
+
 
 /* =========================================================
    MOBILE
@@ -211,6 +223,7 @@ body::before {
         font-size: 1rem;
     }
 }
+
 
 @media (max-width: 600px) {
 
@@ -245,6 +258,8 @@ body::before {
         line-height: 1.7;
     }
 }
+
+
 /* =========================================================
    QUANTUM COMPUTER IMAGE
    ========================================================= */
@@ -267,7 +282,10 @@ body::before {
     height: auto;
 }
 
-/* Tunnel Falls image */
+
+/* =========================================================
+   TUNNEL FALLS IMAGE
+   ========================================================= */
 
 .tunnel-falls-image {
     position: absolute;
@@ -280,7 +298,10 @@ body::before {
     object-fit: contain;
 }
 
-/* Omega image */
+
+/* =========================================================
+   OMEGA IMAGE
+   ========================================================= */
 
 .fundamentals-approach-image {
     position: absolute;
@@ -293,7 +314,10 @@ body::before {
     object-fit: contain;
 }
 
-/* willow image */
+
+/* =========================================================
+   WILLOW IMAGE
+   ========================================================= */
 
 .willow-image {
     position: absolute;
@@ -305,10 +329,11 @@ body::before {
 
     object-fit: contain;
 }
-/* =========================================
-   MOBILE ONLY
-   DO NOT MODIFY DESKTOP STYLES
-   ========================================= */
+
+
+/* =========================================================
+   MOBILE IMAGES
+   ========================================================= */
 
 @media (max-width: 768px) {
 
@@ -355,47 +380,87 @@ body::before {
         line-height: 1;
         margin-bottom: 40px;
     }
-
 }
+
+
 /* =========================================================
    CLASSICAL BITS VS QUBITS
-========================================================= */
+   ========================================================= */
 
 .bits-vs-qubits {
-    width: 100%;
-    margin-top: 80px;
+
+    /*
+       If this section is inside .site-shell,
+       it will naturally use the existing page width.
+
+       If it is outside .site-shell, these rules still
+       prevent it from touching the browser edges.
+    */
+
+    width: min(calc(100% - 64px), 1500px);
+
+    margin: 80px auto 0;
+
     padding-bottom: 100px;
+
+    min-width: 0;
 }
 
 
-/* SECTION DIVIDER */
+/*
+   When the section is already inside .site-shell,
+   don't shrink it again.
+*/
+
+.site-shell .bits-vs-qubits {
+    width: 100%;
+}
+
+
+/* =========================================================
+   SECTION DIVIDER
+   ========================================================= */
 
 .section-divider {
     width: 100%;
     height: 1px;
+
     background: rgba(0, 210, 200, 0.55);
+
     margin-bottom: 70px;
+
     position: relative;
 }
 
 .section-divider::after {
     content: "";
+
     position: absolute;
+
     width: 10px;
     height: 10px;
+
     border-radius: 50%;
+
     background: #16c7bd;
+
     left: 50%;
     top: 50%;
+
     transform: translate(-50%, -50%);
+
     box-shadow: 0 0 18px rgba(22, 199, 189, 0.8);
 }
 
 
-/* HEADING */
+/* =========================================================
+   CLASSICAL VS QUBITS HEADING
+   ========================================================= */
 
 .bits-vs-qubits-heading {
+    width: 100%;
     max-width: 1000px;
+
     margin-bottom: 55px;
 }
 
@@ -404,75 +469,119 @@ body::before {
     margin-bottom: 20px;
 }
 
+
+/* =========================================================
+   SECTION INTRO
+   ========================================================= */
+
 .section-intro {
+    width: 100%;
     max-width: 850px;
+
     font-size: 20px;
     line-height: 1.7;
+
     color: #9baac2;
 }
 
 
-/* SMALL LABEL */
+/* =========================================================
+   SMALL LABEL
+   ========================================================= */
 
 .fundamentals-label {
     display: flex;
     align-items: center;
+
     gap: 12px;
+
     color: #16c7bd;
+
     font-size: 13px;
     font-weight: 700;
+
     letter-spacing: 3px;
 }
 
 .fundamentals-label span {
     width: 8px;
     height: 8px;
+
     background: #16c7bd;
+
     border-radius: 50%;
+
     flex-shrink: 0;
 }
 
 
-/* DIFFERENCE CARDS */
+/* =========================================================
+   DIFFERENCE CARDS
+   ========================================================= */
 
 .difference-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
     gap: 24px;
+
+    width: 100%;
+
     margin-bottom: 100px;
+
+    min-width: 0;
 }
 
 .difference-card {
     position: relative;
+
+    width: 100%;
+    min-width: 0;
+
     padding: 32px;
+
     border: 1px solid rgba(70, 100, 140, 0.35);
+
     border-radius: 18px;
+
     background: rgba(4, 12, 25, 0.45);
+
+    overflow: hidden;
 }
 
 .difference-number {
     color: #16c7bd;
+
     font-size: 14px;
     font-weight: 700;
+
     letter-spacing: 2px;
+
     margin-bottom: 20px;
 }
 
 .difference-card h3 {
     font-size: 25px;
+
     margin: 0 0 30px;
 }
 
 .difference-card h4 {
     font-size: 18px;
+
     color: #16c7bd;
+
     margin: 25px 0 10px;
 }
 
 .difference-card p {
     font-size: 17px;
+
     line-height: 1.7;
+
     color: #d7dfed;
+
     margin-bottom: 18px;
 }
 
@@ -481,15 +590,23 @@ body::before {
 }
 
 
-/* SIMPLE EXAMPLES */
+/* =========================================================
+   SIMPLE EXAMPLES
+   ========================================================= */
 
 .simple-example {
     margin: 20px 0;
+
     padding: 16px 18px;
+
     border-left: 2px solid #16c7bd;
+
     background: rgba(22, 199, 189, 0.05);
+
     color: #aebbd0;
+
     font-size: 15px;
+
     line-height: 1.6;
 }
 
@@ -498,10 +615,16 @@ body::before {
 }
 
 
-/* SCALING */
+/* =========================================================
+   SCALING
+   ========================================================= */
 
 .scaling-section {
+    width: 100%;
+
     margin-bottom: 100px;
+
+    min-width: 0;
 }
 
 .scaling-section h2 {
@@ -511,36 +634,52 @@ body::before {
 
 .scaling-section > p {
     max-width: 900px;
+
     font-size: 18px;
+
     line-height: 1.7;
+
     color: #aebbd0;
 }
 
 .scaling-image-wrapper {
     width: 100%;
+
     margin-top: 45px;
+
     overflow: hidden;
+
     border: 1px solid rgba(70, 100, 140, 0.35);
+
     background: #000;
 }
 
 .scaling-image {
     display: block;
+
     width: 100%;
     height: auto;
 }
 
 .scaling-caption {
     font-size: 14px !important;
+
     color: #71829c !important;
+
     margin-top: 14px;
 }
 
 
-/* PRACTICAL UTILITY */
+/* =========================================================
+   PRACTICAL UTILITY
+   ========================================================= */
 
 .utility-section {
+    width: 100%;
+
     margin-top: 80px;
+
+    min-width: 0;
 }
 
 .utility-section h2 {
@@ -550,91 +689,160 @@ body::before {
 
 .utility-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
     gap: 28px;
+
+    width: 100%;
 }
 
 .utility-card {
+    width: 100%;
+    min-width: 0;
+
     padding: 35px;
+
     border: 1px solid rgba(70, 100, 140, 0.35);
+
     border-radius: 18px;
+
     background: rgba(4, 12, 25, 0.45);
 }
 
 .utility-card h3 {
     font-size: 25px;
+
     margin-top: 0;
     margin-bottom: 20px;
 }
 
 .utility-card p {
     color: #aebbd0;
+
     font-size: 17px;
+
     line-height: 1.7;
 }
 
 .utility-card ul {
     padding-left: 20px;
+
     margin-top: 25px;
 }
 
 .utility-card li {
     color: #d7dfed;
+
     margin-bottom: 12px;
+
     line-height: 1.5;
 }
 
 .important-note {
     margin-top: 30px;
+
     padding: 18px;
+
     border-left: 2px solid #16c7bd;
+
     background: rgba(22, 199, 189, 0.05);
 }
 
 
 /* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .bits-vs-qubits {
+        width: calc(100% - 40px);
+    }
+
+    .site-shell .bits-vs-qubits {
+        width: 100%;
+    }
+
+    .difference-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* =========================================================
    MOBILE
-========================================================= */
+   ========================================================= */
 
 @media (max-width: 768px) {
 
     .bits-vs-qubits {
+        width: calc(100% - 28px);
+
         margin-top: 55px;
+
         padding-bottom: 60px;
     }
+
+    .site-shell .bits-vs-qubits {
+        width: 100%;
+    }
+
+
+    /* Divider */
 
     .section-divider {
         margin-bottom: 50px;
     }
 
+
+    /* Heading */
+
     .bits-vs-qubits-heading {
         margin-bottom: 40px;
     }
+
+
+    /* Intro */
 
     .section-intro {
         font-size: 17px;
         line-height: 1.65;
     }
 
+
+    /* Label */
+
     .fundamentals-label {
         font-size: 11px;
+
         letter-spacing: 2px;
+
         line-height: 1.4;
     }
 
+
+    /* Difference cards */
+
     .difference-grid {
         grid-template-columns: 1fr;
+
         gap: 18px;
+
         margin-bottom: 65px;
     }
 
     .difference-card {
+        width: 100%;
+
         padding: 25px;
+
         border-radius: 15px;
     }
 
     .difference-card h3 {
         font-size: 22px;
+
         margin-bottom: 25px;
     }
 
@@ -644,6 +852,7 @@ body::before {
 
     .difference-card p {
         font-size: 16px;
+
         line-height: 1.65;
     }
 
@@ -651,28 +860,39 @@ body::before {
         font-size: 14px;
     }
 
+
+    /* Scaling */
+
     .scaling-section {
         margin-bottom: 65px;
     }
 
     .scaling-section > p {
         font-size: 16px;
+
         line-height: 1.65;
     }
 
     .scaling-image-wrapper {
         margin-top: 30px;
+
         overflow-x: auto;
     }
 
     .scaling-image {
         width: 100%;
+
         min-width: 650px;
+
         max-width: none;
     }
 
+
+    /* Utility */
+
     .utility-grid {
         grid-template-columns: 1fr;
+
         gap: 18px;
     }
 
@@ -684,5 +904,33 @@ body::before {
     .utility-card li {
         font-size: 16px;
     }
+}
 
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .bits-vs-qubits {
+        width: 100%;
+    }
+
+    .bits-vs-qubits-heading {
+        width: 100%;
+    }
+
+    .difference-card {
+        padding: 22px;
+    }
+
+    .section-intro {
+        font-size: 16px;
+    }
+
+    .fundamentals-label {
+        gap: 9px;
+        letter-spacing: 1.7px;
+    }
 }
