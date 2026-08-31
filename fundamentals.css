@@ -44,6 +44,7 @@ body {
 
 body::before {
     content: "";
+
     position: fixed;
     inset: 0;
 
@@ -224,6 +225,10 @@ body::before {
     }
 }
 
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
 
 @media (max-width: 600px) {
 
@@ -779,7 +784,11 @@ body::before {
     .bits-vs-qubits {
         width: calc(100% - 28px);
 
-        margin-top: 55px;
+        /* CHANGED:
+           Was 55px.
+           Reduced to 20px so the divider sits
+           closer to the previous content. */
+        margin-top: 20px;
 
         padding-bottom: 60px;
     }
@@ -792,7 +801,11 @@ body::before {
     /* Divider */
 
     .section-divider {
-        margin-bottom: 50px;
+        /* CHANGED:
+           Was 50px.
+           Reduced to 35px so the heading sits
+           closer to the divider. */
+        margin-bottom: 35px;
     }
 
 
