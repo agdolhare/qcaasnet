@@ -773,58 +773,95 @@ body::before {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
-
-
 /* =========================================================
    MOBILE
    ========================================================= */
 
 @media (max-width: 768px) {
 
-    .bits-vs-qubits {
-        width: calc(100% - 28px);
+    /* =====================================================
+       CLASSICAL BITS VS QUBITS
+       ===================================================== */
 
-        /* CHANGED:
-           Was 55px.
-           Reduced to 20px so the divider sits
-           closer to the previous content. */
+    .bits-vs-qubits {
+        width: 100%;
+        max-width: none;
+
+        /*
+         * Keep the section content away from the screen edges.
+         * This fixes the heading/paragraph touching the left edge.
+         */
+        padding-left: 20px;
+        padding-right: 20px;
+
+        /*
+         * Reduce the gap between the previous content
+         * and this section.
+         */
         margin-top: 20px;
 
         padding-bottom: 60px;
+
+        box-sizing: border-box;
     }
 
+    /*
+     * Make sure the section does not override the
+     * horizontal spacing above.
+     */
     .site-shell .bits-vs-qubits {
         width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
     }
 
 
-    /* Divider */
+    /* =====================================================
+       DIVIDER
+       ===================================================== */
 
     .section-divider {
-        /* CHANGED:
-           Was 50px.
-           Reduced to 35px so the heading sits
-           closer to the divider. */
+
+        /*
+         * IMPORTANT:
+         * The previous CSS only changed margin-bottom.
+         * The large empty space above the line was still
+         * controlled by the top margin.
+         *
+         * This makes the divider much closer to the
+         * preceding superconducting-qubit section.
+         */
+        margin-top: 25px;
+        margin-bottom: 30px;
+    }
+
+
+    /* =====================================================
+       HEADING
+       ===================================================== */
+
+    .bits-vs-qubits-heading {
         margin-bottom: 35px;
     }
 
 
-    /* Heading */
-
-    .bits-vs-qubits-heading {
-        margin-bottom: 40px;
-    }
-
-
-    /* Intro */
+    /* =====================================================
+       INTRO
+       ===================================================== */
 
     .section-intro {
         font-size: 17px;
         line-height: 1.65;
+
+        margin-left: 0;
+        margin-right: 0;
     }
 
 
-    /* Label */
+    /* =====================================================
+       LABEL
+       ===================================================== */
 
     .fundamentals-label {
         font-size: 11px;
@@ -835,7 +872,9 @@ body::before {
     }
 
 
-    /* Difference cards */
+    /* =====================================================
+       DIFFERENCE CARDS
+       ===================================================== */
 
     .difference-grid {
         grid-template-columns: 1fr;
@@ -843,6 +882,8 @@ body::before {
         gap: 18px;
 
         margin-bottom: 65px;
+
+        width: 100%;
     }
 
     .difference-card {
@@ -851,6 +892,8 @@ body::before {
         padding: 25px;
 
         border-radius: 15px;
+
+        box-sizing: border-box;
     }
 
     .difference-card h3 {
@@ -874,7 +917,9 @@ body::before {
     }
 
 
-    /* Scaling */
+    /* =====================================================
+       SCALING
+       ===================================================== */
 
     .scaling-section {
         margin-bottom: 65px;
@@ -890,18 +935,26 @@ body::before {
         margin-top: 30px;
 
         overflow-x: auto;
+
+        width: 100%;
     }
 
     .scaling-image {
         width: 100%;
 
+        /*
+         * Keep the infographic readable on mobile.
+         * User can scroll horizontally.
+         */
         min-width: 650px;
 
         max-width: none;
     }
 
 
-    /* Utility */
+    /* =====================================================
+       PRACTICAL UTILITY
+       ===================================================== */
 
     .utility-grid {
         grid-template-columns: 1fr;
@@ -911,6 +964,8 @@ body::before {
 
     .utility-card {
         padding: 25px;
+
+        box-sizing: border-box;
     }
 
     .utility-card p,
@@ -928,11 +983,37 @@ body::before {
 
     .bits-vs-qubits {
         width: 100%;
+
+        /*
+         * Maintain a clean 20px boundary on very small
+         * screens as well.
+         */
+        padding-left: 20px;
+        padding-right: 20px;
+
+        box-sizing: border-box;
+    }
+
+    .site-shell .bits-vs-qubits {
+        width: 100%;
+
+        padding-left: 20px;
+        padding-right: 20px;
+
+        box-sizing: border-box;
     }
 
     .bits-vs-qubits-heading {
         width: 100%;
     }
+
+
+    /* Slightly tighter divider on small phones */
+    .section-divider {
+        margin-top: 20px;
+        margin-bottom: 28px;
+    }
+
 
     .difference-card {
         padding: 22px;
