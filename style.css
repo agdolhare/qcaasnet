@@ -674,3 +674,50 @@ footer {
     }
 
 }
+/* =========================================================
+   QCAAS NET BRANDING
+   ========================================================= */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    text-decoration: none;
+}
+
+.brand img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    display: block;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.brand-name {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.3px;
+    color: #f2f5f8;
+}
+
+.brand-name span {
+    color: #10c8c8;
+}
+
+.brand-tagline {
+    margin-top: 3px;
+
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.2;
+
+    color: #d6dce3;
+    letter-spacing: 0.05px;
+}
