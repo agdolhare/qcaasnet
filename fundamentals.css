@@ -1028,3 +1028,72 @@ body::before {
         letter-spacing: 1.7px;
     }
 }
+/* =========================================================
+   FLOATING HOME BUTTON
+   ========================================================= */
+
+.floating-home {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 10px 16px 10px 11px;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    background: rgba(5, 18, 29, 0.94);
+    border: 1px solid rgba(0, 220, 220, 0.55);
+    border-radius: 999px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+
+    backdrop-filter: blur(10px);
+
+    z-index: 1000;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.floating-home img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    display: block;
+}
+
+.floating-home:hover {
+    transform: translateY(-3px);
+    border-color: rgba(0, 220, 220, 0.95);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .floating-home {
+        right: 14px;
+        bottom: 14px;
+        padding: 8px 13px 8px 9px;
+        font-size: 13px;
+    }
+
+    .floating-home img {
+        width: 25px;
+        height: 25px;
+    }
+
+}
