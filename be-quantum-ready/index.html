@@ -3,211 +3,1019 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Be Quantum Ready | QCAASNET</title>
+    <meta name="description"
+          content="Assess your organization's quantum readiness with the QCAASNET Quantum Readiness Assessment Tool.">
 
-    <!-- Keep this path if your favicon is stored here -->
-    <link rel="icon" type="image/png" href="images/qcaasnet-logo.png">
-
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        html, body {
-            margin: 0;
-            min-height: 100%;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            color: #e8eef8;
-            background:
-                linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px),
-                #030914;
-            background-size: 74px 74px;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        .nav {
-            min-height: 74px;
-            padding: 0 5%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 25px;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-            background: rgba(3,9,20,0.88);
-        }
-
-        .brand {
-            font-size: 22px;
-            font-weight: 800;
-            letter-spacing: 2px;
-            white-space: nowrap;
-        }
-
-        .brand span {
-            color: #7dd3fc;
-        }
-
-        .links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-            gap: 18px;
-            font-size: 14px;
-            color: #aebbd0;
-        }
-
-        .links a:hover {
-            color: #ffffff;
-        }
-
-        .hero {
-            min-height: calc(100vh - 74px);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 70px 20px;
-            text-align: center;
-        }
-
-        .content {
-            width: min(850px, 100%);
-        }
-
-        .eyebrow {
-            display: inline-block;
-            margin-bottom: 20px;
-            padding: 8px 14px;
-            border: 1px solid rgba(125,211,252,0.35);
-            border-radius: 999px;
-            color: #7dd3fc;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 2px;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: clamp(44px, 7vw, 82px);
-            line-height: 1.05;
-            letter-spacing: -2px;
-        }
-
-        .line {
-            width: 90px;
-            height: 3px;
-            margin: 28px auto;
-            background: #7dd3fc;
-            border-radius: 10px;
-        }
-
-        .description {
-            max-width: 720px;
-            margin: 0 auto;
-            color: #b8c5d8;
-            font-size: 20px;
-            line-height: 1.75;
-        }
-
-        .coming {
-            margin: 38px auto 0;
-            width: min(620px, 100%);
-            padding: 24px 28px;
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 14px;
-            background: rgba(10,20,36,0.72);
-            box-shadow: 0 20px 70px rgba(0,0,0,0.3);
-        }
-
-        .coming strong {
-            display: block;
-            margin-bottom: 8px;
-            font-size: 18px;
-            color: #ffffff;
-        }
-
-        .coming p {
-            margin: 0;
-            color: #8999b0;
-            line-height: 1.6;
-        }
-
-        .back {
-            display: inline-block;
-            margin-top: 34px;
-            padding: 12px 20px;
-            border: 1px solid rgba(255,255,255,0.16);
-            border-radius: 8px;
-            color: #dce7f5;
-            transition: 0.2s ease;
-        }
-
-        .back:hover {
-            border-color: #7dd3fc;
-            color: #7dd3fc;
-        }
-
-        @media (max-width: 800px) {
-            .nav {
-                padding: 18px 5%;
-                align-items: flex-start;
-                flex-direction: column;
-            }
-
-            .links {
-                justify-content: flex-start;
-                gap: 12px;
-            }
-
-            .hero {
-                min-height: calc(100vh - 130px);
-                padding-top: 50px;
-            }
-
-            .description {
-                font-size: 17px;
-            }
-        }
-    </style>
+    <link rel="icon" type="image/png" href="/images/qcaas-icon.png">
+    <link rel="stylesheet" href="be-quantum-ready.css">
 </head>
 
 <body>
-    <nav class="nav">
-        <a class="brand" href="/">QCAAS<span>NET</span></a>
 
-        <div class="links">
-            <a href="/fundamentals/">Fundamentals</a>
-            <a href="/latest-research/">Latest Research</a>
-            <a href="/deep-learning/">Deep Learning</a>
-            <a href="/be-quantum-ready/">Be Quantum Ready</a>
-            <a href="/feedback-program/">Feedback Program</a>
-        </div>
-    </nav>
+    <!-- =====================================================
+         QCAASNET HEADER
+         ===================================================== -->
 
-    <main class="hero">
-        <section class="content">
-            <div class="eyebrow">PREPARE FOR THE QUANTUM ERA</div>
+    <header class="qr-header">
+        <nav class="qr-nav">
 
-            <h1>Be Quantum Ready</h1>
+            <a class="qr-brand" href="/">
+                <img
+                    class="qr-brand-mark"
+                    src="/images/qcaas-icon.png"
+                    alt="QCAASNET"
+                >
 
-            <div class="line"></div>
+                <span class="qr-brand-text">
+                    <span class="qr-brand-name">
+                        QCAAS<span>NET</span>
+                    </span>
 
-            <p class="description">A practical starting point for students, developers, technology professionals, and curious minds who want to understand what the quantum era could mean for them.</p>
+                    <span class="qr-brand-tagline">
+                        Quantum Computing as a Service Network
+                    </span>
+                </span>
+            </a>
 
-            <div class="coming">
-                <strong>Coming Soon</strong>
-                <p>A structured quantum-readiness program is coming soon.</p>
+            <div class="qr-tabs">
+                <a href="/fundamentals/">Fundamentals</a>
+                <a href="/latest-research/">Latest Research</a>
+                <a href="/deep-learning/">Deep Learning</a>
+                <a class="active" href="/be-quantum-ready/">Be Quantum Ready</a>
+                <a href="/feedback-program/">Feedback Program</a>
             </div>
 
-            <a class="back" href="/fundamentals/">← Back to Fundamentals</a>
+        </nav>
+    </header>
+
+
+    <!-- =====================================================
+         MAIN APPLICATION
+         ===================================================== -->
+
+    <main class="quantum-readiness-app">
+
+        <!-- =================================================
+             WELCOME / HERO
+             ================================================= -->
+
+        <section id="welcome-screen" class="screen welcome-screen" data-screen="welcome">
+
+            <div class="hero-content">
+
+                <p class="eyebrow">QCAASNET QUANTUM READINESS TOOL</p>
+
+                <h1>
+                    Is Your Organization
+                    <span>Quantum Ready?</span>
+                </h1>
+
+                <p class="hero-description">
+                    Assess your organization's preparedness for the quantum era
+                    across organizational readiness, cryptographic assets,
+                    quantum risk, and post-quantum cryptography.
+                </p>
+
+                <div class="hero-actions">
+                    <button id="start-assessment" class="primary-button" type="button">
+                        Start Assessment
+                    </button>
+                </div>
+
+                <p class="hero-note">
+                    This assessment provides a QCAASNET readiness indicator based
+                    on the measurement framework defined for this tool.
+                </p>
+
+            </div>
+
         </section>
+
+
+        <!-- =================================================
+             ASSESSMENT SCREEN
+             ================================================= -->
+
+        <section id="assessment-screen" class="screen assessment-screen"
+                 data-screen="assessment" hidden>
+
+            <!-- Progress -->
+            <div class="assessment-progress">
+
+                <div class="progress-header">
+                    <span id="progress-label">Step 1 of 5</span>
+                    <span id="progress-percent">0%</span>
+                </div>
+
+                <div class="progress-track" aria-hidden="true">
+                    <div id="progress-bar" class="progress-bar"></div>
+                </div>
+
+            </div>
+
+
+            <!-- ---------------------------------------------
+                 STEP 1 — ORGANIZATION
+                 --------------------------------------------- -->
+
+            <section class="assessment-step" data-step="1">
+
+                <div class="step-heading">
+                    <p class="step-number">01</p>
+                    <h2>Organization</h2>
+                    <p>
+                        Start by providing basic information about the
+                        organization being assessed.
+                    </p>
+                </div>
+
+                <div class="form-card">
+
+                    <div class="form-field">
+                        <label for="organization-name">Organization name</label>
+                        <input
+                            id="organization-name"
+                            name="organizationName"
+                            type="text"
+                            autocomplete="organization"
+                            placeholder="Enter organization name"
+                        >
+                    </div>
+
+                    <div class="form-field">
+                        <label for="assessment-contact">Assessment email address</label>
+
+<input
+    id="assessment-contact"
+    name="assessmentContact"
+    type="email"
+    autocomplete="email"
+    inputmode="email"
+    placeholder="name@company.com"
+    required
+>
+                    </div>
+
+                    <p class="form-note">
+                        Contact information is optional and is not part of the
+                        readiness score.
+                    </p>
+
+                </div>
+
+            </section>
+<div class="privacy-declaration">
+
+    <div class="privacy-declaration-title">
+        <span class="privacy-icon">◆</span>
+        Privacy &amp; Independence Declaration
+    </div>
+
+    <p>
+        This assessment is designed to help organizations understand
+        their current quantum-readiness posture. Information entered
+        into this tool is processed locally in your browser and is not
+        transmitted to or stored by QCAASNET through this assessment.
+    </p>
+
+    <p>
+        QCAASNET does not use assessment responses to contact
+        organizations for sales or marketing purposes. We will never
+        initiate contact with an organization solely because it has
+        completed this assessment.
+    </p>
+
+    <p>
+        If you receive an unsolicited request or communication claiming
+        to be from QCAASNET as a result of information submitted through
+        this tool, please treat it as unauthorized and verify the
+        communication through our official channels.
+    </p>
+
+</div>
+
+            <!-- ---------------------------------------------
+                 STEP 2 — ORGANIZATIONAL SELF ASSESSMENT
+                 --------------------------------------------- -->
+                 
+
+            <section class="assessment-step" data-step="2" hidden>
+
+                <div class="step-heading">
+                    <p class="step-number">02</p>
+                    <h2>Quantum Self Assessment</h2>
+                    <p>
+                        Evaluate your organization's current preparedness
+                        against the organizational readiness questions.
+                    </p>
+                </div>
+
+                <div id="self-assessment-questions" class="question-list">
+
+                    <fieldset class="assessment-question" data-question-id="SA-01">
+                        <legend>Do we have a documented inventory of cryptographic algorithms in use?</legend>
+                        <div class="answer-options" role="radiogroup" aria-label="Do we have a documented inventory of cryptographic algorithms in use?">
+                            <label class="answer-card">
+                                <input type="radio" name="SA-01" value="Yes">
+                                <span>Yes</span>
+                            </label>
+                            <label class="answer-card">
+                                <input type="radio" name="SA-01" value="No">
+                                <span>No</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="assessment-question" data-question-id="SA-02">
+                        <legend>Do we know which systems use RSA, ECC, or DH?</legend>
+                        <div class="answer-options" role="radiogroup" aria-label="Do we know which systems use RSA, ECC, or DH?">
+                            <label class="answer-card">
+                                <input type="radio" name="SA-02" value="Yes">
+                                <span>Yes</span>
+                            </label>
+                            <label class="answer-card">
+                                <input type="radio" name="SA-02" value="No">
+                                <span>No</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="assessment-question" data-question-id="SA-03">
+                        <legend>Have we assessed data with long-term sensitivity (10+ years)?</legend>
+                        <div class="answer-options" role="radiogroup" aria-label="Have we assessed data with long-term sensitivity (10+ years)?">
+                            <label class="answer-card">
+                                <input type="radio" name="SA-03" value="Yes">
+                                <span>Yes</span>
+                            </label>
+                            <label class="answer-card">
+                                <input type="radio" name="SA-03" value="No">
+                                <span>No</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="assessment-question" data-question-id="SA-04">
+                        <legend>Do we track vendor cryptography standards?</legend>
+                        <div class="answer-options" role="radiogroup" aria-label="Do we track vendor cryptography standards?">
+                            <label class="answer-card">
+                                <input type="radio" name="SA-04" value="Yes">
+                                <span>Yes</span>
+                            </label>
+                            <label class="answer-card">
+                                <input type="radio" name="SA-04" value="No">
+                                <span>No</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="assessment-question" data-question-id="SA-05">
+                        <legend>Do we design for crypto-agility (easy algorithm replacement)?</legend>
+                        <div class="answer-options" role="radiogroup" aria-label="Do we design for crypto-agility (easy algorithm replacement)?">
+                            <label class="answer-card">
+                                <input type="radio" name="SA-05" value="Yes">
+                                <span>Yes</span>
+                            </label>
+                            <label class="answer-card">
+                                <input type="radio" name="SA-05" value="No">
+                                <span>No</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="assessment-question" data-question-id="SA-06">
+                        <legend>Do we have executive support for quantum risk planning?</legend>
+                        <div class="answer-options" role="radiogroup" aria-label="Do we have executive support for quantum risk planning?">
+                            <label class="answer-card">
+                                <input type="radio" name="SA-06" value="Yes">
+                                <span>Yes</span>
+                            </label>
+                            <label class="answer-card">
+                                <input type="radio" name="SA-06" value="No">
+                                <span>No</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="assessment-question" data-question-id="SA-07">
+                        <legend>Have we tested PQC algorithms in any environment (lab, dev)?</legend>
+                        <div class="answer-options" role="radiogroup" aria-label="Have we tested PQC algorithms in any environment (lab, dev)?">
+                            <label class="answer-card">
+                                <input type="radio" name="SA-07" value="Yes">
+                                <span>Yes</span>
+                            </label>
+                            <label class="answer-card">
+                                <input type="radio" name="SA-07" value="No">
+                                <span>No</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="assessment-question" data-question-id="SA-08">
+                        <legend>Is post-quantum cryptography included in our roadmap or budget?</legend>
+                        <div class="answer-options" role="radiogroup" aria-label="Is post-quantum cryptography included in our roadmap or budget?">
+                            <label class="answer-card">
+                                <input type="radio" name="SA-08" value="Yes">
+                                <span>Yes</span>
+                            </label>
+                            <label class="answer-card">
+                                <input type="radio" name="SA-08" value="No">
+                                <span>No</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="assessment-question" data-question-id="SA-09">
+                        <legend>Is there a formal quantum risk owner or working group?</legend>
+                        <div class="answer-options" role="radiogroup" aria-label="Is there a formal quantum risk owner or working group?">
+                            <label class="answer-card">
+                                <input type="radio" name="SA-09" value="Yes">
+                                <span>Yes</span>
+                            </label>
+                            <label class="answer-card">
+                                <input type="radio" name="SA-09" value="No">
+                                <span>No</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="assessment-question" data-question-id="SA-10">
+                        <legend>Have we reviewed third-party vendor quantum readiness?</legend>
+                        <div class="answer-options" role="radiogroup" aria-label="Have we reviewed third-party vendor quantum readiness?">
+                            <label class="answer-card">
+                                <input type="radio" name="SA-10" value="Yes">
+                                <span>Yes</span>
+                            </label>
+                            <label class="answer-card">
+                                <input type="radio" name="SA-10" value="No">
+                                <span>No</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="assessment-question" data-question-id="SA-11">
+                        <legend>Do our contracts include cryptographic agility requirements?</legend>
+                        <div class="answer-options" role="radiogroup" aria-label="Do our contracts include cryptographic agility requirements?">
+                            <label class="answer-card">
+                                <input type="radio" name="SA-11" value="Yes">
+                                <span>Yes</span>
+                            </label>
+                            <label class="answer-card">
+                                <input type="radio" name="SA-11" value="No">
+                                <span>No</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="assessment-question" data-question-id="SA-12">
+                        <legend>Have we evaluated potential impact on regulatory compliance?</legend>
+                        <div class="answer-options" role="radiogroup" aria-label="Have we evaluated potential impact on regulatory compliance?">
+                            <label class="answer-card">
+                                <input type="radio" name="SA-12" value="Yes">
+                                <span>Yes</span>
+                            </label>
+                            <label class="answer-card">
+                                <input type="radio" name="SA-12" value="No">
+                                <span>No</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="assessment-question" data-question-id="SA-13">
+                        <legend>Have we documented a post-quantum migration strategy?</legend>
+                        <div class="answer-options" role="radiogroup" aria-label="Have we documented a post-quantum migration strategy?">
+                            <label class="answer-card">
+                                <input type="radio" name="SA-13" value="Yes">
+                                <span>Yes</span>
+                            </label>
+                            <label class="answer-card">
+                                <input type="radio" name="SA-13" value="No">
+                                <span>No</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="assessment-question" data-question-id="SA-14">
+                        <legend>Are PQC-compatible libraries/tools integrated into our CI/CD pipeline?</legend>
+                        <div class="answer-options" role="radiogroup" aria-label="Are PQC-compatible libraries/tools integrated into our CI/CD pipeline?">
+                            <label class="answer-card">
+                                <input type="radio" name="SA-14" value="Yes">
+                                <span>Yes</span>
+                            </label>
+                            <label class="answer-card">
+                                <input type="radio" name="SA-14" value="No">
+                                <span>No</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="assessment-question" data-question-id="SA-15">
+                        <legend>Do we participate in relevant standards or industry working groups?</legend>
+                        <div class="answer-options" role="radiogroup" aria-label="Do we participate in relevant standards or industry working groups?">
+                            <label class="answer-card">
+                                <input type="radio" name="SA-15" value="Yes">
+                                <span>Yes</span>
+                            </label>
+                            <label class="answer-card">
+                                <input type="radio" name="SA-15" value="No">
+                                <span>No</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="assessment-question" data-question-id="SA-16">
+                        <legend>Is quantum risk discussed in board or executive briefings?</legend>
+                        <div class="answer-options" role="radiogroup" aria-label="Is quantum risk discussed in board or executive briefings?">
+                            <label class="answer-card">
+                                <input type="radio" name="SA-16" value="Yes">
+                                <span>Yes</span>
+                            </label>
+                            <label class="answer-card">
+                                <input type="radio" name="SA-16" value="No">
+                                <span>No</span>
+                            </label>
+                        </div>
+                    </fieldset>
+                </div>
+
+            </section>
+
+
+            <!-- ---------------------------------------------
+                 STEP 3 — CRYPTOGRAPHIC ASSET ASSESSMENT
+                 --------------------------------------------- -->
+
+            <section class="assessment-step" data-step="3" hidden>
+
+                <div class="step-heading">
+                    <p class="step-number">03</p>
+                    <h2>Cryptographic Assets</h2>
+                    <p>
+                        Record the cryptographic assets that are relevant to
+                        the organization's quantum-readiness assessment.
+                    </p>
+                </div>
+
+                <div class="form-card">
+
+                    <div class="section-intro">
+                        <h3>Cryptographic Asset Inventory</h3>
+                        <p>
+                            Add each relevant asset and indicate whether it is
+                            currently marked as crypto-agile.
+                        </p>
+                    </div>
+
+                    <div id="crypto-assets" class="asset-list">
+
+                        <article class="asset-entry" data-asset-index="0">
+
+                            <div class="form-field">
+                                <label for="asset-name-0">Asset / system</label>
+                                <input
+                                    id="asset-name-0"
+                                    name="assetName-0"
+                                    type="text"
+                                    placeholder="e.g. Customer API"
+                                >
+                            </div>
+
+                            <div class="form-field">
+                                <label for="asset-crypto-0">Crypto-agile?</label>
+                                <select id="asset-crypto-0" name="assetCrypto-0">
+                                    <option value="">Select...</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="asset-algorithm-0">Current algorithm / technology</label>
+                                <input
+                                    id="asset-algorithm-0"
+                                    name="assetAlgorithm-0"
+                                    type="text"
+                                    placeholder="e.g. RSA-2048, ECC, AES"
+                                >
+                            </div>
+
+                            <div class="form-field">
+                                <label for="asset-notes-0">Notes</label>
+                                <textarea
+                                    id="asset-notes-0"
+                                    name="assetNotes-0"
+                                    rows="3"
+                                    placeholder="Optional"
+                                ></textarea>
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                    <button id="add-asset" class="secondary-button" type="button">
+                        + Add Cryptographic Asset
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- ---------------------------------------------
+                 STEP 4 — QUANTUM RISK
+                 --------------------------------------------- -->
+
+            <section class="assessment-step" data-step="4" hidden>
+
+                <div class="step-heading">
+                    <p class="step-number">04</p>
+                    <h2>Quantum Risk</h2>
+                    <p>
+                        Identify assets and evaluate their quantum-risk
+                        exposure using the risk model defined for this tool.
+                    </p>
+                </div>
+
+                <div class="form-card">
+
+                    <div class="section-intro">
+                        <h3>Quantum Risk Register</h3>
+                        <p>
+                            Add relevant assets and provide the values required
+                            by the QCAASNET risk calculation.
+                        </p>
+                    </div>
+
+                    <div id="risk-assets" class="risk-list">
+
+                        <article class="risk-entry" data-risk-index="0">
+
+                            <div class="form-field">
+                                <label for="risk-asset-0">Asset / system</label>
+                                <input
+                                    id="risk-asset-0"
+                                    name="riskAsset-0"
+                                    type="text"
+                                    placeholder="e.g. Identity Platform"
+                                >
+                            </div>
+
+                            <div class="risk-input-grid">
+
+                                <div class="form-field">
+                                    <label for="risk-x-0">X</label>
+                                    <input
+                                        id="risk-x-0"
+                                        name="riskX-0"
+                                        type="number"
+                                        min="0"
+                                        step="any"
+                                    >
+                                </div>
+
+                                <div class="form-field">
+                                    <label for="risk-y-0">Y</label>
+                                    <input
+                                        id="risk-y-0"
+                                        name="riskY-0"
+                                        type="number"
+                                        min="0"
+                                        step="any"
+                                    >
+                                </div>
+
+                                <div class="form-field">
+                                    <label for="risk-z-0">Z</label>
+                                    <input
+                                        id="risk-z-0"
+                                        name="riskZ-0"
+                                        type="number"
+                                        min="0"
+                                        step="any"
+                                    >
+                                </div>
+
+                            </div>
+
+                            <div class="form-field">
+                                <label for="risk-notes-0">Notes</label>
+                                <textarea
+                                    id="risk-notes-0"
+                                    name="riskNotes-0"
+                                    rows="3"
+                                    placeholder="Optional"
+                                ></textarea>
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                    <button id="add-risk" class="secondary-button" type="button">
+                        + Add Risk Asset
+                    </button>
+
+                    <p class="form-note">
+                        The risk flag will be calculated by JavaScript using
+                        the X + Y &gt; Z logic defined in the supplied workbook.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- ---------------------------------------------
+                 STEP 5 — PQC / VENDOR ASSESSMENT
+                 --------------------------------------------- -->
+
+            <section class="assessment-step" data-step="5" hidden>
+
+                <div class="step-heading">
+                    <p class="step-number">05</p>
+                    <h2>PQC Vendor Assessment</h2>
+                    <p>
+                        Evaluate the organization's current vendor and
+                        post-quantum cryptography readiness.
+                    </p>
+                </div>
+
+                <div id="vendor-assessment-questions" class="question-list">
+
+                    <fieldset class="assessment-question" data-question-id="VA-01">
+                        <legend>What cryptographic algorithms does your platform currently support?</legend>
+                        <p class="question-help">
+                            Enter the cryptographic algorithms or algorithm families supported by the vendor.
+                        </p>
+                        <label class="field-label" for="VA-01-response">Supported algorithms</label>
+                        <textarea id="VA-01-response" name="VA-01" rows="4"
+                                  placeholder="Enter supported algorithms..."></textarea>
+                    </fieldset>
+
+                    <fieldset class="assessment-question" data-question-id="VA-02">
+                        <legend>Are you tracking the NIST Post-Quantum Cryptography standardization process?</legend>
+                        <div class="answer-options" role="radiogroup" aria-label="Are you tracking the NIST Post-Quantum Cryptography standardization process?">
+                            <label class="answer-card">
+                                <input type="radio" name="VA-02" value="Yes">
+                                <span>Yes</span>
+                            </label>
+                            <label class="answer-card">
+                                <input type="radio" name="VA-02" value="No">
+                                <span>No</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="assessment-question" data-question-id="VA-03">
+                        <legend>Do you plan to support Kyber, Dilithium, or SPHINCS+ in future releases?</legend>
+                        <div class="answer-options" role="radiogroup" aria-label="Do you plan to support Kyber, Dilithium, or SPHINCS+ in future releases?">
+                            <label class="answer-card">
+                                <input type="radio" name="VA-03" value="Yes">
+                                <span>Yes</span>
+                            </label>
+                            <label class="answer-card">
+                                <input type="radio" name="VA-03" value="No">
+                                <span>No</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="assessment-question" data-question-id="VA-04">
+                        <legend>Will your product support hybrid TLS handshakes?</legend>
+                        <div class="answer-options" role="radiogroup" aria-label="Will your product support hybrid TLS handshakes?">
+                            <label class="answer-card">
+                                <input type="radio" name="VA-04" value="Yes">
+                                <span>Yes</span>
+                            </label>
+                            <label class="answer-card">
+                                <input type="radio" name="VA-04" value="No">
+                                <span>No</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="assessment-question" data-question-id="VA-05">
+                        <legend>Are your systems crypto-agile (can swap algorithms without full rebuilds)?</legend>
+                        <div class="answer-options" role="radiogroup" aria-label="Are your systems crypto-agile (can swap algorithms without full rebuilds)?">
+                            <label class="answer-card">
+                                <input type="radio" name="VA-05" value="Yes">
+                                <span>Yes</span>
+                            </label>
+                            <label class="answer-card">
+                                <input type="radio" name="VA-05" value="No">
+                                <span>No</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="assessment-question" data-question-id="VA-06">
+                        <legend>Do you offer a PQC migration plan for customers?</legend>
+                        <div class="answer-options" role="radiogroup" aria-label="Do you offer a PQC migration plan for customers?">
+                            <label class="answer-card">
+                                <input type="radio" name="VA-06" value="Yes">
+                                <span>Yes</span>
+                            </label>
+                            <label class="answer-card">
+                                <input type="radio" name="VA-06" value="No">
+                                <span>No</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="assessment-question" data-question-id="VA-07">
+                        <legend>Have you performed any quantum threat modeling or risk assessment?</legend>
+                        <div class="answer-options" role="radiogroup" aria-label="Have you performed any quantum threat modeling or risk assessment?">
+                            <label class="answer-card">
+                                <input type="radio" name="VA-07" value="Yes">
+                                <span>Yes</span>
+                            </label>
+                            <label class="answer-card">
+                                <input type="radio" name="VA-07" value="No">
+                                <span>No</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="assessment-question" data-question-id="VA-08">
+                        <legend>Does your platform currently rely on RSA, ECC, or DH key exchanges?</legend>
+                        <div class="answer-options" role="radiogroup" aria-label="Does your platform currently rely on RSA, ECC, or DH key exchanges?">
+                            <label class="answer-card">
+                                <input type="radio" name="VA-08" value="Yes">
+                                <span>Yes</span>
+                            </label>
+                            <label class="answer-card">
+                                <input type="radio" name="VA-08" value="No">
+                                <span>No</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="assessment-question" data-question-id="VA-09">
+                        <legend>Have you conducted a cryptographic inventory across your systems?</legend>
+                        <div class="answer-options" role="radiogroup" aria-label="Have you conducted a cryptographic inventory across your systems?">
+                            <label class="answer-card">
+                                <input type="radio" name="VA-09" value="Yes">
+                                <span>Yes</span>
+                            </label>
+                            <label class="answer-card">
+                                <input type="radio" name="VA-09" value="No">
+                                <span>No</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="assessment-question" data-question-id="VA-10">
+                        <legend>Do you support crypto-agility in your APIs and SDKs?</legend>
+                        <div class="answer-options" role="radiogroup" aria-label="Do you support crypto-agility in your APIs and SDKs?">
+                            <label class="answer-card">
+                                <input type="radio" name="VA-10" value="Yes">
+                                <span>Yes</span>
+                            </label>
+                            <label class="answer-card">
+                                <input type="radio" name="VA-10" value="No">
+                                <span>No</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="assessment-question" data-question-id="VA-11">
+                        <legend>Can your platform interoperate with PQC-ready key management systems?</legend>
+                        <div class="answer-options" role="radiogroup" aria-label="Can your platform interoperate with PQC-ready key management systems?">
+                            <label class="answer-card">
+                                <input type="radio" name="VA-11" value="Yes">
+                                <span>Yes</span>
+                            </label>
+                            <label class="answer-card">
+                                <input type="radio" name="VA-11" value="No">
+                                <span>No</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="assessment-question" data-question-id="VA-12">
+                        <legend>Do you participate in any industry working groups on quantum security?</legend>
+                        <div class="answer-options" role="radiogroup" aria-label="Do you participate in any industry working groups on quantum security?">
+                            <label class="answer-card">
+                                <input type="radio" name="VA-12" value="Yes">
+                                <span>Yes</span>
+                            </label>
+                            <label class="answer-card">
+                                <input type="radio" name="VA-12" value="No">
+                                <span>No</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="assessment-question" data-question-id="VA-13">
+                        <legend>Have your cryptographic components been independently reviewed for quantum resilience?</legend>
+                        <div class="answer-options" role="radiogroup" aria-label="Have your cryptographic components been independently reviewed for quantum resilience?">
+                            <label class="answer-card">
+                                <input type="radio" name="VA-13" value="Yes">
+                                <span>Yes</span>
+                            </label>
+                            <label class="answer-card">
+                                <input type="radio" name="VA-13" value="No">
+                                <span>No</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="assessment-question" data-question-id="VA-14">
+                        <legend>Do your support contracts include provisions for future cryptographic upgrades?</legend>
+                        <div class="answer-options" role="radiogroup" aria-label="Do your support contracts include provisions for future cryptographic upgrades?">
+                            <label class="answer-card">
+                                <input type="radio" name="VA-14" value="Yes">
+                                <span>Yes</span>
+                            </label>
+                            <label class="answer-card">
+                                <input type="radio" name="VA-14" value="No">
+                                <span>No</span>
+                            </label>
+                        </div>
+                    </fieldset>
+                </div>
+
+            </section>
+
+
+            <!-- Assessment navigation -->
+            <div class="assessment-navigation">
+
+                <button id="previous-step" class="secondary-button"
+                        type="button" hidden>
+                    ← Previous
+                </button>
+
+                <button id="next-step" class="primary-button"
+                        type="button">
+                    Continue →
+                </button>
+
+                <button id="calculate-results" class="primary-button"
+                        type="button" hidden>
+                    Calculate Readiness
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             RESULTS SCREEN
+             ================================================= -->
+
+        <section id="results-screen" class="screen results-screen"
+                 data-screen="results" hidden>
+
+            <div class="results-header">
+
+                <p class="eyebrow">QCAASNET QUANTUM READINESS ASSESSMENT</p>
+
+                <h2>Your Quantum Readiness</h2>
+
+                <p id="results-organization">
+                    Assessment results
+                </p>
+
+            </div>
+
+
+            <!-- Overall score -->
+            <div class="overall-result-card">
+
+                <div class="score-label">Overall Readiness Score</div>
+
+                <div id="overall-score" class="overall-score">
+                    0%
+                </div>
+
+                <div id="readiness-status" class="readiness-status">
+                    Not Assessed
+                </div>
+
+                <p id="results-summary" class="results-summary">
+                    Complete the assessment to generate your readiness result.
+                </p>
+
+            </div>
+
+
+            <!-- Component scores -->
+            <div class="component-results">
+
+                <article class="result-card" data-result="self">
+                    <span class="result-card-label">
+                        Organizational Readiness
+                    </span>
+                    <strong id="self-score">0%</strong>
+                    <p>Quantum self-assessment</p>
+                </article>
+
+                <article class="result-card" data-result="crypto">
+                    <span class="result-card-label">
+                        Cryptographic Readiness
+                    </span>
+                    <strong id="crypto-score">0%</strong>
+                    <p>Crypto-agility coverage</p>
+                </article>
+
+                <article class="result-card" data-result="risk">
+                    <span class="result-card-label">
+                        Quantum Risk
+                    </span>
+                    <strong id="risk-score">0%</strong>
+                    <p>Assets not flagged at risk</p>
+                </article>
+
+                <article class="result-card" data-result="vendor">
+                    <span class="result-card-label">
+                        PQC Vendor Readiness
+                    </span>
+                    <strong id="vendor-score">0%</strong>
+                    <p>Vendor assessment</p>
+                </article>
+
+            </div>
+
+
+            <!-- Gaps -->
+            <section class="results-section">
+
+                <div class="results-section-heading">
+                    <p class="eyebrow">01</p>
+                    <h3>Your Biggest Gaps</h3>
+                </div>
+
+                <div id="key-gaps" class="results-list">
+                    <p class="empty-result">
+                        Your assessment gaps will appear here.
+                    </p>
+                </div>
+
+            </section>
+
+
+            <!-- Recommendations -->
+            <section class="results-section">
+
+                <div class="results-section-heading">
+                    <p class="eyebrow">02</p>
+                    <h3>Recommended Next Steps</h3>
+                </div>
+
+                <div id="recommendations" class="results-list">
+                    <p class="empty-result">
+                        Recommendations will appear here after assessment.
+                    </p>
+                </div>
+
+            </section>
+
+
+            <!-- Disclaimer -->
+            <section class="results-disclaimer">
+
+                <h3>About this result</h3>
+
+                <p>
+                    This score is a QCAASNET assessment indicator based on the
+                    measurement and scoring framework defined for this tool.
+                    It is not an industry certification or guarantee of
+                    quantum security.
+                </p>
+
+            </section>
+
+
+            <div class="results-actions">
+
+                <button id="restart-assessment" class="secondary-button" type="button">
+                    Start New Assessment
+                </button>
+
+            </div>
+
+        </section>
+
     </main>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="qr-footer">
+        <p>
+            © QCAASNET — Quantum Computing as a Service Network
+        </p>
+    </footer>
+
+
+    <!-- JavaScript will be added in the next stage -->
+    <script src="be-quantum-ready.js"></script>
+
 </body>
 </html>
