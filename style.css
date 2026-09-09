@@ -1472,13 +1472,13 @@ footer {
     border: 1px solid rgba(0, 210, 200, 0.22);
 }
 /* =========================================================
-   TIGHTEN QUANTUM READINESS TRANSITION
+   READINESS CTA POSITION
    ========================================================= */
 
 .readiness-cta {
-    margin-top: -20px;
+    margin-top: 34px;
 }
 
 .quantum-readiness {
-    padding-bottom: 35px;
+    padding-bottom: 25px;
 }
