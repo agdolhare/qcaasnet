@@ -1482,3 +1482,445 @@ footer {
 .quantum-readiness {
     padding-bottom: 25px;
 }
+/* =========================================================
+   QUANTUM SECURITY & POST-QUANTUM CRYPTOGRAPHY
+   ========================================================= */
+
+.quantum-security {
+    padding-top: 90px;
+    padding-bottom: 95px;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.security-header {
+    max-width: 850px;
+    margin-bottom: 58px;
+}
+
+.security-header h2 {
+    margin: 18px 0 20px;
+    font-size: clamp(38px, 4vw, 58px);
+    line-height: 1.08;
+    letter-spacing: -1.8px;
+}
+
+.security-header h2 span {
+    color: #00d2c8;
+}
+
+.security-header p {
+    max-width: 760px;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.8;
+    color: rgba(220, 235, 240, 0.68);
+}
+
+
+/* =========================================================
+   SECURITY GRID
+   ========================================================= */
+
+.security-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+
+/* =========================================================
+   SECURITY CARD
+   ========================================================= */
+
+.security-card {
+    position: relative;
+    padding: 30px 30px 32px;
+    border: 1px solid rgba(0, 210, 200, 0.14);
+    border-radius: 16px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(9, 24, 31, 0.82),
+            rgba(4, 13, 19, 0.94)
+        );
+    box-shadow:
+        0 18px 50px rgba(0, 0, 0, 0.18);
+    overflow: hidden;
+    transition:
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.security-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 210, 200, 0.5),
+        transparent 70%
+    );
+    opacity: 0.55;
+}
+
+.security-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(0, 210, 200, 0.28);
+}
+
+
+/* =========================================================
+   CARD TOP
+   ========================================================= */
+
+.security-card-top {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 25px;
+}
+
+.security-number {
+    font-family: "Courier New", monospace;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    color: #00d2c8;
+}
+
+.security-line {
+    width: 45px;
+    height: 1px;
+    background: rgba(0, 210, 200, 0.28);
+}
+
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.security-card h3 {
+    margin: 0 0 16px;
+    font-size: 22px;
+    line-height: 1.25;
+    letter-spacing: -0.4px;
+    color: #eefcff;
+}
+
+.security-card p {
+    margin: 0 0 14px;
+    font-size: 14px;
+    line-height: 1.75;
+    color: rgba(220, 235, 240, 0.65);
+}
+
+.security-card p:last-of-type {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   KEY TAKEAWAY
+   ========================================================= */
+
+.security-takeaway {
+    margin-top: 25px;
+    padding: 17px 18px;
+    border-left: 2px solid #00d2c8;
+    background: rgba(0, 210, 200, 0.045);
+    border-radius: 0 10px 10px 0;
+}
+
+.security-takeaway span {
+    display: block;
+    margin-bottom: 8px;
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: #00d2c8;
+}
+
+.security-takeaway strong {
+    display: block;
+    font-size: 13px;
+    line-height: 1.6;
+    font-weight: 500;
+    color: rgba(235, 250, 252, 0.82);
+}
+
+
+/* =========================================================
+   MIGRATION FLOW
+   ========================================================= */
+
+.migration-flow {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 7px;
+    margin-top: 25px;
+}
+
+.migration-flow > div {
+    min-width: 0;
+    padding: 12px 8px;
+    border: 1px solid rgba(0, 210, 200, 0.10);
+    border-radius: 9px;
+    background: rgba(0, 210, 200, 0.025);
+}
+
+.migration-flow span {
+    display: block;
+    margin-bottom: 7px;
+    font-family: "Courier New", monospace;
+    font-size: 9px;
+    color: #00d2c8;
+}
+
+.migration-flow strong {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 11px;
+    color: #e9fbfd;
+}
+
+.migration-flow small {
+    display: block;
+    font-size: 9px;
+    line-height: 1.35;
+    color: rgba(220, 235, 240, 0.48);
+}
+
+
+/* =========================================================
+   PQC CURRENT STATUS
+   ========================================================= */
+
+.pqc-status {
+    margin-top: 22px;
+    padding: 30px 32px;
+    border: 1px solid rgba(0, 210, 200, 0.18);
+    border-radius: 16px;
+    background:
+        linear-gradient(
+            110deg,
+            rgba(0, 210, 200, 0.055),
+            rgba(4, 14, 21, 0.72)
+        );
+}
+
+.pqc-status-label {
+    margin-bottom: 18px;
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    letter-spacing: 1.8px;
+    color: #00d2c8;
+}
+
+.pqc-status-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.8fr);
+    gap: 45px;
+    align-items: center;
+}
+
+.pqc-status h3 {
+    margin: 0 0 12px;
+    font-size: 25px;
+    color: #eefcff;
+}
+
+.pqc-status p {
+    max-width: 760px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.75;
+    color: rgba(220, 235, 240, 0.63);
+}
+
+.pqc-status-highlight {
+    padding: 22px 23px;
+    border: 1px solid rgba(0, 210, 200, 0.16);
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.16);
+}
+
+.pqc-status-highlight span {
+    display: block;
+    margin-bottom: 9px;
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: #00d2c8;
+}
+
+.pqc-status-highlight strong {
+    display: block;
+    font-size: 17px;
+    line-height: 1.45;
+    font-weight: 500;
+    color: #e9fbfd;
+}
+
+
+/* =========================================================
+   SOURCES
+   ========================================================= */
+
+.security-sources {
+    margin-top: 25px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.security-sources span {
+    font-family: "Courier New", monospace;
+    font-size: 9px;
+    letter-spacing: 1.6px;
+    color: rgba(220, 235, 240, 0.42);
+}
+
+.security-sources p {
+    margin: 7px 0 0;
+    font-size: 11px;
+    color: rgba(220, 235, 240, 0.38);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .quantum-security {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .security-header {
+        margin-bottom: 38px;
+    }
+
+    .security-header h2 {
+        font-size: 38px;
+        letter-spacing: -1px;
+    }
+
+    .security-header p {
+        font-size: 14px;
+        line-height: 1.75;
+    }
+
+    .security-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .security-card {
+        padding: 25px 22px 27px;
+    }
+
+    .security-card h3 {
+        font-size: 20px;
+    }
+
+    .security-card p {
+        font-size: 13px;
+    }
+
+    .migration-flow {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .migration-flow > div:last-child {
+        grid-column: span 2;
+    }
+
+    .pqc-status {
+        padding: 24px 21px;
+    }
+
+    .pqc-status-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .pqc-status h3 {
+        font-size: 22px;
+    }
+
+    .pqc-status-highlight {
+        padding: 19px;
+    }
+
+    .security-sources p {
+        line-height: 1.7;
+    }
+
+}
+/* =========================================================
+   TIGHTEN TRANSITION INTO QUANTUM SECURITY
+   ========================================================= */
+
+.quantum-readiness {
+    padding-bottom: 15px;
+}
+
+.quantum-security {
+    padding-top: 70px;
+}
+/* =========================================================
+   QUANTUM SECURITY INTRO
+   ========================================================= */
+
+.security-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(420px, 0.95fr);
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 58px;
+}
+
+.security-hero-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 210, 200, 0.18);
+    background: #06131d;
+    box-shadow:
+        0 20px 55px rgba(0, 0, 0, 0.28);
+}
+
+.security-hero-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .security-intro {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-bottom: 38px;
+    }
+
+    .security-hero-image {
+        aspect-ratio: 16 / 9;
+    }
+
+}

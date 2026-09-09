@@ -362,6 +362,294 @@
     </div>
 
 </section>
+<!-- =========================================================
+     QUANTUM SECURITY & POST-QUANTUM CRYPTOGRAPHY
+     ========================================================= -->
+
+<section class="section quantum-security" id="quantum-security">
+
+    <div class="security-intro">
+
+    <div class="security-header">
+
+        <div class="eyebrow">
+            <span></span> QUANTUM SECURITY &amp; PQC
+        </div>
+
+        <h2>
+            Preparing for a<br>
+            <span>Post-Quantum World</span>
+        </h2>
+
+        <p>
+            Quantum computing will not make every form of encryption obsolete.
+            The most significant change will be how organizations protect keys,
+            identities, digital signatures, and other cryptographic systems
+            that depend on mathematical problems vulnerable to quantum attacks.
+        </p>
+
+    </div>
+
+    <div class="security-hero-image">
+
+        <img
+            src="/images/quantum-security-pqc.png"
+            alt="Quantum security and post-quantum cryptography illustration"
+        >
+
+    </div>
+
+</div>
+
+
+    <div class="security-grid">
+
+        <!-- 01 -->
+        <article class="security-card">
+
+            <div class="security-card-top">
+                <span class="security-number">01</span>
+                <span class="security-line"></span>
+            </div>
+
+            <h3>Why Quantum Changes Cryptography</h3>
+
+            <p>
+                Powerful quantum computers are expected to challenge widely used
+                public-key cryptography. Algorithms based on problems such as
+                integer factorization and discrete logarithms could become
+                vulnerable to sufficiently capable quantum attacks.
+            </p>
+
+            <p>
+                This affects technologies used for secure key establishment,
+                authentication, certificates, and digital signatures.
+            </p>
+
+        </article>
+
+
+        <!-- 02 -->
+        <article class="security-card">
+
+            <div class="security-card-top">
+                <span class="security-number">02</span>
+                <span class="security-line"></span>
+            </div>
+
+            <h3>What Post-Quantum Cryptography Does</h3>
+
+            <p>
+                Post-quantum cryptography (PQC) uses cryptographic techniques
+                designed to remain secure against both conventional and
+                quantum computers.
+            </p>
+
+            <p>
+                NIST has finalized ML-KEM for establishing shared secret keys,
+                along with ML-DSA and SLH-DSA for digital signatures. Additional
+                algorithms continue to be evaluated and standardized.
+            </p>
+
+        </article>
+
+
+        <!-- 03 -->
+        <article class="security-card">
+
+            <div class="security-card-top">
+                <span class="security-number">03</span>
+                <span class="security-line"></span>
+            </div>
+
+            <h3>Not All Encryption Is Equally Affected</h3>
+
+            <p>
+                The quantum threat is not the same across every cryptographic
+                technology. Public-key systems face the most disruptive change,
+                particularly where they are used for key exchange and signatures.
+            </p>
+
+            <p>
+                Symmetric encryption such as AES is affected differently.
+                Quantum search techniques can reduce its effective security
+                level, but they do not represent the same type of break expected
+                against vulnerable public-key systems.
+            </p>
+
+            <div class="security-takeaway">
+                <span>KEY TAKEAWAY</span>
+                <strong>
+                    Quantum readiness is not about replacing all encryption.
+                    It is about finding the cryptography that is vulnerable
+                    and planning its migration.
+                </strong>
+            </div>
+
+        </article>
+
+
+        <!-- 04 -->
+        <article class="security-card">
+
+            <div class="security-card-top">
+                <span class="security-number">04</span>
+                <span class="security-line"></span>
+            </div>
+
+            <h3>Migration Starts With Discovery</h3>
+
+            <p>
+                Before organizations can migrate to quantum-resistant
+                cryptography, they need visibility into where cryptography
+                is being used.
+            </p>
+
+            <p>
+                This can include applications, APIs, VPNs, TLS certificates,
+                identity systems, databases, cloud services, devices,
+                software libraries, firmware, and third-party products.
+            </p>
+
+        </article>
+
+
+        <!-- 05 -->
+        <article class="security-card">
+
+            <div class="security-card-top">
+                <span class="security-number">05</span>
+                <span class="security-line"></span>
+            </div>
+
+            <h3>Harvest Now, Decrypt Later</h3>
+
+            <p>
+                Encrypted information can have a much longer lifetime than the
+                systems that protect it today. An attacker could collect
+                encrypted data now and attempt to decrypt it in the future if
+                quantum capabilities become sufficient.
+            </p>
+
+            <p>
+                Organizations should therefore consider how long sensitive
+                information must remain confidential when deciding what to
+                migrate first.
+            </p>
+
+        </article>
+
+
+        <!-- 06 -->
+        <article class="security-card">
+
+            <div class="security-card-top">
+                <span class="security-number">06</span>
+                <span class="security-line"></span>
+            </div>
+
+            <h3>What Organizations Can Do Now</h3>
+
+            <p>
+                Quantum-readiness is a migration process rather than a
+                one-time technology upgrade.
+            </p>
+
+            <div class="migration-flow">
+
+                <div>
+                    <span>01</span>
+                    <strong>Discover</strong>
+                    <small>Find cryptographic assets</small>
+                </div>
+
+                <div>
+                    <span>02</span>
+                    <strong>Prioritize</strong>
+                    <small>Identify critical exposure</small>
+                </div>
+
+                <div>
+                    <span>03</span>
+                    <strong>Plan</strong>
+                    <small>Map migration paths</small>
+                </div>
+
+                <div>
+                    <span>04</span>
+                    <strong>Migrate</strong>
+                    <small>Adopt suitable PQC</small>
+                </div>
+
+                <div>
+                    <span>05</span>
+                    <strong>Verify</strong>
+                    <small>Test and validate</small>
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <!-- =====================================================
+         CURRENT STATE OF PQC
+         ===================================================== -->
+
+    <div class="pqc-status">
+
+        <div class="pqc-status-label">
+            CURRENT STATE
+        </div>
+
+        <div class="pqc-status-content">
+
+            <div>
+                <h3>Where PQC Stands Today</h3>
+
+                <p>
+                    Post-quantum cryptography is already moving from research
+                    toward real-world deployment. NIST's first finalized
+                    standards include ML-KEM, ML-DSA, and SLH-DSA, while
+                    additional algorithms continue through the standardization
+                    process.
+                </p>
+            </div>
+
+            <div class="pqc-status-highlight">
+
+                <span>PQC IS NOT A SINGLE ALGORITHM</span>
+
+                <strong>
+                    It is an evolving cryptographic transition.
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         SOURCES
+         ===================================================== -->
+
+    <div class="security-sources">
+
+        <span>REFERENCE FRAMEWORKS</span>
+
+        <p>
+            CISA quantum-readiness guidance &nbsp;•&nbsp;
+            NIST Post-Quantum Cryptography standards &nbsp;•&nbsp;
+            NIST cryptography guidance
+        </p>
+
+    </div>
+
+</section>
 <section class="section" id="explore">
         <div class="section-heading">
           <div class="eyebrow"><span></span> EXPLORE</div>
