@@ -1866,17 +1866,6 @@ footer {
 
 }
 /* =========================================================
-   TIGHTEN TRANSITION INTO QUANTUM SECURITY
-   ========================================================= */
-
-.quantum-readiness {
-    padding-bottom: 15px;
-}
-
-.quantum-security {
-    padding-top: 70px;
-}
-/* =========================================================
    QUANTUM SECURITY INTRO
    ========================================================= */
 
@@ -1923,4 +1912,11 @@ footer {
         aspect-ratio: 16 / 9;
     }
 
+}
+/* =========================================================
+   TIGHTEN TRANSITION INTO QUANTUM SECURITY
+   ========================================================= */
+
+.quantum-security {
+    margin-top: -70px;
 }
