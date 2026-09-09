@@ -113,7 +113,7 @@ a {
 
 .hero {
     min-height: 700px;
-    padding: 35px 0 85px;
+    padding: 0 0 85px;
     display: grid;
     grid-template-columns: minmax(0, 1.15fr) minmax(390px, .85fr);
     align-items: center;
