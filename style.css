@@ -113,7 +113,7 @@ a {
 
 .hero {
     min-height: 700px;
-    padding: 0 0 85px;
+    padding: 0 0 45px;
     display: grid;
     grid-template-columns: minmax(0, 1.15fr) minmax(390px, .85fr);
     align-items: center;
@@ -841,6 +841,7 @@ footer {
    ========================================================= */
 
 .quantum-readiness {
+    padding-top: 55px;
     padding-bottom: 55px;
 }
 
@@ -1295,4 +1296,31 @@ footer {
         font-size: .8rem;
     }
 
+}
+/* =========================================================
+   HERO — ALIGN LEFT CONTENT WITH CONSOLE
+   ========================================================= */
+
+.hero-copy {
+    padding-top: 8px;
+}
+/* =========================================================
+   HERO CONSOLE — COMPACT ASSESSMENT AREA
+   ========================================================= */
+
+.console-capabilities + .console-divider {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.console-capability {
+    padding-bottom: 10px;
+}
+/* =========================================================
+   HERO CONSOLE — ALIGN WITH HERO CONTENT
+   ========================================================= */
+
+.quantum-console {
+    align-self: start;
+    margin-top: 12px;
 }
