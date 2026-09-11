@@ -1,213 +1,1084 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QCRGRVZ3NY"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-QCRGRVZ3NY');
+    </script>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Explore quantum computing research from leading companies, laboratories, and organizations through QCAASNET."
+    >
+
     <title>Latest Research | QCAASNET</title>
 
-    <!-- Keep this path if your favicon is stored here -->
-    <link rel="icon" type="image/png" href="images/qcaasnet-logo.png">
+    <link
+        rel="icon"
+        type="image/png"
+        href="/images/qcaas-icon.png?v=2"
+    >
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
 
-        html, body {
-            margin: 0;
-            min-height: 100%;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            color: #e8eef8;
-            background:
-                linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px),
-                #030914;
-            background-size: 74px 74px;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        .nav {
-            min-height: 74px;
-            padding: 0 5%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 25px;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-            background: rgba(3,9,20,0.88);
-        }
-
-        .brand {
-            font-size: 22px;
-            font-weight: 800;
-            letter-spacing: 2px;
-            white-space: nowrap;
-        }
-
-        .brand span {
-            color: #7dd3fc;
-        }
-
-        .links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-            gap: 18px;
-            font-size: 14px;
-            color: #aebbd0;
-        }
-
-        .links a:hover {
-            color: #ffffff;
-        }
-
-        .hero {
-            min-height: calc(100vh - 74px);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 70px 20px;
-            text-align: center;
-        }
-
-        .content {
-            width: min(850px, 100%);
-        }
-
-        .eyebrow {
-            display: inline-block;
-            margin-bottom: 20px;
-            padding: 8px 14px;
-            border: 1px solid rgba(125,211,252,0.35);
-            border-radius: 999px;
-            color: #7dd3fc;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 2px;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: clamp(44px, 7vw, 82px);
-            line-height: 1.05;
-            letter-spacing: -2px;
-        }
-
-        .line {
-            width: 90px;
-            height: 3px;
-            margin: 28px auto;
-            background: #7dd3fc;
-            border-radius: 10px;
-        }
-
-        .description {
-            max-width: 720px;
-            margin: 0 auto;
-            color: #b8c5d8;
-            font-size: 20px;
-            line-height: 1.75;
-        }
-
-        .coming {
-            margin: 38px auto 0;
-            width: min(620px, 100%);
-            padding: 24px 28px;
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 14px;
-            background: rgba(10,20,36,0.72);
-            box-shadow: 0 20px 70px rgba(0,0,0,0.3);
-        }
-
-        .coming strong {
-            display: block;
-            margin-bottom: 8px;
-            font-size: 18px;
-            color: #ffffff;
-        }
-
-        .coming p {
-            margin: 0;
-            color: #8999b0;
-            line-height: 1.6;
-        }
-
-        .back {
-            display: inline-block;
-            margin-top: 34px;
-            padding: 12px 20px;
-            border: 1px solid rgba(255,255,255,0.16);
-            border-radius: 8px;
-            color: #dce7f5;
-            transition: 0.2s ease;
-        }
-
-        .back:hover {
-            border-color: #7dd3fc;
-            color: #7dd3fc;
-        }
-
-        @media (max-width: 800px) {
-            .nav {
-                padding: 18px 5%;
-                align-items: flex-start;
-                flex-direction: column;
-            }
-
-            .links {
-                justify-content: flex-start;
-                gap: 12px;
-            }
-
-            .hero {
-                min-height: calc(100vh - 130px);
-                padding-top: 50px;
-            }
-
-            .description {
-                font-size: 17px;
-            }
-        }
-    </style>
 </head>
 
+
 <body>
-    <nav class="nav">
-        <a class="brand" href="/">QCAAS<span>NET</span></a>
 
-        <div class="links">
-            <a href="/fundamentals/">Fundamentals</a>
-            <a href="/latest-research/">Latest Research</a>
-            <a href="/deep-learning/">Deep Learning</a>
-            <a href="/be-quantum-ready/">Be Quantum Ready</a>
-            <a href="/feedback-program/">Feedback Program</a>
-        </div>
-    </nav>
+<div class="site-shell">
 
-    <main class="hero">
-        <section class="content">
-            <div class="eyebrow">QCAASNET RESEARCH</div>
 
-            <h1>Latest Research</h1>
+    <!-- =========================================================
+         NAVIGATION
+         ========================================================= -->
 
-            <div class="line"></div>
+    <header class="nav-wrap">
 
-            <p class="description">A curated space for emerging developments in quantum computing, hardware, algorithms, error correction, and the technologies shaping the next generation of computing.</p>
+        <nav class="nav">
 
-            <div class="coming">
-                <strong>Coming Soon</strong>
-                <p>Research updates and carefully selected developments will be published here soon.</p>
+            <a class="brand" href="/">
+
+                <img
+                    class="brand-mark"
+                    src="/images/qcaas-icon.png"
+                    alt="QCAAS Net quantum logo"
+                >
+
+                <span class="brand-text">
+
+                    <span class="brand-name">
+                        QCAAS<span class="brand-accent">NET</span>
+                    </span>
+
+                    <span class="brand-tagline">
+                        Quantum Computing as a Service Network
+                    </span>
+
+                </span>
+
+            </a>
+
+
+            <div class="content-tabs">
+
+                <a href="/fundamentals/">
+                    Fundamentals of Quantum Computing
+                </a>
+
+                <a href="/be-quantum-ready/">
+                    Be Quantum Ready
+                </a>
+
+                <a
+                    href="/latest-research/"
+                    class="active"
+                >
+                    Latest Research
+                </a>
+
+                <a href="/deep-learning/">
+                    Deep Learning
+                </a>
+
+                <a href="/#about">
+                    About QCAAS NET
+                </a>
+
             </div>
 
-            <a class="back" href="/fundamentals/">← Back to Fundamentals</a>
+        </nav>
+
+    </header>
+
+
+    <!-- =========================================================
+         MOBILE TOPIC MENU
+         ========================================================= -->
+
+    <details class="mobile-topic-menu">
+
+        <summary>
+
+            <span>Explore Topics</span>
+
+            <span class="mobile-topic-arrow">
+                ↓
+            </span>
+
+        </summary>
+
+
+        <div class="mobile-topic-links">
+
+            <a href="/fundamentals/">
+                Fundamentals of Quantum Computing
+            </a>
+
+            <a href="/be-quantum-ready/">
+                Be Quantum Ready
+            </a>
+
+            <a href="/latest-research/">
+                Latest Research
+            </a>
+
+            <a href="/deep-learning/">
+                Deep Learning
+            </a>
+
+            <a href="/#about">
+                About QCAAS NET
+            </a>
+
+        </div>
+
+    </details>
+
+
+
+    <!-- =========================================================
+         RESEARCH HERO
+         ========================================================= -->
+
+    <main>
+
+        <section class="research-hero">
+
+            <div class="research-hero-copy">
+
+                <div class="eyebrow">
+                    <span></span>
+                    RESEARCH
+                </div>
+
+
+                <h1>
+                    Real Research.
+                    <strong>
+                        A Clearer Tomorrow.
+                    </strong>
+                </h1>
+
+
+                <p class="research-hero-text">
+
+                    We explore and explain research shaping
+                    quantum computing — from new hardware and
+                    error correction to algorithms, materials,
+                    software, and the technologies moving the
+                    field forward.
+
+                </p>
+
+            </div>
+
+
+            <!-- FUTURISTIC RESEARCH VISUAL -->
+
+            <div class="research-hero-visual">
+
+                <div class="research-orbit orbit-one"></div>
+
+                <div class="research-orbit orbit-two"></div>
+
+                <div class="research-orbit orbit-three"></div>
+
+                <div class="research-core">
+
+                    <span class="core-ring"></span>
+
+                    <span class="core-ring core-ring-two"></span>
+
+                    <span class="core-dot"></span>
+
+                </div>
+
+
+                <div class="research-particle particle-one"></div>
+                <div class="research-particle particle-two"></div>
+                <div class="research-particle particle-three"></div>
+                <div class="research-particle particle-four"></div>
+                <div class="research-particle particle-five"></div>
+
+
+                <div class="research-visual-label">
+
+                    <span>QUANTUM</span>
+                    <span>RESEARCH</span>
+                    <span>TECHNOLOGY</span>
+                    <span>DISCOVERY</span>
+
+                </div>
+
+            </div>
+
         </section>
+
+
+
+        <!-- =========================================================
+             EXPLORE RESEARCH BY COMPANY
+             ========================================================= -->
+
+        <section class="research-explorer">
+
+            <div class="research-explorer-header">
+
+                <div class="eyebrow">
+                    <span></span>
+                    EXPLORE RESEARCH BY
+                </div>
+
+                <span class="research-explorer-note">
+                    FROM TODAY'S BREAKTHROUGHS TO TOMORROW'S POSSIBILITIES
+                </span>
+
+            </div>
+
+
+            <div class="company-nav">
+
+                <a
+                    href="/latest-research/google/"
+                    class="company-button"
+                >
+                    <span class="company-logo google-logo">
+                        G
+                    </span>
+                    Google
+                </a>
+
+
+                <a
+                    href="/latest-research/ibm/"
+                    class="company-button"
+                >
+                    <span class="company-logo ibm-logo">
+                        IBM
+                    </span>
+                    IBM
+                </a>
+
+
+                <a
+                    href="/latest-research/microsoft/"
+                    class="company-button"
+                >
+                    <span class="company-logo microsoft-logo">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </span>
+                    Microsoft
+                </a>
+
+
+                <a
+                    href="/latest-research/intel/"
+                    class="company-button"
+                >
+                    <span class="company-logo intel-logo">
+                        intel.
+                    </span>
+                    Intel
+                </a>
+
+
+                <a
+                    href="/latest-research/nvidia/"
+                    class="company-button"
+                >
+                    <span class="company-logo nvidia-logo">
+                        ◉
+                    </span>
+                    NVIDIA
+                </a>
+
+
+                <a
+                    href="/latest-research/quantinuum/"
+                    class="company-button"
+                >
+                    <span class="company-logo quantinuum-logo">
+                        Q
+                    </span>
+                    Quantinuum
+                </a>
+
+
+                <a
+                    href="/latest-research/ionq/"
+                    class="company-button"
+                >
+                    <span class="company-logo ionq-logo">
+                        Q
+                    </span>
+                    IonQ
+                </a>
+
+
+                <a
+                    href="/latest-research/rigetti/"
+                    class="company-button"
+                >
+                    <span class="company-logo rigetti-logo">
+                        R
+                    </span>
+                    Rigetti
+                </a>
+
+
+                <details class="company-more">
+
+                    <summary class="company-button">
+
+                        More
+
+                        <span class="more-arrow">
+                            ↓
+                        </span>
+
+                    </summary>
+
+
+                    <div class="company-dropdown">
+
+                        <a href="/latest-research/dwave/">
+                            D-Wave
+                        </a>
+
+                        <a href="/latest-research/psiquantum/">
+                            PsiQuantum
+                        </a>
+
+                        <a href="/latest-research/xanadu/">
+                            Xanadu
+                        </a>
+
+                        <a href="/latest-research/pasqal/">
+                            Pasqal
+                        </a>
+
+                        <a href="/latest-research/quera/">
+                            QuEra
+                        </a>
+
+                    </div>
+
+                </details>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================================
+             LATEST RESEARCH
+             ========================================================= -->
+
+        <section class="latest-research">
+
+            <div class="latest-research-header">
+
+                <div>
+
+                    <div class="eyebrow">
+                        <span></span>
+                        FEATURED
+                    </div>
+
+
+                    <h2>
+                        Latest <strong>Research</strong>
+                    </h2>
+
+
+                    <p>
+                        A curated view of important and
+                        interesting research from across
+                        the quantum ecosystem.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="#"
+                    class="view-all-research"
+                >
+                    View all research
+                    <span>→</span>
+                </a>
+
+            </div>
+
+
+
+            <!-- =====================================================
+                 RESEARCH GRID
+                 ===================================================== -->
+
+            <div class="research-grid">
+
+
+                <!-- 01 — GOOGLE -->
+
+                <article class="research-card">
+
+                    <div class="research-card-image">
+
+                        <div class="research-card-company">
+                            GOOGLE
+                        </div>
+
+                        <span class="research-card-date">
+                            RESEARCH
+                        </span>
+
+                        <div class="research-card-visual google-card-visual">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="research-card-content">
+
+                        <div class="research-card-meta">
+                            GOOGLE
+                        </div>
+
+
+                        <h3>
+                            Quantum Error Correction
+                            and the Path Toward Useful
+                            Quantum Computing
+                        </h3>
+
+
+                        <p>
+                            Explore how advances in quantum
+                            error correction are helping researchers
+                            move toward more reliable quantum
+                            computation.
+                        </p>
+
+
+                        <div class="research-tags">
+
+                            <span>
+                                ERROR CORRECTION
+                            </span>
+
+                            <span>
+                                QUANTUM HARDWARE
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="/latest-research/google/"
+                            class="research-card-link"
+                        >
+                            Explore research
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 02 — IBM -->
+
+                <article class="research-card">
+
+                    <div class="research-card-image">
+
+                        <div class="research-card-company">
+                            IBM
+                        </div>
+
+                        <span class="research-card-date">
+                            RESEARCH
+                        </span>
+
+                        <div class="research-card-visual ibm-card-visual">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="research-card-content">
+
+                        <div class="research-card-meta">
+                            IBM
+                        </div>
+
+
+                        <h3>
+                            Scaling Quantum Processors
+                            and Quantum-Centric
+                            Supercomputing
+                        </h3>
+
+
+                        <p>
+                            Discover research spanning quantum
+                            processors, software, error correction,
+                            and the integration of quantum and
+                            classical computing.
+                        </p>
+
+
+                        <div class="research-tags">
+
+                            <span>
+                                HARDWARE
+                            </span>
+
+                            <span>
+                                SCALING
+                            </span>
+
+                            <span>
+                                SOFTWARE
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="/latest-research/ibm/"
+                            class="research-card-link"
+                        >
+                            Explore research
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 03 — MICROSOFT -->
+
+                <article class="research-card">
+
+                    <div class="research-card-image">
+
+                        <div class="research-card-company">
+                            MICROSOFT
+                        </div>
+
+                        <span class="research-card-date">
+                            RESEARCH
+                        </span>
+
+                        <div class="research-card-visual microsoft-card-visual">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="research-card-content">
+
+                        <div class="research-card-meta">
+                            MICROSOFT
+                        </div>
+
+
+                        <h3>
+                            Topological Approaches
+                            to Scalable Quantum Computing
+                        </h3>
+
+
+                        <p>
+                            Explore Microsoft's research into
+                            topological quantum computing,
+                            quantum materials, and approaches
+                            to building scalable systems.
+                        </p>
+
+
+                        <div class="research-tags">
+
+                            <span>
+                                TOPOLOGICAL QUBITS
+                            </span>
+
+                            <span>
+                                MATERIALS
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="/latest-research/microsoft/"
+                            class="research-card-link"
+                        >
+                            Explore research
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 04 — INTEL -->
+
+                <article class="research-card">
+
+                    <div class="research-card-image">
+
+                        <div class="research-card-company">
+                            INTEL
+                        </div>
+
+                        <span class="research-card-date">
+                            RESEARCH
+                        </span>
+
+                        <div class="research-card-visual intel-card-visual">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="research-card-content">
+
+                        <div class="research-card-meta">
+                            INTEL
+                        </div>
+
+
+                        <h3>
+                            Silicon Spin Qubits
+                            and Semiconductor-Scale
+                            Quantum Hardware
+                        </h3>
+
+
+                        <p>
+                            Examine research exploring silicon-based
+                            spin qubits and the possibility of using
+                            semiconductor manufacturing techniques
+                            for quantum systems.
+                        </p>
+
+
+                        <div class="research-tags">
+
+                            <span>
+                                SPIN QUBITS
+                            </span>
+
+                            <span>
+                                SILICON
+                            </span>
+
+                            <span>
+                                MANUFACTURING
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="/latest-research/intel/"
+                            class="research-card-link"
+                        >
+                            Explore research
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 05 — NVIDIA -->
+
+                <article class="research-card">
+
+                    <div class="research-card-image">
+
+                        <div class="research-card-company">
+                            NVIDIA
+                        </div>
+
+                        <span class="research-card-date">
+                            RESEARCH
+                        </span>
+
+                        <div class="research-card-visual nvidia-card-visual">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="research-card-content">
+
+                        <div class="research-card-meta">
+                            NVIDIA
+                        </div>
+
+
+                        <h3>
+                            Accelerating
+                            Quantum-Classical
+                            Computing
+                        </h3>
+
+
+                        <p>
+                            Explore the intersection of quantum
+                            computing, GPU acceleration,
+                            simulation, and hybrid quantum-classical
+                            workflows.
+                        </p>
+
+
+                        <div class="research-tags">
+
+                            <span>
+                                SIMULATION
+                            </span>
+
+                            <span>
+                                HYBRID COMPUTING
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="/latest-research/nvidia/"
+                            class="research-card-link"
+                        >
+                            Explore research
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 06 — QUANTINUUM -->
+
+                <article class="research-card">
+
+                    <div class="research-card-image">
+
+                        <div class="research-card-company">
+                            QUANTINUUM
+                        </div>
+
+                        <span class="research-card-date">
+                            RESEARCH
+                        </span>
+
+                        <div class="research-card-visual quantinuum-card-visual">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="research-card-content">
+
+                        <div class="research-card-meta">
+                            QUANTINUUM
+                        </div>
+
+
+                        <h3>
+                            Trapped-Ion Systems
+                            and the Development
+                            of Logical Qubits
+                        </h3>
+
+
+                        <p>
+                            Explore trapped-ion quantum computing,
+                            high-fidelity operations, and research
+                            toward increasingly reliable logical
+                            quantum systems.
+                        </p>
+
+
+                        <div class="research-tags">
+
+                            <span>
+                                TRAPPED IONS
+                            </span>
+
+                            <span>
+                                LOGICAL QUBITS
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="/latest-research/quantinuum/"
+                            class="research-card-link"
+                        >
+                            Explore research
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================================
+             CLOSING STATEMENT
+             ========================================================= -->
+
+        <section class="research-closing">
+
+            <span class="closing-line"></span>
+
+            <p>
+                UNDERSTANDING TODAY.
+                A MORE CAPABLE TOMORROW.
+            </p>
+
+            <div class="closing-keywords">
+
+                <span>LEARN</span>
+                <span>EXPLORE</span>
+                <span>UNDERSTAND</span>
+
+            </div>
+
+        </section>
+
     </main>
+
+
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+
+    <footer>
+
+
+        <!-- CONNECT WITH US -->
+
+        <div class="footer-social">
+
+            <h3>
+                Connect with us
+            </h3>
+
+
+            <div class="footer-social-links">
+
+                <a
+                    href="https://www.youtube.com/@QCaaSNet"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    YouTube
+                </a>
+
+
+                <a
+                    href="https://x.com/qcaasnet"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    X / Twitter
+                </a>
+
+
+                <a
+                    href="https://www.linkedin.com/company/qcaasnet/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    LinkedIn
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- FOOTER MAIN -->
+
+        <div class="footer-main">
+
+
+            <div class="footer-brand-column">
+
+                <div class="footer-brand">
+
+                    <img
+                        class="brand-mark"
+                        src="/images/qcaas-icon.png"
+                        alt="QCAAS Net quantum logo"
+                    >
+
+                    <span>
+                        QCAAS<span class="brand-accent">
+                            NET
+                        </span>
+                    </span>
+
+                </div>
+
+
+                <p>
+                    Quantum Computing as a Service Network
+                </p>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h4>
+                    QCAASNET
+                </h4>
+
+                <a href="/#about">
+                    About QCAASNET
+                </a>
+
+                <a href="mailto:Hello@qcaasnet.com">
+                    Contact
+                </a>
+
+                <a href="/privacy/">
+                    Privacy
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Explore
+                </h4>
+
+                <a href="/fundamentals/">
+                    Fundamentals of Quantum Computing
+                </a>
+
+                <a href="/latest-research/">
+                    Latest Research
+                </a>
+
+                <a href="/be-quantum-ready/">
+                    Be Quantum Ready
+                </a>
+
+                <a href="/deep-learning/">
+                    Deep Learning
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- FOOTER BOTTOM -->
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 QCAAS Net
+            </span>
+
+
+            <div class="footer-legal">
+
+                <a href="/terms/">
+                    Terms
+                </a>
+
+                <a href="/privacy/">
+                    Privacy
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </footer>
+
+
+</div>
+
 </body>
+
 </html>
