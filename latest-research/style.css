@@ -73,7 +73,7 @@ body {
             transparent 1px
         );
 
-    background-size: 48px 48px;
+    background-size: 120px 120px;
 }
 
 body::before {
@@ -315,10 +315,26 @@ button {
 
 .research-hero {
     position: relative;
+    min-height: 410px;
 
-    min-height: 285px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
 
-    border-bottom: 1px solid var(--line-soft);
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(3, 10, 19, 0.98) 0%,
+            rgba(3, 10, 19, 0.92) 34%,
+            rgba(3, 10, 19, 0.62) 52%,
+            rgba(3, 10, 19, 0.18) 72%,
+            rgba(3, 10, 19, 0.05) 100%
+        ),
+        url("/images/qcaas-research-hero.png");
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 
     overflow: hidden;
 }
@@ -367,6 +383,8 @@ button {
 
 .research-hero-copy {
     max-width: 850px;
+     position: relative;
+     z-index: 2;
 }
 
 .eyebrow {
@@ -420,16 +438,11 @@ button {
    ========================================================= */
 
 .research-hero-visual {
-    position: relative;
-
-    width: 100%;
-    height: 205px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    overflow: hidden;
+    position: absolute;
+    inset: 0;
+    background: none;
+    border: none;
+    pointer-events: none;
 }
 
 .research-hero-visual {
@@ -528,13 +541,12 @@ button {
 
     gap: 8px;
 
-    overflow-x: auto;
+    overflow: visible;
 
     padding-bottom: 4px;
 
     scrollbar-width: none;
 }
-
 .company-selector::-webkit-scrollbar {
     display: none;
 }
@@ -610,12 +622,6 @@ button {
     display: none;
 }
 
-.company-selector details summary::after {
-    content: "⌄";
-
-    margin-left: 8px;
-}
-
 .company-selector details[open] summary {
     color: var(--accent);
     border-color: var(--accent);
@@ -673,7 +679,7 @@ button {
    ========================================================= */
 
 .featured-research {
-    padding: 72px 0 82px;
+    padding: 95px 0 105px;
 }
 
 .featured-header {
@@ -1595,4 +1601,1109 @@ button {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
     }
+}
+/* =========================================================
+   RESEARCH PAGE HEADER — MATCH HOMEPAGE
+   ========================================================= */
+
+@media (min-width: 721px) {
+
+    .site-header {
+        padding: 28px 0 16px;
+
+        border-bottom: none;
+
+        background: transparent;
+    }
+
+    .site-header .main-nav {
+        width: calc(100% - 48px);
+
+        min-height: 100px;
+
+        margin: 0 auto;
+
+        padding: 0 38px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 40px;
+
+        border: 1px solid var(--line-soft);
+
+        border-radius: 16px;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(8, 20, 35, .96),
+                rgba(6, 16, 29, .96)
+            );
+    }
+
+
+    /* -------------------------
+       BRAND
+       ------------------------- */
+
+    .site-header .brand {
+        display: inline-flex;
+        align-items: center;
+
+        gap: 14px;
+
+        flex-shrink: 0;
+
+        color: var(--text);
+
+        text-decoration: none;
+    }
+
+    .site-header .brand-logo {
+        width: 52px;
+        height: 52px;
+
+        object-fit: contain;
+
+        flex-shrink: 0;
+    }
+
+    .site-header .brand-copy {
+        display: flex;
+        flex-direction: column;
+
+        line-height: 1;
+    }
+
+    .site-header .brand-name {
+        color: var(--text);
+
+        font-family: inherit;
+
+        font-size: 1.05rem;
+        font-weight: 800;
+
+        letter-spacing: .02em;
+    }
+
+    .site-header .brand-name span {
+        color: var(--accent);
+    }
+
+    .site-header .brand-tagline {
+        margin-top: 7px;
+
+        color: var(--muted-2);
+
+        font-family: "DM Mono", monospace;
+
+        font-size: .58rem;
+
+        letter-spacing: .08em;
+
+        text-transform: none;
+    }
+
+
+    /* -------------------------
+       NAVIGATION
+       ------------------------- */
+
+    .site-header .desktop-nav {
+        display: flex;
+        align-items: center;
+
+        gap: 34px;
+    }
+
+    .site-header .desktop-nav a {
+        position: relative;
+
+        padding: 8px 0;
+
+        color: var(--muted);
+
+        font-family: inherit;
+
+        font-size: .88rem;
+
+        font-weight: 600;
+
+        letter-spacing: 0;
+
+        text-transform: none;
+
+        text-decoration: none;
+
+        white-space: nowrap;
+
+        transition: color .2s ease;
+    }
+
+    .site-header .desktop-nav a::after {
+        display: none;
+    }
+
+    .site-header .desktop-nav a:hover {
+        color: var(--text);
+    }
+
+
+    /* -------------------------
+       SEARCH BUTTON
+       ------------------------- */
+
+    .site-header .search-button {
+        width: 36px;
+        height: 36px;
+
+        margin-left: 4px;
+
+        border: 1px solid var(--line-soft);
+
+        background: transparent;
+
+        cursor: pointer;
+    }
+
+}
+/* Remove search box from Research header */
+.site-header .search-button {
+    display: none;
+}
+/* Match homepage brand tagline */
+.site-header .brand-tagline {
+    margin-top: 6px;
+
+    color: var(--text);
+
+    font-family: inherit;
+
+    font-size: .72rem;
+
+    font-weight: 400;
+
+    letter-spacing: 0;
+
+    text-transform: none;
+}
+/* =========================================================
+   EXPLORE RESEARCH
+   ========================================================= */
+
+.research-explorer {
+
+    width: min(
+        var(--max-width),
+        calc(100% - 48px)
+    );
+
+    margin: 0 auto;
+
+    padding: 26px 0 30px;
+
+    border-bottom: 1px solid var(--line-soft);
+}
+
+
+/* ---------------------------------------------------------
+   TOP LINE
+   --------------------------------------------------------- */
+
+.explorer-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 18px;
+}
+
+
+.explorer-title {
+
+    color: var(--accent);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: .72rem;
+
+    font-weight: 500;
+
+    letter-spacing: .28em;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+}
+
+
+.explorer-description {
+
+    color: var(--muted-2);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: .55rem;
+
+    font-weight: 500;
+
+    letter-spacing: .14em;
+
+    text-align: right;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+}
+
+
+/* ---------------------------------------------------------
+   COMPANY SELECTOR
+   --------------------------------------------------------- */
+
+.company-selector {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    width: 100%;
+}
+
+
+/* ---------------------------------------------------------
+   COMPANY PILL
+   --------------------------------------------------------- */
+
+.company-pill {
+
+    height: 40px;
+
+    padding: 0 17px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    flex: 1;
+
+    min-width: 0;
+
+    border: 1px solid rgba(35, 65, 92, .9);
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(8, 20, 34, .92),
+            rgba(5, 14, 25, .92)
+        );
+
+    color: var(--text);
+
+    font-family: inherit;
+
+    font-size: .72rem;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    transition:
+        border-color .2s ease,
+        background .2s ease,
+        transform .2s ease;
+}
+
+
+.company-pill:hover {
+    border-color: rgba(25, 199, 183, .7);
+    background:
+        linear-gradient(
+            180deg,
+            rgba(11, 28, 43, .98),
+            rgba(6, 17, 29, .98)
+        );
+    transform: none;
+}
+.company-pill {
+    overflow: visible;
+}
+
+
+/* ---------------------------------------------------------
+   LOGOS
+   --------------------------------------------------------- */
+
+.company-logo {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    line-height: 1;
+}
+
+
+.google-logo {
+
+    width: 20px;
+
+    color: #4285f4;
+
+    font-size: 1.2rem;
+
+    font-family: Arial, sans-serif;
+
+    font-weight: 700;
+}
+
+
+.ibm-logo {
+
+    color: #5ca8ff;
+
+    font-family: Arial, sans-serif;
+
+    font-size: .85rem;
+
+    font-weight: 800;
+
+    letter-spacing: -.04em;
+}
+
+
+.microsoft-logo {
+
+    width: 16px;
+
+    height: 16px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-rows: 1fr 1fr;
+
+    gap: 2px;
+}
+
+
+.microsoft-logo i {
+
+    display: block;
+
+    background: #e74c3c;
+}
+
+
+.microsoft-logo i:nth-child(2) {
+
+    background: #7fba00;
+}
+
+
+.microsoft-logo i:nth-child(3) {
+
+    background: #00a4ef;
+}
+
+
+.microsoft-logo i:nth-child(4) {
+
+    background: #ffb900;
+}
+
+
+.intel-logo {
+
+    color: #1689d5;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    letter-spacing: -.04em;
+}
+
+
+.nvidia-logo {
+
+    color: #8bc34a;
+
+    font-family: Arial, sans-serif;
+
+    font-size: .72rem;
+
+    font-weight: 800;
+}
+
+
+.quantinuum-logo {
+
+    width: 18px;
+
+    height: 18px;
+
+    border-radius: 50%;
+
+    border: 2px solid #d7e0e8;
+
+    color: #d7e0e8;
+
+    font-size: .62rem;
+
+    font-weight: 800;
+}
+
+
+.ionq-logo {
+
+    color: #e0e6ec;
+
+    font-size: 1rem;
+}
+
+
+.rigetti-logo {
+
+    color: #42c7c5;
+
+    font-size: 1rem;
+}
+
+
+/* ---------------------------------------------------------
+   MORE
+   --------------------------------------------------------- */
+
+.more-pill {
+
+    flex: 0 0 96px;
+
+    gap: 8px;
+}
+
+
+.more-arrow {
+
+    font-size: 1rem;
+
+    line-height: 1;
+
+    transform: translateY(-2px);
+}
+/* =========================================================
+   REAL COMPANY LOGOS
+   ========================================================= */
+
+.company-pill img {
+    width: auto;
+    height: 20px;
+
+    max-width: 90px;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* Individual sizing */
+
+.company-pill img[alt="Google"] {
+    height: 21px;
+    max-width: 68px;
+}
+
+.company-pill img[alt="IBM"] {
+    height: 20px;
+    max-width: 58px;
+}
+
+.company-pill img[alt="Microsoft"] {
+    height: 21px;
+    max-width: 95px;
+}
+
+.company-pill img[alt="Intel"] {
+    height: 20px;
+    max-width: 65px;
+}
+
+.company-pill img[alt="NVIDIA"] {
+    height: 20px;
+    max-width: 82px;
+}
+
+.company-pill img[alt="Quantinuum"] {
+    height: 21px;
+    max-width: 105px;
+}
+
+.company-pill img[alt="IonQ"] {
+    height: 22px;
+    max-width: 65px;
+}
+
+.company-pill img[alt="Rigetti"] {
+    height: 50px;
+    max-width: 200px;
+}
+/* =========================================================
+   RESEARCH HEADER — EXACT HOMEPAGE STYLE
+   ========================================================= */
+
+@media (min-width: 721px) {
+
+    /* OUTER HEADER AREA */
+
+    .site-header {
+        width: min(1560px, calc(100% - 48px));
+        margin: 0 auto;
+        padding: 24px 0 16px;
+
+        position: relative;
+        z-index: 100;
+
+        border-bottom: none;
+        background: transparent;
+
+        box-sizing: border-box;
+    }
+
+
+    /* HEADER PANEL */
+
+    .site-header .main-nav {
+        width: 100%;
+        min-height: 82px;
+
+        margin: 0;
+        padding: 0 18px 0 30px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 35px;
+
+        border: 1px solid var(--line);
+        border-radius: 12px;
+
+        background: rgba(7, 17, 30, .82);
+
+        backdrop-filter: blur(18px);
+
+        box-sizing: border-box;
+    }
+
+
+    /* BRAND */
+
+    .site-header .brand {
+        display: inline-flex;
+        align-items: center;
+
+        gap: 10px;
+
+        flex-shrink: 0;
+
+        color: inherit;
+        text-decoration: none;
+    }
+
+
+    .site-header .brand-logo {
+        width: 42px;
+        height: 42px;
+
+        display: block;
+        object-fit: contain;
+
+        flex: 0 0 auto;
+    }
+
+
+    .site-header .brand-copy {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        line-height: 1;
+    }
+
+
+    .site-header .brand-name {
+        color: #f2f5f8;
+
+        font-family: Inter, system-ui, sans-serif;
+
+        font-size: 18px;
+        font-weight: 700;
+
+        line-height: 1.05;
+        letter-spacing: -0.3px;
+
+        text-transform: none;
+    }
+
+
+    .site-header .brand-name span {
+        color: #10c8c8;
+    }
+
+
+    /* FULL FORM */
+
+    .site-header .brand-tagline {
+        margin-top: 3px;
+
+        color: #d6dce3;
+
+        font-family: Inter, system-ui, sans-serif;
+
+        font-size: 10px;
+        font-weight: 400;
+
+        line-height: 1.2;
+        letter-spacing: 0.05px;
+
+        text-transform: none;
+    }
+
+
+    /* NAVIGATION */
+
+    .site-header .desktop-nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        gap: 38px;
+
+        flex: 1;
+    }
+
+
+    .site-header .desktop-nav a {
+        position: relative;
+
+        padding: 0;
+
+        color: #9aabc0;
+
+        font-family: Inter, system-ui, sans-serif;
+
+        font-size: 13px;
+        font-weight: 600;
+
+        line-height: 1.5;
+
+        letter-spacing: 0;
+        text-transform: none;
+
+        white-space: nowrap;
+
+        text-decoration: none;
+
+        transition: color .2s ease;
+    }
+
+
+    .site-header .desktop-nav a::after {
+        display: none;
+    }
+
+
+    .site-header .desktop-nav a:hover {
+        color: #f4f8fc;
+    }
+
+
+    /* SEARCH — NOT USED */
+
+    .site-header .search-button {
+        display: none;
+    }
+
+}
+/* =========================================================
+   MORE COMPANY DROPDOWN
+   ========================================================= */
+
+.more-company {
+    position: relative;
+    flex: 0 0 96px;
+}
+
+.more-company summary {
+    cursor: pointer;
+}
+
+.more-company summary::-webkit-details-marker {
+    display: none;
+}
+
+.more-company[open] .more-pill {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+.more-company .more-menu {
+    min-width: 210px;
+}
+
+.more-company .more-menu a {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .02em;
+}
+/* =========================================================
+   MORE DROPDOWN — FIX
+   ========================================================= */
+
+.more-company {
+    position: relative;
+    flex: 0 0 96px;
+}
+
+.more-company summary {
+    width: 96px;
+    height: 40px;
+    min-height: 40px;
+    padding: 0 17px;
+    box-sizing: border-box;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    cursor: pointer;
+    list-style: none;
+}
+
+.more-company summary::-webkit-details-marker {
+    display: none;
+}
+
+.more-company .more-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+
+    width: 210px;
+    min-width: 210px;
+
+    padding: 8px;
+
+    box-sizing: border-box;
+
+    z-index: 9999;
+}
+
+.more-company .more-menu a {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 10px 12px;
+
+    color: var(--muted);
+    text-decoration: none;
+
+    font-family: "DM Mono", monospace;
+    font-size: .65rem;
+    font-weight: 500;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+.more-company .more-menu a:hover {
+    color: var(--text);
+    background: var(--accent-soft);
+}
+/* =========================================================
+   RESEARCH FOOTER — MATCH HOMEPAGE EXACTLY
+   ========================================================= */
+
+footer {
+    margin-top: 30px;
+    border-top: 1px solid var(--line);
+    color: #61738a;
+    font-size: .85rem;
+}
+
+
+/* =========================================================
+   SOCIAL
+   ========================================================= */
+
+.footer-social {
+    padding: 38px 0 40px;
+}
+
+.footer-social h3 {
+    margin: 0 0 22px;
+    color: #d4dde8;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.footer-social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-social-links a {
+    width: fit-content;
+    color: #8da0b6;
+    font-weight: 500;
+    transition: color .2s ease;
+}
+
+.footer-social-links a:hover {
+    color: var(--accent);
+}
+
+
+/* =========================================================
+   FOOTER MAIN
+   ========================================================= */
+
+.footer-main {
+    padding: 40px 0 45px;
+    border-top: 1px solid var(--line);
+
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1.4fr;
+
+    gap: 70px;
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.footer-brand-column {
+    max-width: 320px;
+}
+
+.footer-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #d4dde8;
+    font-weight: 800;
+    letter-spacing: .12em;
+}
+
+.footer-brand .brand-mark {
+    width: 42px;
+    height: 42px;
+
+    object-fit: contain;
+    display: block;
+}
+
+.footer-brand-column p {
+    margin: 16px 0 0;
+
+    color: #61738a;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   COLUMNS
+   ========================================================= */
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 13px;
+}
+
+.footer-column h4 {
+    margin: 0 0 8px;
+
+    color: #d4dde8;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.footer-column a {
+    color: #71859c;
+    transition: color .2s ease;
+}
+
+.footer-column a:hover {
+    color: var(--accent);
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+   ========================================================= */
+
+.footer-bottom {
+    padding: 25px 0 35px;
+
+    border-top: 1px solid var(--line);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 25px;
+}
+
+.footer-bottom > span {
+    color: #71859c;
+}
+
+.footer-legal {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-legal a {
+    color: #71859c;
+    transition: color .2s ease;
+}
+
+.footer-legal a:hover {
+    color: var(--accent);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 720px) {
+
+    .footer-social {
+        padding: 32px 0 35px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+}
+/* =========================================================
+   RESEARCH FOOTER — MATCH HOME PAGE TYPOGRAPHY
+   ========================================================= */
+
+footer {
+    font-family: Inter, system-ui, sans-serif !important;
+    font-size: .85rem !important;
+    line-height: 1.6;
+}
+
+
+/* CONNECT WITH US */
+
+.footer-social h3 {
+    font-family: Inter, system-ui, sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    letter-spacing: normal !important;
+    text-transform: none !important;
+}
+
+.footer-social-links a {
+    font-family: Inter, system-ui, sans-serif !important;
+    font-size: .85rem !important;
+    font-weight: 500 !important;
+    letter-spacing: normal !important;
+    text-transform: none !important;
+}
+
+
+/* BRAND */
+
+.footer-brand {
+    font-family: Inter, system-ui, sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 800 !important;
+    letter-spacing: .12em !important;
+}
+
+.footer-brand-column p {
+    font-family: Inter, system-ui, sans-serif !important;
+    font-size: .85rem !important;
+    font-weight: 400 !important;
+    letter-spacing: normal !important;
+}
+
+
+/* COLUMNS */
+
+.footer-column h4 {
+    font-family: Inter, system-ui, sans-serif !important;
+    font-size: .9rem !important;
+    font-weight: 600 !important;
+    letter-spacing: normal !important;
+    text-transform: none !important;
+}
+
+.footer-column a {
+    font-family: Inter, system-ui, sans-serif !important;
+    font-size: .85rem !important;
+    font-weight: 400 !important;
+    letter-spacing: normal !important;
+}
+
+
+/* BOTTOM */
+
+.footer-bottom {
+    font-family: Inter, system-ui, sans-serif !important;
+    font-size: .85rem !important;
+}
+
+.footer-bottom > span,
+.footer-legal a {
+    font-family: Inter, system-ui, sans-serif !important;
+    font-size: .85rem !important;
+    font-weight: 400 !important;
+    letter-spacing: normal !important;
 }
