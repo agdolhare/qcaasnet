@@ -444,6 +444,14 @@ button {
     border: none;
     pointer-events: none;
 }
+.research-hero {
+    width: 100vw;
+    margin-left: calc((100% - 100vw) / 2);
+
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
+}
 
 .research-hero-visual {
     background-image: url("/images/qcaas-research-hero.png");
@@ -2181,8 +2189,8 @@ button {
     /* OUTER HEADER AREA */
 
     .site-header {
-        width: min(1560px, calc(100% - 48px));
-        margin: 0 auto;
+        width: 100%;
+        margin: 0;
         padding: 24px 0 16px;
 
         position: relative;
@@ -2317,7 +2325,7 @@ button {
 
         font-family: Inter, system-ui, sans-serif;
 
-        font-size: 13px;
+        font-size: 14px;
         font-weight: 600;
 
         line-height: 1.5;
@@ -2706,4 +2714,70 @@ footer {
     font-size: .85rem !important;
     font-weight: 400 !important;
     letter-spacing: normal !important;
+}
+/* =========================================================
+   COMPANY TABS — PREMIUM INTERACTION
+   ========================================================= */
+
+.company-pill,
+.company-selector button,
+.company-selector summary {
+    position: relative;
+    transition:
+        transform .22s ease,
+        color .22s ease,
+        border-color .22s ease,
+        background .22s ease,
+        box-shadow .22s ease;
+}
+
+/* Hover */
+.company-pill:hover,
+.company-selector button:hover,
+.company-selector summary:hover {
+    transform: translateY(-2px);
+
+    color: var(--text);
+    border-color: var(--accent);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(25,199,183,.10),
+            rgba(8,20,33,.88)
+        );
+
+    box-shadow:
+        0 0 0 1px rgba(25,199,183,.08),
+        0 8px 24px rgba(25,199,183,.08);
+}
+
+/* Logo movement */
+.company-pill img {
+    transition:
+        transform .22s ease,
+        filter .22s ease;
+}
+
+.company-pill:hover img {
+    transform: scale(1.08);
+}
+
+/* Selected / active tab */
+.company-pill.active,
+.company-selector button.active,
+.company-selector summary.active {
+    color: var(--text);
+    border-color: var(--accent);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(25,199,183,.14),
+            rgba(8,20,33,.92)
+        );
+
+    box-shadow:
+        0 0 0 1px rgba(25,199,183,.10),
+        0 0 22px rgba(25,199,183,.08);
 }
