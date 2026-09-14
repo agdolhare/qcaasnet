@@ -687,7 +687,7 @@ button {
    ========================================================= */
 
 .featured-research {
-    padding: 95px 0 105px;
+    padding: 45px 0 105px;
 }
 
 .featured-header {
@@ -824,10 +824,13 @@ button {
    ========================================================= */
 
 .research-image {
+    position: relative;
+
     width: 100%;
     height: 205px;
 
-    object-fit: cover;
+    display: block;
+    overflow: hidden;
 
     border-bottom: 1px solid var(--line);
 
@@ -837,13 +840,23 @@ button {
             #091624,
             #050b16
         );
+}
+
+.research-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center top;
 
     transition:
         transform .45s ease,
         opacity .3s ease;
 }
 
-.research-card:hover .research-image {
+.research-card:hover .research-image img {
     transform: scale(1.025);
 }
 
@@ -859,6 +872,11 @@ button {
     flex-direction: column;
 
     padding: 22px 23px 23px;
+}
+.research-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .research-date {
@@ -2780,4 +2798,22 @@ footer {
     box-shadow:
         0 0 0 1px rgba(25,199,183,.10),
         0 0 22px rgba(25,199,183,.08);
+}
+/* =========================================================
+   FIX — RESEARCH CARD CLICK AREA
+   ========================================================= */
+
+.research-card > a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 205px;
+    max-width: 100%;
+}
+
+.research-card > a img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
 }

@@ -388,9 +388,9 @@ body {
 .card-visual img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
     display: block;
-    transition: .45s
+    object-fit: cover;
+    object-position: center 15%;
 }
 
 .research-card:hover .card-visual img {
@@ -913,4 +913,249 @@ footer {
         align-items: flex-start;
         flex-direction: column
     }
+}
+/* =========================================================
+   QCAASNET MASTER BACKGROUND
+   MATCH HOMEPAGE
+   ========================================================= */
+
+body {
+    background:
+        radial-gradient(
+            circle at 72% 20%,
+            rgba(25, 199, 183, .1),
+            transparent 26rem
+        ),
+        radial-gradient(
+            circle at 15% 70%,
+            rgba(16, 79, 128, .12),
+            transparent 30rem
+        ),
+        var(--bg);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+
+    opacity: .38;
+
+    background-image:
+        linear-gradient(
+            rgba(64, 105, 139, .16) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(64, 105, 139, .16) 1px,
+            transparent 1px
+        );
+
+    background-size: 120px 120px;
+}
+/* =========================================================
+   QCAASNET FOOTER
+   EXACT HOMEPAGE FOOTER SYSTEM
+   ========================================================= */
+
+footer {
+    margin-top: 30px;
+    border-top: 1px solid var(--line);
+    color: #61738a;
+    font-size: .85rem;
+}
+
+
+/* =========================================================
+   SOCIAL
+   ========================================================= */
+
+.footer-social {
+    padding: 38px 0 40px;
+}
+
+.footer-social h3 {
+    margin: 0 0 22px;
+    color: #d4dde8;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.footer-social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-social-links a {
+    width: fit-content;
+    color: #8da0b6;
+    font-weight: 500;
+    transition: color .2s ease;
+}
+
+.footer-social-links a:hover {
+    color: var(--accent);
+}
+
+
+/* =========================================================
+   FOOTER MAIN
+   ========================================================= */
+
+.footer-main {
+    padding: 40px 0 45px;
+    border-top: 1px solid var(--line);
+
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1.4fr;
+
+    gap: 70px;
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.footer-brand-column {
+    max-width: 320px;
+}
+
+.footer-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #d4dde8;
+    font-weight: 800;
+    letter-spacing: .12em;
+}
+
+.footer-brand .brand-mark {
+    width: 42px;
+    height: 42px;
+
+    object-fit: contain;
+    display: block;
+}
+
+.footer-brand-column p {
+    margin: 16px 0 0;
+
+    color: #61738a;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   COLUMNS
+   ========================================================= */
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 13px;
+}
+
+.footer-column h4 {
+    margin: 0 0 8px;
+
+    color: #d4dde8;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.footer-column a {
+    color: #71859c;
+    transition: color .2s ease;
+}
+
+.footer-column a:hover {
+    color: var(--accent);
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+   ========================================================= */
+
+.footer-bottom {
+    padding: 25px 0 35px;
+
+    border-top: 1px solid var(--line);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 25px;
+}
+
+.footer-bottom > span {
+    color: #71859c;
+}
+
+.footer-legal {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-legal a {
+    color: #71859c;
+    transition: color .2s ease;
+}
+
+.footer-legal a:hover {
+    color: var(--accent);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 720px) {
+
+    .footer-social {
+        padding: 32px 0 35px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+}
+/* =========================================================
+   FOOTER WORDMARK — FORCE HOMEPAGE COLORS
+   ========================================================= */
+
+footer .footer-brand > span {
+    color: #d4dde8 !important;
+    font-family: Inter, system-ui, sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 800 !important;
+    letter-spacing: .12em !important;
+}
+
+footer .footer-brand > span .brand-accent {
+    color: #10c8c8 !important;
+}
+
+footer .footer-brand .brand-mark {
+    width: 42px !important;
+    height: 42px !important;
+    object-fit: contain !important;
+    display: block !important;
 }
