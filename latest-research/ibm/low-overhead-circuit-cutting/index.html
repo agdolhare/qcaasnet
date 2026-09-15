@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Low overhead circuit cutting with operator backpropagation — QCAASNET research explanation."
+    >
+
+    <title>
+        Low-Overhead Circuit Cutting with Operator Backpropagation | QCAASNET
+    </title>
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="/images/qcaas-icon.png?v=2"
+    >
+
+    <!-- IBM company-page shell: shared with the Google research pages. -->
+    <link
+        rel="stylesheet"
+        href="../style.css"
+    >
+
+    <!-- Shared paper-page typography, spacing, and responsive layout. -->
+    <link
+        rel="stylesheet"
+        href="../../google/quantum-algorithm-linear-matrix-equations/style.css"
+    >
+
+    <!-- Article-specific stylesheet -->
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+<div class="site-shell">
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="site-header">
+        <nav class="main-nav">
+
+            <a class="brand" href="/">
+                <img
+                    class="brand-logo"
+                    src="/images/qcaas-icon.png"
+                    alt="QCAASNET"
+                >
+
+                <span class="brand-copy">
+                    <span class="brand-name">
+                        QCAAS<span>NET</span>
+                    </span>
+
+                    <span class="brand-tagline">
+                        Quantum Computing as a Service Network
+                    </span>
+                </span>
+            </a>
+
+            <div class="desktop-nav">
+                <a href="/">Home</a>
+                <a href="/fundamentals/">Learn</a>
+                <a href="/latest-research/" class="active">Research</a>
+                <a href="/be-quantum-ready/">Be Quantum Ready</a>
+                <a href="/#about">About</a>
+            </div>
+
+            <details class="mobile-navigation">
+                <summary>MENU</summary>
+
+                <div class="mobile-menu">
+                    <a href="/">Home</a>
+                    <a href="/fundamentals/">Learn</a>
+                    <a href="/latest-research/">Research</a>
+                    <a href="/be-quantum-ready/">Be Quantum Ready</a>
+                    <a href="/#about">About</a>
+                </div>
+            </details>
+
+        </nav>
+    </header>
+
+
+    <main class="paper-page">
+
+        <!-- =====================================================
+             HERO
+             ===================================================== -->
+
+        <!-- BREADCRUMBS -->
+
+<div class="paper-breadcrumbs">
+
+    <a href="/">
+        Home
+    </a>
+
+    <span>›</span>
+
+    <a href="/latest-research/">
+        Latest Research
+    </a>
+
+    <span>›</span>
+
+    <a href="/latest-research/ibm/">
+        IBM
+    </a>
+
+    <span>›</span>
+
+    <span>
+        Low Overhead Circuit Cutting
+    </span>
+
+</div>
+
+
+<!-- HERO -->
+
+<section class="paper-hero">
+
+    <div class="paper-hero-copy">
+
+        <p class="eyebrow">
+            IBM QUANTUM
+        </p>
+
+        <h1>
+            Lower Overhead.<br>
+            <span>Deeper Quantum Circuits.</span>
+        </h1>
+
+        <p class="paper-lead">
+            How operator backpropagation can be combined with
+            circuit cutting to reduce the number of quantum
+            circuit executions — without simply trading one
+            source of overhead for another.
+        </p>
+
+        <div class="paper-meta">
+
+            <span>
+                JUL 2026
+            </span>
+
+            <span>
+                IBM QUANTUM
+            </span>
+
+            <span>
+                QUANTUM INFORMATION PROCESSING
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="paper-hero-image">
+
+        <img
+            src="/images/research/ibm-circuit-cutting.png"
+            alt="IBM Quantum research on circuit cutting and operator backpropagation"
+        >
+
+    </div>
+
+</section>
+        <!-- =====================================================
+             THE PROBLEM
+             ===================================================== -->
+
+        <section class="paper-section">
+
+            <p class="section-label">
+                THE PROBLEM
+            </p>
+
+            <h2>
+                Circuit cutting makes large circuits smaller.
+                The price is execution overhead.
+            </h2>
+
+            <p>
+                Near-term quantum computers are limited by noise.
+                One way to reduce the impact of that noise is
+                <strong>circuit cutting</strong>: divide a large
+                quantum circuit into smaller subcircuits that can be
+                executed independently.
+            </p>
+
+            <p>
+                The smaller pieces can fit on smaller hardware and can
+                also contain fewer gates, potentially reducing the noise
+                accumulated during execution. The original expectation
+                value is then reconstructed classically from the
+                subcircuits.
+            </p>
+
+            <p>
+                The problem is that the number of required executions
+                grows exponentially with the number of cuts.
+            </p>
+
+            <div class="metric-strip">
+
+                <div>
+                    <span>GATE CUTS</span>
+                    <strong>9<sup>k</sup></strong>
+                    <small>for k gate cuts</small>
+                </div>
+
+                <div>
+                    <span>WIRE CUTS</span>
+                    <strong>16<sup>k</sup></strong>
+                    <small>for k wire cuts</small>
+                </div>
+
+                <div>
+                    <span>CORE TRADE-OFF</span>
+                    <strong>↓ noise</strong>
+                    <small>but ↑ executions</small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             TWO TECHNIQUES
+             ===================================================== -->
+
+        <section class="paper-section">
+
+            <p class="section-label">
+                TWO TECHNIQUES
+            </p>
+
+            <h2>
+                Circuit cutting and OBP attack different parts of the problem.
+            </h2>
+
+            <div class="concept-grid">
+
+                <article>
+                    <span class="concept-number">01</span>
+
+                    <h3>
+                        Circuit cutting
+                    </h3>
+
+                    <p>
+                        Break a large circuit into smaller independent
+                        subcircuits. This can make execution possible on
+                        smaller hardware and reduce the noise experienced
+                        by each subcircuit.
+                    </p>
+
+                    <div class="card-formula">
+                        MORE CUTS → MORE EXECUTIONS
+                    </div>
+                </article>
+
+
+                <article>
+                    <span class="concept-number">02</span>
+
+                    <h3>
+                        Operator backpropagation
+                    </h3>
+
+                    <p>
+                        Move part of the observable backward through
+                        the circuit classically. The hardware then
+                        executes a shallower circuit while using an
+                        updated observable.
+                    </p>
+
+                    <div class="card-formula">
+                        LOWER DEPTH → FEWER CUTS
+                    </div>
+                </article>
+
+
+                <article>
+                    <span class="concept-number">03</span>
+
+                    <h3>
+                        The hidden cost
+                    </h3>
+
+                    <p>
+                        Backpropagating through non-Clifford gates can
+                        create additional non-commuting observable terms.
+                        Those terms require additional circuit executions.
+                    </p>
+
+                    <div class="card-formula">
+                        LOWER DEPTH ↔ MORE TERMS
+                    </div>
+                </article>
+
+            </div>
+
+            <p>
+                The research question is therefore not simply whether
+                OBP helps. It is whether there is a useful point where
+                the reduction in circuit-cutting overhead outweighs the
+                extra executions created by backpropagation.
+            </p>
+
+        </section>
+
+
+        <!-- =====================================================
+             OPERATOR BACKPROPAGATION
+             ===================================================== -->
+
+        <section class="paper-section">
+
+            <p class="section-label">
+                OPERATOR BACKPROPAGATION
+            </p>
+
+            <h2>
+                Move the observable instead of executing the deepest part of the circuit.
+            </h2>
+
+            <p>
+                Let the circuit unitary be logically divided as
+                <strong>U = U<sub>C</sub>U<sub>Q</sub></strong>.
+                Instead of executing the complete circuit directly,
+                operator backpropagation classically propagates the
+                observable through U<sub>C</sub>.
+            </p>
+
+            <div class="equation-box">
+                <span>
+                    ⟨ψ|O|ψ⟩
+                    =
+                    ⟨ψ<sub>init</sub>|U<sub>Q</sub><sup>†</sup>
+                    O<sub>new</sub>
+                    U<sub>Q</sub>|ψ<sub>init</sub>⟩
+                </span>
+            </div>
+
+            <p>
+                The updated observable is
+                <strong>
+                    O<sub>new</sub> =
+                    U<sub>C</sub><sup>†</sup> O U<sub>C</sub>
+                </strong>.
+                The hardware therefore sees the shallower U<sub>Q</sub>
+                circuit.
+            </p>
+
+            <div class="concept-grid">
+
+                <article>
+                    <span class="concept-number">01</span>
+                    <h3>Clifford gates</h3>
+                    <p>
+                        Clifford gates map Pauli operators to Pauli
+                        operators, so complete backpropagation through
+                        Clifford portions does not create the same
+                        explosion of non-commuting groups.
+                    </p>
+                </article>
+
+                <article>
+                    <span class="concept-number">02</span>
+                    <h3>Non-Clifford gates</h3>
+                    <p>
+                        A non-Clifford gate can transform one observable
+                        into a combination of terms. If those terms do
+                        not commute, separate quantum executions are
+                        required.
+                    </p>
+                </article>
+
+                <article>
+                    <span class="concept-number">03</span>
+                    <h3>max_qwc_groups</h3>
+                    <p>
+                        OBP therefore exposes a parameter that limits
+                        how many qubit-wise commuting groups are allowed
+                        during backpropagation.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             THE COMBINED APPROACH
+             ===================================================== -->
+
+        <section class="paper-section paper-highlight">
+
+            <div class="paper-highlight-inner">
+
+                <p class="section-label">
+                    THE COMBINED APPROACH
+                </p>
+
+                <h2>
+                    Backpropagate first. Cut second.
+                </h2>
+
+                <p>
+                    The central strategy is simple: reduce the depth of
+                    the circuit before asking the cutting algorithm to
+                    partition it.
+                </p>
+
+                <div class="process-flow">
+
+                    <div class="process-step">
+                        <span>01</span>
+                        <strong>ORIGINAL</strong>
+                        <em>Deep circuit</em>
+                    </div>
+
+                    <div class="process-line"></div>
+
+                    <div class="process-step highlighted">
+                        <span>02</span>
+                        <strong>OBP</strong>
+                        <em>Shallower circuit</em>
+                    </div>
+
+                    <div class="process-line"></div>
+
+                    <div class="process-step">
+                        <span>03</span>
+                        <strong>CUT</strong>
+                        <em>Fewer partitions</em>
+                    </div>
+
+                    <div class="process-line"></div>
+
+                    <div class="process-step highlighted">
+                        <span>04</span>
+                        <strong>EXECUTE</strong>
+                        <em>Lower total overhead</em>
+                    </div>
+
+                </div>
+
+                <p>
+                    The paper gives a concrete three-qubit example:
+                    vanilla cutting requires three cuts — two gate cuts
+                    and one wire cut — corresponding to 1,296 executions.
+                    After OBP, only two cuts are required, but the updated
+                    observable needs two executions. The combined method
+                    therefore requires 288 executions, about a
+                    <strong>4× reduction</strong>.
+                </p>
+
+                <div class="comparison-box">
+
+                    <div class="comparison-row header-row">
+                        <span></span>
+                        <span>VANILLA CUTTING</span>
+                        <span>CUT + OBP</span>
+                    </div>
+
+                    <div class="comparison-row">
+                        <strong>Number of cuts</strong>
+                        <span>3</span>
+                        <span class="accent-value">2</span>
+                    </div>
+
+                    <div class="comparison-row">
+                        <strong>Circuit executions</strong>
+                        <span>1296</span>
+                        <span class="accent-value">288</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             EXPERIMENTAL RESULTS
+             ===================================================== -->
+
+        <section class="paper-section">
+
+            <p class="section-label">
+                EXPERIMENTAL RESULTS
+            </p>
+
+            <h2>
+                The paper tests the trade-off on real circuits.
+            </h2>
+
+            <p>
+                The authors evaluated two primary circuits in detail:
+                a 6-qubit EfficientSU2 circuit for VQE and a 19-qubit
+                Hamiltonian simulation circuit. They also evaluated
+                additional circuits from the Benchpress database,
+                focusing there on execution-count reduction rather than
+                hardware quality measurements.
+            </p>
+
+            <div class="results-grid">
+
+                <article class="result-card">
+
+                    <div class="result-top">
+                        <span>VQE</span>
+                        <strong>3×</strong>
+                    </div>
+
+                    <h3>
+                        6-qubit EfficientSU2
+                    </h3>
+
+                    <p>
+                        The vanilla cutting approach required 432 circuit
+                        executions. Cutting equipped with OBP required
+                        144 executions.
+                    </p>
+
+                    <div class="execution-bar">
+                        <div>
+                            <span>VANILLA</span>
+                            <strong>432</strong>
+                        </div>
+
+                        <div class="bar-track">
+                            <i style="width:100%"></i>
+                        </div>
+                    </div>
+
+                    <div class="execution-bar">
+                        <div>
+                            <span>OBP + CUT</span>
+                            <strong>144</strong>
+                        </div>
+
+                        <div class="bar-track">
+                            <i style="width:33.333%"></i>
+                        </div>
+                    </div>
+
+                    <small>
+                        Similar — slightly improved — quality of outcome
+                        compared with vanilla cutting.
+                    </small>
+
+                </article>
+
+
+                <article class="result-card">
+
+                    <div class="result-top">
+                        <span>HAMILTONIAN SIMULATION</span>
+                        <strong>~10×</strong>
+                    </div>
+
+                    <h3>
+                        19-qubit spin system
+                    </h3>
+
+                    <p>
+                        Vanilla cutting required 1,536 executions.
+                        Cutting with OBP required 156 executions while
+                        producing a somewhat improved quality of outcome.
+                    </p>
+
+                    <div class="execution-bar">
+                        <div>
+                            <span>VANILLA</span>
+                            <strong>1536</strong>
+                        </div>
+
+                        <div class="bar-track">
+                            <i style="width:100%"></i>
+                        </div>
+                    </div>
+
+                    <div class="execution-bar">
+                        <div>
+                            <span>OBP + CUT</span>
+                            <strong>156</strong>
+                        </div>
+
+                        <div class="bar-track">
+                            <i style="width:10.16%"></i>
+                        </div>
+                    </div>
+
+                    <small>
+                        The experiment used a 19-qubit time-evolution
+                        circuit for a Heisenberg XYZ spin system.
+                    </small>
+
+                </article>
+
+            </div>
+
+            <div class="research-note">
+                <strong>Important experimental detail</strong>
+                <p>
+                    The paper states that these experiments were not
+                    equipped with additional error mitigation or
+                    suppression techniques. The observed improvement is
+                    therefore attributed to circuit cutting and/or OBP.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             BENCHPRESS
+             ===================================================== -->
+
+        <section class="paper-section">
+
+            <p class="section-label">
+                BEYOND TWO CIRCUITS
+            </p>
+
+            <h2>
+                The same idea appears across a broader benchmark set.
+            </h2>
+
+            <p>
+                The authors applied OBP followed by circuit cutting to
+                multiple circuits from the Benchpress database. They
+                removed circuits with mid-circuit measurements, circuits
+                requiring zero cuts after backpropagation, and circuits
+                that could be completely backpropagated under the tested
+                settings.
+            </p>
+
+            <div class="benchmark-table-wrap">
+
+                <table class="benchmark-table">
+
+                    <thead>
+                        <tr>
+                            <th>Circuit</th>
+                            <th>Qubits</th>
+                            <th>Vanilla</th>
+                            <th>Cut + OBP</th>
+                            <th>Reduction</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Fredkin</td>
+                            <td>3</td>
+                            <td>2592</td>
+                            <td>1152</td>
+                            <td>2.25×</td>
+                        </tr>
+
+                        <tr>
+                            <td>QAOA</td>
+                            <td>3</td>
+                            <td>576</td>
+                            <td>192</td>
+                            <td>3×</td>
+                        </tr>
+
+                        <tr>
+                            <td>Basis change</td>
+                            <td>3</td>
+                            <td>2592</td>
+                            <td>24</td>
+                            <td>108×</td>
+                        </tr>
+
+                        <tr>
+                            <td>QFT</td>
+                            <td>4</td>
+                            <td>2304</td>
+                            <td>144</td>
+                            <td>16×</td>
+                        </tr>
+
+                        <tr>
+                            <td>State-encoded ansatz</td>
+                            <td>11</td>
+                            <td>12288</td>
+                            <td>576</td>
+                            <td>21.3×</td>
+                        </tr>
+
+                        <tr class="warning-row">
+                            <td>KNN</td>
+                            <td>67</td>
+                            <td>192</td>
+                            <td>320</td>
+                            <td>↑ overhead</td>
+                        </tr>
+
+                        <tr>
+                            <td>Big adder</td>
+                            <td>118</td>
+                            <td>108</td>
+                            <td>84</td>
+                            <td>1.29×</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <p>
+                The KNN result is particularly important. It shows why
+                simply applying OBP is not enough: an unsuitable
+                backpropagation parameter can actually make the method
+                worse.
+            </p>
+
+        </section>
+
+
+        <!-- =====================================================
+             SIMULATED ANNEALING
+             ===================================================== -->
+
+        <section class="paper-section paper-highlight">
+
+            <div class="paper-highlight-inner">
+
+                <p class="section-label">
+                    OPTIMIZING THE TRADE-OFF
+                </p>
+
+                <h2>
+                    The difficult part is deciding how far to backpropagate.
+                </h2>
+
+                <p>
+                    The paper finds no simple relationship between
+                    <strong>max_qwc_groups</strong> and the final number
+                    of circuit executions. The best value depends on the
+                    circuit and the observable.
+                </p>
+
+                <div class="annealing-flow">
+
+                    <div class="annealing-node">
+                        <span>01</span>
+                        <strong>Choose w</strong>
+                        <em>max_qwc_groups</em>
+                    </div>
+
+                    <div class="annealing-arrow">→</div>
+
+                    <div class="annealing-node">
+                        <span>02</span>
+                        <strong>Backpropagate</strong>
+                        <em>Update observable</em>
+                    </div>
+
+                    <div class="annealing-arrow">→</div>
+
+                    <div class="annealing-node">
+                        <span>03</span>
+                        <strong>Cut</strong>
+                        <em>Count executions</em>
+                    </div>
+
+                    <div class="annealing-arrow">→</div>
+
+                    <div class="annealing-node active">
+                        <span>04</span>
+                        <strong>Search</strong>
+                        <em>Keep promising values</em>
+                    </div>
+
+                </div>
+
+                <p>
+                    Rather than brute-force every possible value, the
+                    authors use <strong>simulated annealing</strong>.
+                    Their experiment used up to 20 iterations and ran
+                    five instances in parallel through Qiskit Serverless.
+                </p>
+
+                <div class="metric-strip two">
+
+                    <div>
+                        <span>VQE</span>
+                        <strong>w = 4</strong>
+                        <small>selected by the search</small>
+                    </div>
+
+                    <div>
+                        <span>HAMILTONIAN</span>
+                        <strong>w = 18</strong>
+                        <small>selected by the search</small>
+                    </div>
+
+                </div>
+
+                <p>
+                    For the 67-qubit KNN circuit, simulated annealing found
+                    <strong>176 executions at max_qwc_groups = 10</strong>,
+                    improving on the 192 executions required by vanilla
+                    cutting — unlike the tested small parameter range,
+                    which increased the overhead.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             OBSERVABLE WEIGHT
+             ===================================================== -->
+
+        <section class="paper-section">
+
+            <p class="section-label">
+                ANOTHER DIMENSION
+            </p>
+
+            <h2>
+                The improvement also depends on what you measure.
+            </h2>
+
+            <p>
+                The authors tested the 67-qubit KNN circuit with
+                observables of different weights. The improvement from
+                OBP plus simulated annealing was retained, and higher
+                observable weights produced even fewer circuit
+                executions in the reported experiment.
+            </p>
+
+            <div class="observable-grid">
+
+                <article>
+                    <span>WEIGHT 1</span>
+                    <strong>192 → 176</strong>
+                    <small>10 QWC groups</small>
+                </article>
+
+                <article>
+                    <span>WEIGHT 2</span>
+                    <strong>192 → 72</strong>
+                    <small>6 QWC groups</small>
+                </article>
+
+                <article>
+                    <span>WEIGHT 3</span>
+                    <strong>192 → 72</strong>
+                    <small>6 QWC groups</small>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             TRUNCATION + MPF
+             ===================================================== -->
+
+        <section class="paper-section">
+
+            <p class="section-label">
+                BEYOND THE MAIN METHOD
+            </p>
+
+            <h2>
+                The paper also shows where the optimization becomes more subtle.
+            </h2>
+
+            <div class="concept-grid">
+
+                <article>
+                    <span class="concept-number">01</span>
+
+                    <h3>
+                        Truncation
+                    </h3>
+
+                    <p>
+                        Dropping small observable terms can allow deeper
+                        backpropagation and shallower circuits, but it
+                        introduces approximation error. Once functional
+                        equivalence is lost, minimizing circuit executions
+                        alone is no longer an ideal objective.
+                    </p>
+                </article>
+
+
+                <article>
+                    <span class="concept-number">02</span>
+
+                    <h3>
+                        Multi-product formulas
+                    </h3>
+
+                    <p>
+                        For Hamiltonian time evolution, multi-product
+                        formulas can achieve the error of more Trotter
+                        steps using fewer steps in each circuit, at the
+                        cost of additional executions. The authors suggest
+                        that a similar optimization analysis may be useful.
+                    </p>
+                </article>
+
+
+                <article>
+                    <span class="concept-number">03</span>
+
+                    <h3>
+                        The broader lesson
+                    </h3>
+
+                    <p>
+                        Every technique that makes an individual circuit
+                        shallower can introduce another kind of execution
+                        overhead. The useful objective is the total
+                        resource cost of the complete workflow.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             WHAT THE PAPER DOES NOT CLAIM
+             ===================================================== -->
+
+        <section class="paper-section paper-caution">
+
+            <p class="section-label">
+                WHAT THIS DOES NOT CLAIM
+            </p>
+
+            <h2>
+                A lower execution count is not the same thing as quantum advantage.
+            </h2>
+
+            <p>
+                The paper demonstrates a resource-reduction strategy for
+                circuit cutting. It does not establish that the method
+                provides a universal quantum speedup or that circuit
+                cutting has become practical for arbitrary large
+                algorithms.
+            </p>
+
+            <p>
+                The strongest experimental quality comparisons are for
+                the 6-qubit VQE and 19-qubit Hamiltonian simulation
+                circuits. The broader Benchpress study focuses on
+                execution-count reduction and does not execute those
+                benchmark circuits on hardware.
+            </p>
+
+            <div class="caution-box">
+                <strong>QCAASNET reading</strong>
+
+                <p>
+                    The interesting result is the optimization principle:
+                    reducing circuit depth before cutting can reduce an
+                    exponential cutting overhead, but only when the
+                    additional cost introduced by the changed observable
+                    is kept under control.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             QCAASNET TAKEAWAY
+             ===================================================== -->
+
+        <section class="paper-section paper-takeaway">
+
+            <p class="section-label">
+                <span class="brand-accent">QCAASNET</span> TAKEAWAY
+            </p>
+
+            <h2>
+                The real idea is to optimize the whole quantum workflow.
+            </h2>
+
+            <p>
+                Circuit cutting is powerful because it lets a large
+                circuit be reconstructed from smaller pieces. But every
+                cut multiplies the number of executions. Operator
+                backpropagation attacks the other side of the problem:
+                it makes the circuit shallower before the cutting step.
+            </p>
+
+            <p>
+                The catch is that backpropagation can create more
+                non-commuting observable groups. The paper's contribution
+                is therefore not simply “use OBP before cutting.” It is
+                <strong>choose how much OBP to use for the specific
+                circuit and observable</strong>.
+            </p>
+
+            <div class="concept-grid">
+
+                <article>
+                    <span class="concept-number">01</span>
+
+                    <h3>
+                        Depth is a resource
+                    </h3>
+
+                    <p>
+                        Shallower circuits can be easier to execute and
+                        can require fewer cuts, reducing the cutting
+                        overhead.
+                    </p>
+                </article>
+
+
+                <article>
+                    <span class="concept-number">02</span>
+
+                    <h3>
+                        Execution count is also a resource
+                    </h3>
+
+                    <p>
+                        A shallower circuit is not automatically cheaper.
+                        Extra observable terms can multiply the number of
+                        executions required to estimate the result.
+                    </p>
+                </article>
+
+
+                <article>
+                    <span class="concept-number">03</span>
+
+                    <h3>
+                        Optimize the complete pipeline
+                    </h3>
+
+                    <p>
+                        Simulated annealing provides a practical heuristic
+                        for navigating the trade-off instead of assuming
+                        that more backpropagation is always better.
+                    </p>
+                </article>
+
+            </div>
+
+            <div class="takeaway-statement">
+                <span>THE CORE LESSON</span>
+
+                <strong>
+                    The best quantum circuit is not necessarily the
+                    shallowest one. It is the one that minimizes the
+                    total cost of producing a useful answer.
+                </strong>
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ORIGINAL RESEARCH
+             ===================================================== -->
+
+        <section class="paper-source">
+
+            <div>
+
+                <p class="section-label">
+                    ORIGINAL RESEARCH
+                </p>
+
+                <h2>
+                    Low overhead circuit cutting with operator backpropagation
+                </h2>
+
+                <p>
+                    Debarthi Pal and Ritajit Majumdar ·
+                    <em>Quantum Information Processing</em>,
+                    Volume 25, Article 274 (2026).
+                </p>
+
+                <p class="source-details">
+                    DOI: 10.1007/s11128-026-05287-x
+                </p>
+
+            </div>
+
+            <div class="source-actions">
+
+                <a
+                    href="https://doi.org/10.1007/s11128-026-05287-x"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    READ PAPER
+                    <span>↗</span>
+                </a>
+
+                <a
+                    href="https://arxiv.org/abs/2510.19467"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    ARXIV
+                    <span>↗</span>
+                </a>
+
+                <a
+                    href="https://github.com/debarthi1610/circuit-cutting-with-OBP"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    CODE
+                    <span>↗</span>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer>
+
+        <div class="footer-social">
+
+            <h3>Connect with us</h3>
+
+            <div class="footer-social-links">
+
+                <a
+                    href="https://www.youtube.com/@QCaaSNet"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    YouTube
+                </a>
+
+                <a
+                    href="https://x.com/qcaasnet"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    X / Twitter
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/company/qcaasnet/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    LinkedIn
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-main">
+
+            <div class="footer-brand-column">
+
+                <div class="footer-brand">
+
+                    <img
+                        class="brand-mark"
+                        src="/images/qcaas-icon.png"
+                        alt="QCAAS Net quantum logo"
+                    >
+
+                    <span>
+                        QCAAS<span class="brand-accent">NET</span>
+                    </span>
+
+                </div>
+
+                <p>
+                    Quantum Computing as a Service Network
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>QCAASNET</h4>
+
+                <a href="/#about">About QCAASNET</a>
+                <a href="mailto:Hello@qcaasnet.com">Contact</a>
+                <a href="/privacy/">Privacy</a>
+                <a href="/terms/">Terms</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Explore</h4>
+
+                <a href="/fundamentals/">Fundamentals of Quantum Computing</a>
+                <a href="/latest-research/">Latest Research</a>
+                <a href="/be-quantum-ready/">Be Quantum Ready</a>
+                <a href="/deep-learning/">Deep Learning</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 QCAAS Net
+            </span>
+
+            <div class="footer-legal">
+                <a href="/terms/">Terms</a>
+                <a href="/privacy/">Privacy</a>
+            </div>
+
+        </div>
+
+    </footer>
+
+</div>
+
+</body>
+</html>

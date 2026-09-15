@@ -1,0 +1,835 @@
+/* =========================================================
+   QCAASNET — IBM CIRCUIT CUTTING PAPER
+   IBM-only components layered on top of the shared Google-style
+   paper system loaded by index.html.
+   ========================================================= */
+
+
+/* =========================================================
+   IBM PAPER PAGE
+   GOOGLE-MATCHED PAPER SYSTEM
+   ========================================================= */
+
+.paper-page {
+    padding: 42px 0 90px;
+}
+
+
+/* =========================================================
+   BREADCRUMBS
+   ========================================================= */
+
+.paper-breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 48px;
+
+    color: #71849a;
+    font-size: 11px;
+    letter-spacing: .04em;
+}
+
+.paper-breadcrumbs a {
+    color: #91a5bb;
+    text-decoration: none;
+}
+
+.paper-breadcrumbs span:last-child {
+    color: #4e6379;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.paper-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(420px, .9fr);
+    gap: 70px;
+    align-items: center;
+
+    padding: 20px 0 80px;
+
+    border-bottom: 1px solid var(--line);
+}
+
+.paper-hero-copy {
+    max-width: 760px;
+}
+
+.paper-hero .eyebrow {
+    margin-bottom: 22px;
+}
+
+.paper-hero h1 {
+    margin: 0;
+
+    font-size: clamp(48px, 5vw, 78px);
+    line-height: .98;
+    letter-spacing: -.045em;
+    color: #f2f5f8;
+}
+
+.paper-hero h1 span {
+    color: #10c8c8;
+}
+
+.paper-lead {
+    max-width: 690px;
+    margin: 30px 0 28px;
+
+    color: #9eb1c6;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.paper-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 22px;
+
+    color: #10c8c8;
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: .08em;
+}
+
+.paper-meta span + span {
+    color: #8295aa;
+}
+
+
+.paper-hero-image {
+    width: 100%;
+    overflow: hidden;
+
+    border: 1px solid var(--line);
+    border-radius: 12px;
+
+    background: #07111e;
+}
+
+.paper-hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =========================================================
+   METRIC STRIPS
+   ========================================================= */
+
+.metric-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+
+    margin: 42px 0 0;
+
+    border: 1px solid var(--line);
+    background: var(--line);
+}
+
+.metric-strip.two {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.metric-strip > div {
+    min-height: 130px;
+    padding: 24px;
+
+    background: #07111e;
+}
+
+.metric-strip span {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #70869d;
+    font-family: monospace;
+    font-size: 10px;
+    letter-spacing: .12em;
+}
+
+.metric-strip strong {
+    display: block;
+
+    color: #10c8c8;
+    font-family: Georgia, serif;
+    font-size: 34px;
+}
+
+.metric-strip small {
+    display: block;
+
+    margin-top: 8px;
+
+    color: #71859c;
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   CARD FORMULAS
+   ========================================================= */
+
+.card-formula {
+    margin-top: 22px;
+    padding-top: 16px;
+
+    border-top: 1px solid var(--line);
+
+    color: #10c8c8;
+    font-family: monospace;
+    font-size: 10px;
+    letter-spacing: .08em;
+}
+
+
+/* =========================================================
+   PROCESS FLOW
+   ========================================================= */
+
+.process-flow {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+    align-items: center;
+
+    margin: 42px 0;
+}
+
+.process-step {
+    min-height: 120px;
+    padding: 20px;
+
+    border: 1px solid var(--line);
+    border-radius: 9px;
+
+    background: #07111e;
+}
+
+.process-step.highlighted {
+    border-color: #155b7b;
+}
+
+.process-step span {
+    display: block;
+
+    margin-bottom: 14px;
+
+    color: #10c8c8;
+    font-family: monospace;
+    font-size: 10px;
+}
+
+.process-step strong {
+    display: block;
+
+    color: #edf3f8;
+    font-size: 13px;
+}
+
+.process-step em {
+    display: block;
+
+    margin-top: 8px;
+
+    color: #71859c;
+    font-size: 12px;
+    font-style: normal;
+}
+
+.process-line {
+    width: 28px;
+    height: 1px;
+
+    background: #155b7b;
+}
+
+
+/* =========================================================
+   COMPARISON BOX
+   ========================================================= */
+
+.comparison-box {
+    margin: 40px 0 0;
+
+    border: 1px solid var(--line);
+}
+
+.comparison-row {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+
+    border-top: 1px solid var(--line);
+}
+
+.comparison-row:first-child {
+    border-top: 0;
+}
+
+.comparison-row > * {
+    padding: 18px 20px;
+}
+
+.comparison-row span,
+.comparison-row strong {
+    color: #a7b8c9;
+}
+
+.header-row {
+    color: #70869d;
+    font-family: monospace;
+    font-size: 10px;
+    letter-spacing: .1em;
+}
+
+.header-row span {
+    color: #70869d;
+}
+
+.accent-value {
+    color: #10c8c8 !important;
+}
+
+
+/* =========================================================
+   RESULT CARDS
+   ========================================================= */
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+
+    margin-top: 42px;
+}
+
+.result-card {
+    padding: 28px;
+
+    border: 1px solid var(--line);
+    border-radius: 10px;
+
+    background: rgba(7,17,30,.68);
+}
+
+.result-top {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.result-top span {
+    color: #70869d;
+    font-family: monospace;
+    font-size: 10px;
+    letter-spacing: .12em;
+}
+
+.result-top strong {
+    color: #10c8c8;
+    font-family: Georgia, serif;
+    font-size: 32px;
+}
+
+.result-card h3 {
+    margin: 18px 0 10px;
+
+    color: #edf3f8;
+    font-size: 22px;
+}
+
+.result-card p {
+    margin: 0 0 28px !important;
+}
+
+.execution-bar {
+    margin-top: 16px;
+}
+
+.execution-bar > div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 7px;
+}
+
+.execution-bar span {
+    color: #71859c;
+    font-family: monospace;
+    font-size: 9px;
+    letter-spacing: .1em;
+}
+
+.execution-bar strong {
+    color: #dfeaf2;
+    font-family: monospace;
+    font-size: 12px;
+}
+
+.bar-track {
+    height: 5px;
+
+    border-radius: 10px;
+
+    background: #102334;
+    overflow: hidden;
+}
+
+.bar-track i {
+    display: block;
+
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: #10c8c8;
+}
+
+.result-card > small {
+    display: block;
+
+    margin-top: 26px;
+
+    color: #71859c;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.research-note,
+.caution-box {
+    margin-top: 32px;
+    padding: 24px;
+
+    border-left: 2px solid #10c8c8;
+
+    background: rgba(6,23,38,.58);
+}
+
+.research-note strong,
+.caution-box strong {
+    color: #10c8c8;
+    font-family: monospace;
+    font-size: 10px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.research-note p,
+.caution-box p {
+    margin-bottom: 0 !important;
+}
+
+
+/* =========================================================
+   BENCHMARK TABLE
+   ========================================================= */
+
+.benchmark-table-wrap {
+    margin-top: 40px;
+
+    border: 1px solid var(--line);
+    overflow-x: auto;
+}
+
+.benchmark-table {
+    width: 100%;
+    min-width: 720px;
+
+    border-collapse: collapse;
+}
+
+.benchmark-table th,
+.benchmark-table td {
+    padding: 14px 16px;
+
+    border-bottom: 1px solid var(--line);
+
+    text-align: left;
+}
+
+.benchmark-table th {
+    color: #70869d;
+    font-family: monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+
+    background: #07111e;
+}
+
+.benchmark-table td {
+    color: #9eb1c6;
+    font-size: 13px;
+}
+
+.benchmark-table td:not(:first-child) {
+    font-family: monospace;
+}
+
+.benchmark-table tr:last-child td {
+    border-bottom: 0;
+}
+
+.benchmark-table .warning-row td {
+    background: rgba(94,60,20,.18);
+}
+
+.benchmark-table .warning-row td:last-child {
+    color: #10c8c8;
+}
+
+
+/* =========================================================
+   SIMULATED ANNEALING
+   ========================================================= */
+
+.annealing-flow {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+    align-items: center;
+
+    margin: 42px 0;
+}
+
+.annealing-node {
+    min-height: 120px;
+    padding: 20px;
+
+    border: 1px solid var(--line);
+    border-radius: 9px;
+
+    background: #07111e;
+}
+
+.annealing-node.active {
+    border-color: #155b7b;
+    box-shadow: 0 0 28px rgba(16,200,200,.045);
+}
+
+.annealing-node span {
+    display: block;
+
+    color: #10c8c8;
+    font-family: monospace;
+    font-size: 10px;
+}
+
+.annealing-node strong {
+    display: block;
+
+    margin-top: 12px;
+
+    color: #edf3f8;
+    font-size: 13px;
+}
+
+.annealing-node em {
+    display: block;
+
+    margin-top: 7px;
+
+    color: #71859c;
+    font-size: 11px;
+    font-style: normal;
+}
+
+.annealing-arrow {
+    padding: 0 10px;
+
+    color: #155b7b;
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   OBSERVABLE RESULTS
+   ========================================================= */
+
+.observable-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+
+    margin-top: 40px;
+}
+
+.observable-grid article {
+    padding: 26px;
+
+    border: 1px solid var(--line);
+    border-radius: 9px;
+
+    background: rgba(7,17,30,.68);
+}
+
+.observable-grid span {
+    display: block;
+
+    color: #70869d;
+    font-family: monospace;
+    font-size: 10px;
+    letter-spacing: .1em;
+}
+
+.observable-grid strong {
+    display: block;
+
+    margin-top: 20px;
+
+    color: #10c8c8;
+    font-family: Georgia, serif;
+    font-size: 28px;
+}
+
+.observable-grid small {
+    display: block;
+
+    margin-top: 7px;
+
+    color: #71859c;
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   CAUTION
+   ========================================================= */
+
+.paper-caution {
+    max-width: 900px;
+}
+
+.paper-caution > h2 {
+    max-width: 800px;
+}
+
+
+/* =========================================================
+   TAKEAWAY
+   ========================================================= */
+
+.paper-takeaway {
+    max-width: 900px;
+}
+
+.paper-takeaway .section-label .brand-accent {
+    color: #10c8c8;
+}
+
+.paper-takeaway p {
+    font-size: 18px;
+}
+
+.takeaway-statement {
+    margin-top: 42px;
+    padding: 32px;
+
+    border: 1px solid #155b7b;
+    border-radius: 10px;
+
+    background: rgba(6,23,38,.62);
+}
+
+.takeaway-statement span {
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: #10c8c8;
+    font-family: monospace;
+    font-size: 10px;
+    letter-spacing: .12em;
+}
+
+.takeaway-statement strong {
+    display: block;
+
+    color: #edf3f8;
+    font-size: clamp(22px, 3vw, 32px);
+    line-height: 1.25;
+    letter-spacing: -.02em;
+}
+
+
+/* =========================================================
+   ORIGINAL RESEARCH
+   ========================================================= */
+
+.paper-source {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+    margin: 20px auto 30px;
+    padding: 40px;
+
+    width: min(1050px, calc(100% - 48px));
+    box-sizing: border-box;
+
+    border: 1px solid #155b7b;
+    border-radius: 12px;
+
+    background: rgba(7,17,30,.75);
+}
+
+.paper-source h2 {
+    margin: 0 0 12px;
+
+    color: #f2f5f8;
+    font-size: 30px;
+    line-height: 1.15;
+}
+
+.paper-source p {
+    margin: 0 0 10px;
+
+    color: #8fa5ba;
+}
+
+.paper-source .source-details {
+    color: #71859c;
+    font-family: monospace;
+    font-size: 11px;
+}
+
+.source-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+
+    flex: 0 0 auto;
+}
+
+.source-actions a {
+    display: inline-flex;
+    justify-content: space-between;
+    gap: 18px;
+
+    min-width: 150px;
+
+    padding: 13px 16px;
+
+    border: 1px solid #155b7b;
+    border-radius: 7px;
+
+    color: #10c8c8;
+    font-family: monospace;
+    font-size: 10px;
+    text-decoration: none;
+    letter-spacing: .08em;
+
+    transition:
+        border-color .2s ease,
+        background .2s ease,
+        color .2s ease;
+}
+
+.source-actions a:hover {
+    border-color: #10c8c8;
+    background: rgba(16,200,200,.05);
+}
+
+.source-actions a span {
+    margin-left: auto;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .ibm-paper-hero {
+        grid-template-columns: 1fr;
+        gap: 42px;
+    }
+
+    .circuit-hero-visual {
+        min-height: auto;
+    }
+
+    .process-flow,
+    .annealing-flow {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .process-line {
+        width: 1px;
+        height: 24px;
+        margin: 0 auto;
+    }
+
+    .annealing-arrow {
+        padding: 4px 0;
+        text-align: center;
+    }
+
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .paper-source {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .source-actions {
+        width: 100%;
+    }
+
+    .source-actions a {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+
+@media (max-width: 720px) {
+
+    .ibm-paper-hero {
+        padding-top: 45px;
+        padding-bottom: 40px;
+    }
+
+    .paper-hero-copy h1 {
+        font-size: clamp(40px, 12vw, 58px);
+    }
+
+    .paper-hero-description {
+        font-size: 16px;
+    }
+
+    .circuit-hero-visual {
+        padding: 20px;
+    }
+
+    .metric-strip,
+    .metric-strip.two,
+    .observable-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-row {
+        grid-template-columns: 1.2fr 1fr 1fr;
+    }
+
+    .comparison-row > * {
+        padding: 14px 12px;
+        font-size: 12px;
+    }
+
+    .takeaway-statement {
+        padding: 24px;
+    }
+
+}

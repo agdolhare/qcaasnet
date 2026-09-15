@@ -875,36 +875,29 @@ button {
 }
 .research-meta {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     gap: 10px;
+    margin-bottom: 13px;
 }
 
 .research-date {
     display: inline-block;
-
-    margin-bottom: 8px;
-
+    margin-bottom: 0;
     color: var(--accent);
-
     font-family: "DM Mono", monospace;
     font-size: .54rem;
-
     letter-spacing: .10em;
     text-transform: uppercase;
 }
 
 .research-company {
-    margin-bottom: 13px;
-
+    margin-bottom: 0;
     color: var(--muted-2);
-
     font-family: "DM Mono", monospace;
     font-size: .58rem;
-
     letter-spacing: .09em;
     text-transform: uppercase;
 }
-
 .research-card h3 {
     margin: 0;
 
