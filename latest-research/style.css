@@ -454,7 +454,7 @@ button {
 }
 
 .research-hero-visual {
-    background-image: url("/images/qcaas-research-hero.png");
+    background-image: url("/images/qcaas-research-hero.png?v=2");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
