@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consumable Data via Quantum Communication - a QCAASNET explanation of research from Google Quantum AI and collaborators.">
+    <title>Consumable Data via Quantum Communication | QCAASNET</title>
+
+    <link rel="icon" type="image/png" href="/images/qcaas-icon.png?v=2">
+
+    <!-- Shared Google research shell. -->
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- Shared paper-page typography, spacing, and responsive layout. -->
+    <link rel="stylesheet" href="../quantum-algorithm-linear-matrix-equations/style.css">
+
+    <!-- Article-specific diagrams and data visualizations. -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="site-shell">
+
+    <header class="site-header">
+        <nav class="main-nav">
+            <a class="brand" href="/">
+                <img class="brand-logo" src="/images/qcaas-icon.png" alt="QCAASNET">
+                <span class="brand-copy">
+                    <span class="brand-name">QCAAS<span>NET</span></span>
+                    <span class="brand-tagline">Quantum Computing as a Service Network</span>
+                </span>
+            </a>
+
+            <div class="desktop-nav">
+                <a href="/">Home</a>
+                <a href="/fundamentals/">Learn</a>
+                <a href="/latest-research/" class="active">Research</a>
+                <a href="/be-quantum-ready/">Be Quantum Ready</a>
+                <a href="/#about">About</a>
+            </div>
+
+            <details class="mobile-navigation">
+                <summary>MENU</summary>
+                <div class="mobile-menu">
+                    <a href="/">Home</a>
+                    <a href="/fundamentals/">Learn</a>
+                    <a href="/latest-research/">Research</a>
+                    <a href="/be-quantum-ready/">Be Quantum Ready</a>
+                    <a href="/#about">About</a>
+                </div>
+            </details>
+        </nav>
+    </header>
+
+    <main class="paper-page">
+        <div class="paper-breadcrumbs">
+            <a href="/">Home</a>
+            <span>&rsaquo;</span>
+            <a href="/latest-research/">Latest Research</a>
+            <span>&rsaquo;</span>
+            <a href="/latest-research/google/">Google</a>
+            <span>&rsaquo;</span>
+            <span>Consumable Data via Quantum Communication</span>
+        </div>
+
+        <section class="paper-hero consumable-hero">
+            <div class="paper-hero-copy">
+                <p class="eyebrow">GOOGLE QUANTUM AI</p>
+
+                <h1>
+                    Consumable Data via
+                    <span>Quantum Communication</span>
+                </h1>
+
+                <p class="paper-lead">
+                    A research paper asks whether useful data can be sent as a quantum state,
+                    used for a computation, and then become genuinely harder to reuse.
+                </p>
+
+                <div class="paper-meta">
+                    <span>JUL 2026</span>
+                    <span>GOOGLE QUANTUM AI</span>
+                    <span>QUANTUM COMMUNICATION</span>
+                </div>
+            </div>
+
+            <div class="paper-hero-image data-hero-visual">
+
+    <img
+        src="/images/research/consumable-quantum-communication.png"
+        alt="Consumable Data via Quantum Communication"
+    >
+
+</div>
+                
+                <div class="data-caption">ONE-WAY COMMUNICATION</div>
+            </div>
+        </section>
+
+        <section class="paper-section">
+            <p class="section-label">THE QUESTION</p>
+            <h2>What if data could be useful, but not freely reusable?</h2>
+
+            <p>
+                Classical information is easy to copy. Once a buyer receives an ordinary data file,
+                the same file can usually support many later computations at almost no extra cost.
+                That makes data economically different from physical inputs such as fuel or raw materials.
+            </p>
+
+            <p>
+                This paper studies a narrower, information-theoretic possibility. Alice holds data and
+                sends Bob a quantum message that helps solve a task. If using that message for one task
+                makes it costly to solve many more tasks, the data behaves like a consumable resource.
+            </p>
+
+            <div class="equation-box consumability-equation">
+                <span>one useful state &ne; unlimited uses</span>
+            </div>
+
+            <div class="concept-grid">
+                <article>
+                    <span class="concept-number">01</span>
+                    <h3>Classical copy</h3>
+                    <p>A classical message can be duplicated before it is used, so one delivery can serve many compatible computations.</p>
+                </article>
+
+                <article>
+                    <span class="concept-number">02</span>
+                    <h3>Quantum use</h3>
+                    <p>Measuring a quantum state can disturb it. That physical constraint can make reuse expensive for particular tasks.</p>
+                </article>
+
+                <article>
+                    <span class="concept-number">03</span>
+                    <h3>Important caveat</h3>
+                    <p>No-cloning alone is not enough. The state must be both useful for the task and hard to reuse in the stated communication model.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="paper-section paper-highlight">
+            <div class="paper-highlight-inner">
+                <p class="section-label">THE PAPER'S TEST</p>
+                <h2>How quickly does communication cost grow when the same data must support more tasks?</h2>
+
+                <p>
+                    The authors formalize an asymmetric direct-sum question. Alice keeps one input,
+                    while Bob holds <em>m</em> different inputs and wants an answer for every pairing.
+                    A problem is called consumable when the communication needed for those <em>m</em>
+                    uses grows polynomially relative to a single use.
+                </p>
+
+                <div class="consumability-scale">
+                    <div>
+                        <span>SINGLE USE</span>
+                        <strong>c(P)</strong>
+                        <small>Cost to solve one task</small>
+                    </div>
+                    <div class="scale-arrow">&rarr;</div>
+                    <div>
+                        <span>MANY USES</span>
+                        <strong>c(P<sup>m</sup>)</strong>
+                        <small>Cost to solve m related tasks</small>
+                    </div>
+                    <div class="scale-arrow">&rarr;</div>
+                    <div>
+                        <span>CONSUMABLE</span>
+                        <strong>m<sup>&Omega;(1)</sup></strong>
+                        <small>Polynomial growth in the ratio</small>
+                    </div>
+                </div>
+
+                <p class="research-note">
+                    <strong>Why this matters</strong>
+                    The framework measures the cost of communication from Alice to Bob, not an all-purpose guarantee that quantum data cannot be copied or shared.
+                </p>
+            </div>
+        </section>
+
+        <section class="paper-section">
+            <p class="section-label">THREE EXAMPLES</p>
+            <h2>Where the paper finds quantum data can become consumable.</h2>
+
+            <div class="application-grid result-grid">
+                <article>
+                    <span class="concept-number">01</span>
+                    <h3>Hidden Matching</h3>
+                    <p>
+                        Alice's quantum state can reveal one matching-related answer. For multiple hidden matchings,
+                        the paper proves a lower bound that grows as &Omega;(&radic;m) for the stated parameter range.
+                    </p>
+                    <div class="card-formula">RESULT: A QUANTUM MESSAGE CANNOT SIMPLY BE REUSED FOR EVERY MATCHING</div>
+                </article>
+
+                <article>
+                    <span class="concept-number">02</span>
+                    <h3>Linear Regression Sampling</h3>
+                    <p>
+                        For a sampling version of linear regression, the paper shows a setting where quantum communication grows essentially linearly with the number of requested samples, while classical communication can be reused.
+                    </p>
+                    <div class="card-formula">RESULT: CONSUMABILITY RATE m FOR THE CONSTRUCTED INPUTS</div>
+                </article>
+
+                <article>
+                    <span class="concept-number">03</span>
+                    <h3>Many observers</h3>
+                    <p>
+                        When multiple Bobs are limited to single-copy measurements and classical communication between themselves, estimating many observables can require a number of copies that grows nearly linearly with the number of observables.
+                    </p>
+                    <div class="card-formula">RESULT: THE COMMUNICATION MODEL CHANGES THE OUTCOME</div>
+                </article>
+            </div>
+        </section>
+
+        <section class="paper-section">
+            <p class="section-label">NOT AUTOMATIC</p>
+            <h2>An exponential quantum advantage does not by itself make data consumable.</h2>
+
+            <p>
+                The paper also identifies a limit. In some decision problems, a receiver can use shadow tomography to estimate the answers to many two-outcome measurements from a number of copies that grows only polylogarithmically with the number of measurements.
+            </p>
+
+            <p>
+                The lesson is subtle: the task, the number of possible outputs, the allowed measurements,
+                and whether recipients can exchange quantum information all affect whether the data is consumable.
+            </p>
+
+            <div class="comparison-box">
+                <div class="comparison-row header-row">
+                    <span>SETTING</span>
+                    <span>CAN DATA BE REUSED?</span>
+                    <span>WHY</span>
+                </div>
+                <div class="comparison-row">
+                    <strong>Deterministic classical message</strong>
+                    <span>Yes</span>
+                    <span>The receiver can copy the message.</span>
+                </div>
+                <div class="comparison-row">
+                    <strong>Quantum state, task-specific measurement</strong>
+                    <span class="accent-value">Sometimes costly</span>
+                    <span>Using the state can limit later task-specific use.</span>
+                </div>
+                <div class="comparison-row">
+                    <strong>Quantum recipients can communicate quantumly</strong>
+                    <span>Often more reusable</span>
+                    <span>Joint procedures can reduce the copies needed.</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="paper-section paper-highlight">
+            <div class="paper-highlight-inner">
+                <p class="section-label">ECONOMIC INTERPRETATION</p>
+                <h2>The authors connect communication complexity to the economics of data.</h2>
+
+                <p>
+                    Classical data is commonly treated as non-rival: one buyer's use does not stop another use,
+                    because copying is cheap. The paper argues that, in specific quantum communication settings,
+                    a useful state can instead behave more like a rival input. More uses require more communication.
+                </p>
+
+                <div class="economics-flow">
+                    <div><span>CLASSICAL DATA</span><strong>Copy once</strong><small>Reuse across many tasks</small></div>
+                    <i>&rarr;</i>
+                    <div class="active"><span>QUANTUM DATA</span><strong>Send again</strong><small>More task uses can require more states</small></div>
+                    <i>&rarr;</i>
+                    <div><span>MARKET EFFECT</span><strong>Price per use</strong><small>A theoretical path to value that scales with use</small></div>
+                </div>
+
+                <p>
+                    This is a theoretical result, not a ready-made data-market product. The paper's conclusions depend on the selected tasks and communication restrictions, and it discusses these constraints explicitly.
+                </p>
+            </div>
+        </section>
+
+        <section class="paper-section paper-takeaway">
+            <p class="section-label"><span class="brand-accent">QCAASNET</span> TAKEAWAY</p>
+            <h2>Quantum states may make some data uses scarce - but only in carefully defined settings.</h2>
+
+            <div class="concept-grid">
+                <article>
+                    <span class="concept-number">01</span>
+                    <h3>Consumption is task-dependent</h3>
+                    <p>Quantum data is not universally one-time-use. The relevant question is whether it can support many instances of a particular computation.</p>
+                </article>
+                <article>
+                    <span class="concept-number">02</span>
+                    <h3>Restrictions matter</h3>
+                    <p>Allowing multi-copy measurements or quantum communication between recipients can fundamentally change the resource cost.</p>
+                </article>
+                <article>
+                    <span class="concept-number">03</span>
+                    <h3>It links physics and economics</h3>
+                    <p>The work uses destructive measurement as a bridge between quantum information theory and the value of data in a market.</p>
+                </article>
+            </div>
+
+            <div class="takeaway-statement">
+                <span>THE CORE IDEA</span>
+                <strong>A quantum state can be valuable precisely because using it for one computation may limit its value for the next.</strong>
+            </div>
+        </section>
+
+        <section class="paper-source">
+            <div>
+                <p class="section-label">ORIGINAL RESEARCH</p>
+                <h2>Consumable Data via Quantum Communication</h2>
+                <p>Dar Gilboa, Siddhartha Jain, and Jarrod R. McClean. Google Quantum AI and UT Austin.</p>
+                <p class="source-details">arXiv:2409.08495v3 &middot; July 2025 &middot; CC BY 4.0</p>
+            </div>
+
+            <a href="https://arxiv.org/abs/2409.08495" target="_blank" rel="noopener noreferrer">
+                READ ON ARXIV <span>&nearr;</span>
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-social">
+            <h3>Connect with us</h3>
+            <div class="footer-social-links">
+                <a href="https://www.youtube.com/@QCaaSNet" target="_blank" rel="noopener noreferrer">YouTube</a>
+                <a href="https://x.com/qcaasnet" target="_blank" rel="noopener noreferrer">X / Twitter</a>
+                <a href="https://www.linkedin.com/company/qcaasnet/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+        </div>
+
+        <div class="footer-main">
+            <div class="footer-brand-column">
+                <div class="footer-brand">
+                    <img class="brand-mark" src="/images/qcaas-icon.png" alt="QCAAS Net quantum logo">
+                    <span>QCAAS<span class="brand-accent">NET</span></span>
+                </div>
+                <p>Quantum Computing as a Service Network</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>QCAASNET</h4>
+                <a href="/#about">About QCAASNET</a>
+                <a href="mailto:Hello@qcaasnet.com">Contact</a>
+                <a href="/privacy/">Privacy</a>
+                <a href="/terms/">Terms</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>Explore</h4>
+                <a href="/fundamentals/">Fundamentals of Quantum Computing</a>
+                <a href="/latest-research/">Latest Research</a>
+                <a href="/be-quantum-ready/">Be Quantum Ready</a>
+                <a href="/deep-learning/">Deep Learning</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 QCAAS Net</span>
+            <div class="footer-legal">
+                <a href="/terms/">Terms</a>
+                <a href="/privacy/">Privacy</a>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

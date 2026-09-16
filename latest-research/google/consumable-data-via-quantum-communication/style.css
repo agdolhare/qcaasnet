@@ -1,0 +1,324 @@
+/* =========================================================
+   CONSUMABLE DATA VIA QUANTUM COMMUNICATION
+   Article-specific diagrams layered on the shared paper system.
+   ========================================================= */
+
+.consumability-equation span {
+    font-size: clamp(28px, 4vw, 46px);
+}
+
+/* =========================================================
+   HERO VISUAL
+   ========================================================= */
+
+.data-hero-visual {
+    position: relative;
+    min-height: 390px;
+    overflow: hidden;
+    border: 1px solid #155b7b;
+    border-radius: 12px;
+    background:
+        radial-gradient(circle at 70% 35%, rgba(25, 199, 183, .20), transparent 24%),
+        radial-gradient(circle at 30% 75%, rgba(66, 133, 244, .16), transparent 32%),
+        #061321;
+}
+
+.data-grid {
+    position: absolute;
+    inset: 0;
+    opacity: .48;
+    background-image:
+        linear-gradient(rgba(94, 150, 191, .16) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(94, 150, 191, .16) 1px, transparent 1px);
+    background-size: 44px 44px;
+}
+
+.data-packet {
+    position: absolute;
+    top: 50%;
+    left: 14%;
+    z-index: 1;
+    width: 142px;
+    height: 142px;
+    transform: translateY(-50%) rotate(-7deg);
+    border: 1px solid rgba(144, 213, 239, .72);
+    border-radius: 10px;
+    background: linear-gradient(145deg, rgba(127, 202, 232, .20), rgba(4, 26, 43, .92));
+    box-shadow: 0 0 34px rgba(25, 199, 183, .14);
+}
+
+.data-packet span,
+.data-packet strong {
+    position: absolute;
+    left: 18px;
+}
+
+.data-packet span {
+    top: 20px;
+    color: #9bb8cd;
+    font-family: monospace;
+    font-size: 9px;
+    letter-spacing: .14em;
+}
+
+.data-packet strong {
+    top: 54px;
+    color: #e8f5fb;
+    font-family: Georgia, serif;
+    font-size: 38px;
+    font-weight: 400;
+}
+
+.data-packet i {
+    position: absolute;
+    bottom: 18px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #10c8c8;
+    box-shadow: 0 0 12px rgba(16, 200, 200, .9);
+}
+
+.data-packet i:nth-of-type(1) { left: 20px; }
+.data-packet i:nth-of-type(2) { left: 46px; opacity: .65; }
+.data-packet i:nth-of-type(3) { left: 72px; opacity: .3; }
+
+.measurement-gate {
+    position: absolute;
+    top: 50%;
+    right: 12%;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 12px;
+    min-width: 210px;
+    padding: 24px 20px;
+    transform: translateY(-50%);
+    border: 1px solid rgba(25, 199, 183, .55);
+    border-radius: 10px;
+    background: rgba(3, 18, 30, .88);
+}
+
+.measurement-gate span,
+.measurement-gate em {
+    color: #a8c0d2;
+    font-family: monospace;
+    font-size: 9px;
+    font-style: normal;
+    letter-spacing: .12em;
+}
+
+.measurement-gate b {
+    color: #10c8c8;
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.data-caption {
+    position: absolute;
+    bottom: 22px;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%);
+    color: #6f8ba0;
+    font-family: monospace;
+    font-size: 9px;
+    letter-spacing: .16em;
+    white-space: nowrap;
+}
+
+/* =========================================================
+   CONSUMABILITY SCALE
+   ========================================================= */
+
+.consumability-scale,
+.economics-flow {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    align-items: center;
+    gap: 12px;
+    margin: 42px 0;
+}
+
+.consumability-scale > div:not(.scale-arrow),
+.economics-flow > div {
+    min-height: 124px;
+    padding: 22px;
+    border: 1px solid var(--line);
+    border-radius: 9px;
+    background: #07111e;
+}
+
+.consumability-scale span,
+.economics-flow span {
+    display: block;
+    margin-bottom: 16px;
+    color: #718ba1;
+    font-family: monospace;
+    font-size: 9px;
+    letter-spacing: .12em;
+}
+
+.consumability-scale strong {
+    display: block;
+    color: #10c8c8;
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.consumability-scale small,
+.economics-flow small {
+    display: block;
+    margin-top: 10px;
+    color: #71859c;
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+.scale-arrow,
+.economics-flow > i {
+    color: #1b6081;
+    font-size: 22px;
+    font-style: normal;
+}
+
+.research-note {
+    margin: 0;
+    padding: 22px 24px;
+    border-left: 2px solid #10c8c8;
+    background: rgba(6, 23, 38, .58);
+    color: #9eb1c6;
+    line-height: 1.65;
+}
+
+.research-note strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #10c8c8;
+    font-family: monospace;
+    font-size: 10px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+/* =========================================================
+   COMPARISON AND ECONOMICS FLOW
+   ========================================================= */
+
+.comparison-box {
+    margin-top: 40px;
+    border: 1px solid var(--line);
+}
+
+.comparison-row {
+    display: grid;
+    grid-template-columns: 1.25fr .9fr 1.25fr;
+    border-top: 1px solid var(--line);
+}
+
+.comparison-row:first-child {
+    border-top: 0;
+}
+
+.comparison-row > * {
+    padding: 17px 20px;
+    color: #a7b8c9;
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+.comparison-row strong {
+    color: #dfeaf2;
+}
+
+.header-row > * {
+    color: #70869d;
+    font-family: monospace;
+    font-size: 9px;
+    letter-spacing: .1em;
+}
+
+.accent-value {
+    color: #10c8c8 !important;
+}
+
+.economics-flow > div.active {
+    border-color: #155b7b;
+    background: rgba(6, 29, 43, .78);
+}
+
+.economics-flow strong {
+    display: block;
+    color: #e6f0f7;
+    font-size: 17px;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+    .data-hero-visual {
+        min-height: 310px;
+    }
+
+    .data-packet {
+        left: 10%;
+    }
+
+    .measurement-gate {
+        right: 8%;
+    }
+
+    .consumability-scale,
+    .economics-flow {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .scale-arrow,
+    .economics-flow > i {
+        padding: 2px 0;
+        text-align: center;
+        transform: rotate(90deg);
+    }
+}
+
+@media (max-width: 600px) {
+    .data-hero-visual {
+        min-height: 260px;
+    }
+
+    .data-packet {
+        left: 8%;
+        width: 118px;
+        height: 118px;
+    }
+
+    .data-packet strong {
+        top: 49px;
+        font-size: 31px;
+    }
+
+    .measurement-gate {
+        right: 6%;
+        min-width: 145px;
+        padding: 17px 12px;
+    }
+
+    .measurement-gate span,
+    .measurement-gate em {
+        font-size: 8px;
+    }
+
+    .comparison-row {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-row > * {
+        padding: 13px 15px;
+    }
+}

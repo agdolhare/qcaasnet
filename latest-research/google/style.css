@@ -392,6 +392,10 @@ body {
     object-fit: cover;
     object-position: center 15%;
 }
+/* Second research card — show more of the top of the image */
+.research-card:nth-child(2) .card-visual img {
+    object-position: center 0%;
+}
 
 .research-card:hover .card-visual img {
     transform: scale(1.035)
