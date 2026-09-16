@@ -1,4 +1,20 @@
 /* =========================================================
+   PAGE WIDTH — KEEP CONTENT INSIDE QCAASNET SHELL
+   ========================================================= */
+
+.site-shell {
+    width: min(1560px, calc(100% - 48px));
+    margin: 0 auto;
+}
+/* Keep the original research block inside the page width */
+.paper-source {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+}
+
+/* =========================================================
    CONSUMABLE DATA VIA QUANTUM COMMUNICATION
    Article-specific diagrams layered on the shared paper system.
    ========================================================= */
