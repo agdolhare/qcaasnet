@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <!-- Google tag  -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCRGRVZ3NY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-QCRGRVZ3NY');
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1175538206082589"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Quantum Parity Representations — QCAASNET research summary."
+    >
+
+    <title>
+        Quantum Parity Representations | QCAASNET
+    </title>
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="/images/qcaas-icon.png?v=2"
+    >
+
+    <!-- Reuse Google research page styling -->
+    <link
+        rel="stylesheet"
+        href="../style.css"
+    >
+
+    <!-- Dedicated paper-page styling -->
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+<div class="site-shell">
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="site-header">
+
+        <nav class="main-nav">
+
+            <a class="brand" href="/">
+
+                <img
+                    class="brand-logo"
+                    src="/images/qcaas-icon.png"
+                    alt="QCAASNET"
+                >
+
+                <span class="brand-copy">
+
+                    <span class="brand-name">
+                        QCAAS<span>NET</span>
+                    </span>
+
+                    <span class="brand-tagline">
+                        Quantum Computing as a Service Network
+                    </span>
+
+                </span>
+
+            </a>
+
+
+            <div class="desktop-nav">
+
+                <a href="/">
+                    Home
+                </a>
+
+                <a href="/fundamentals/">
+                    Learn
+                </a>
+
+                <a href="/latest-research/" class="active">
+                    Research
+                </a>
+
+                <a href="/be-quantum-ready/">
+                    Be Quantum Ready
+                </a>
+
+                <a href="/#about">
+                    About
+                </a>
+
+            </div>
+
+
+            <details class="mobile-navigation">
+
+                <summary>
+                    MENU
+                </summary>
+
+                <div class="mobile-menu">
+
+                    <a href="/">
+                        Home
+                    </a>
+
+                    <a href="/fundamentals/">
+                        Learn
+                    </a>
+
+                    <a href="/latest-research/">
+                        Research
+                    </a>
+
+                    <a href="/be-quantum-ready/">
+                        Be Quantum Ready
+                    </a>
+
+                    <a href="/#about">
+                        About
+                    </a>
+
+                </div>
+
+            </details>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         PAPER
+         ===================================================== -->
+
+    <main class="paper-page">
+<div class="paper-breadcrumbs"><a href="/">Home</a><span>›</span><a href="/latest-research/">Latest Research</a><span>›</span><a href="/latest-research/ionq/">IonQ</a><span>›</span><span>Quantum Parity Representations</span></div>
+<section class="paper-hero"><div class="paper-hero-copy"><p class="eyebrow">IONQ</p><h1>Quantum Parity <span>Representations</span></h1><p class="paper-lead">A hybrid quantum-classical approach to discovering parity-based representations for machine learning — using quantum resources during training while keeping inference classical.</p><div class="paper-meta"><span>MAY 2026</span><span>IONQ &amp; RESEARCH PARTNERS &gt;</span><span>ARXIV</span></div></div><div class="paper-hero-image"><img src="/images/research/ionq-quantum-parity-representations.png" alt="Quantum parity representations for classical machine learning"></div></section>
+<section class="paper-section"><p class="section-label">THE IDEA</p><h2>Can quantum training discover better classical features?</h2><p>Machine-learning models often depend on how input data is represented. This paper studies <strong>parity features</strong> — signed products of selected binary variables — as a way to represent higher-order interactions between features.</p><p>Once the relevant binary variables and parity words are known, evaluating a parity feature requires no quantum computer. The difficult part is discovering which parity combinations contain useful information.</p><div class="equation-box"><span>f(x) = x<sub>i₁</sub> x<sub>i₂</sub> ··· x<sub>iₖ</sub></span></div><p>The researchers therefore investigate an asymmetric workflow: use hybrid quantum-classical training to discover useful representations, then perform inference entirely classically.</p></section>
+<section class="paper-section"><p class="section-label">THE REPRESENTATION PROBLEM</p><h2>The challenge is finding the right parity basis.</h2><p>If an input is already a meaningful binary string, the central problem is <strong>basis discovery</strong>: selecting useful parity words from a combinatorial search space. If the original data is continuous or not parity-ready, a second problem appears: constructing a binary representation on which parity computation is meaningful.</p><p>The paper separates these challenges and develops different mechanisms for them, making the work primarily about learning a representation that exposes higher-order structure.</p><div class="concept-grid"><article><span class="concept-number">01</span><h3>Basis discovery</h3><p>Learn which parity words are useful when the input is already represented as a suitable binary string.</p></article><article><span class="concept-number">02</span><h3>Learned encoding</h3><p>For continuous embeddings, learn projections that produce a more useful binary representation before parity evaluation.</p></article><article><span class="concept-number">03</span><h3>Classical inference</h3><p>Once the representation is learned, parity features can be evaluated without quantum resources.</p></article></div></section>
+<section class="paper-section"><p class="section-label">THE QUANTUM APPROACH</p><h2>Quantum resources are concentrated in the learning stage.</h2><p>For parity-ready inputs, the researchers use <strong>learnable Pauli-word selection</strong> to search for useful parity structure. The quantum component helps identify binary coefficient vectors whose corresponding parity functions are informative for the task.</p><p>For continuous data, the work studies <strong>learned projection encodings</strong>. For discrete inputs where encoding is limiting, it introduces <strong>sPQC-Parity</strong> as another route to constructing a useful binary representation.</p><div class="equation-box"><span>data → encoding → parity basis → classical inference</span></div><p>The important architectural choice is that quantum computation is not required at the final prediction stage. The learned representation can be deployed using classical computation after training.</p></section>
+<section class="paper-section"><p class="section-label">WHAT THEY FOUND</p><h2>The reported gains came primarily from discovering the right parity structure.</h2><p>On three native-binary parity tasks using 5–10 qubits, the learned parity basis improved mean accuracy by <strong>23.9% to 41.7%</strong> over the evaluated logistic-regression and support-vector baselines.</p><p>A model comparison indicates that the improvement came primarily from discovering the right parity basis rather than from quantum moment computation at inference.</p><div class="concept-grid"><article><span class="concept-number">01</span><h3>Binary tasks</h3><p>Three native-binary parity problems were evaluated at 5–10 qubits.</p></article><article><span class="concept-number">02</span><h3>Text benchmarks</h3><p>Five continuous text benchmarks tested learned projection against dimensionality reduction and fixed binarization.</p></article><article><span class="concept-number">03</span><h3>Quantized inference</h3><p>The study also examined robustness when inference is binary or quantized.</p></article></div><p>On the continuous text benchmarks, learned projection recovered much of the loss introduced by dimensionality reduction and fixed binarization, exceeding the full continuous baseline on <strong>CR, SST-2 and SST-5</strong> in the reported experiments.</p></section>
+<section class="paper-section paper-highlight"><div class="paper-highlight-inner"><p class="section-label">RESULTS</p><h2>Selected experimental results</h2><div class="complexity-box"><div><span>BINARY TASK ACCURACY GAIN</span><strong>23.9–41.7%</strong></div><div><span>HIGHEST sPQC-PARITY GAIN</span><strong>94.6%</strong></div><div><span>INFERENCE MODE</span><strong>CLASSICAL</strong></div></div><p>On three encoding-limited discrete datasets, sPQC-Parity improved over the PCA-bin baseline by <strong>94.6% on mushroom</strong> and <strong>3.0% on splice</strong>, while matching PCA-bin on promoter.</p><p>The study also reports exact invariance to rounding when the rounding error remains below half the quantization step, connecting the representation to constrained classical deployment.</p></div></section>
+<section class="paper-section"><p class="section-label">WHY IT MATTERS</p><h2>A quantum model does not have to remain quantum at inference.</h2><p>Quantum machine learning is often framed as requiring a quantum processor during prediction. This work explores a different architecture: quantum resources are used to search for hidden structure during training, while the learned structure becomes a representation that can be evaluated classically.</p><p>The practical question therefore shifts from replacing a classical inference engine to asking whether quantum-assisted discovery can produce a representation valuable enough to justify the training cost.</p><div class="concept-grid"><article><span class="concept-number">01</span><h3>Quantum search</h3><p>The quantum component targets representation discovery in a combinatorial search space.</p></article><article><span class="concept-number">02</span><h3>Classical deployment</h3><p>Once parity words and encodings are fixed, feature evaluation does not require a QPU.</p></article><article><span class="concept-number">03</span><h3>Hybrid workflow</h3><p>The quantum contribution can be concentrated in model development rather than every prediction.</p></article></div></section>
+<section class="paper-section"><p class="section-label">THE TRADE-OFF</p><h2>The results are specific to the tasks and representations studied.</h2><p>The paper demonstrates improvements on selected datasets, but discovering a useful parity basis remains difficult because the number of possible binary coefficient vectors grows rapidly with the number of input variables.</p><p>The experiments do not establish a universal replacement for conventional machine learning. They show settings in which hybrid quantum training uncovered parity structure that the evaluated classical baselines did not capture as effectively.</p><p>The quantum resource is part of the representation-learning pipeline, not a requirement for every individual prediction.</p></section>
+<section class="paper-section"><p class="section-label">APPLICATIONS</p><h2>Where could learned parity representations be useful?</h2><div class="application-grid"><article><h3>Classification</h3><p>Tasks where labels depend on higher-order interactions between binary variables are a natural setting for parity features.</p></article><article><h3>Text &amp; embeddings</h3><p>Learned projection encodings provide a route for applying parity representations to continuous embeddings.</p></article><article><h3>Edge inference</h3><p>Classical parity evaluation can fit deployment environments where inference must be inexpensive.</p></article><article><h3>Quantized models</h3><p>The reported robustness analysis connects parity representations with binary and quantized inference.</p></article><article><h3>Hybrid AI pipelines</h3><p>The work is an example of quantum computation being used during model development while deployment remains classical.</p></article><article><h3>Representation learning</h3><p>The study treats feature representation itself as an object that quantum resources may help discover.</p></article></div></section>
+<section class="paper-section paper-takeaway"><p class="section-label"><span class="brand-accent">QCAASNET</span> TAKEAWAY</p><h2>What should you take away from this paper?</h2><p>The central idea is that <strong>quantum computing does not necessarily need to be present when the model is making predictions</strong>. It can instead be used to discover a representation that is difficult to find with straightforward classical search.</p><p>Parity features can express higher-order interactions while remaining cheap to evaluate once useful parity words are known. The reported experiments show meaningful gains on selected binary and encoding-limited datasets.</p><div class="concept-grid"><article><span class="concept-number">01</span><h3>Representation first</h3><p>The work focuses on discovering a useful feature basis rather than replacing inference with a quantum circuit.</p></article><article><span class="concept-number">02</span><h3>Quantum training</h3><p>Hybrid quantum-classical optimization searches for useful parity structure and encodings.</p></article><article><span class="concept-number">03</span><h3>Classical deployment</h3><p>After learning, inference can be performed entirely with classical computation.</p></article></div><p>The broader lesson is a different way to think about quantum machine-learning workflows: a quantum contribution could be concentrated in the discovery stage and then reused across many classical inferences.</p><div class="complexity-note"><strong>What remains to be proven</strong><p>The next question is whether training cost, scaling behavior and hardware requirements can produce an end-to-end advantage on larger, independently selected real-world workloads. The reported experiments are evidence for the studied tasks, not a universal demonstration of quantum advantage in machine learning.</p></div></section>
+<section class="paper-source"><div><p class="section-label">ORIGINAL RESEARCH</p><h2>Read the original paper</h2><p>Quantum Parity Representations: Learnable Basis Discovery, Encoders, and Shadow Deployment by Sang Hyub Kim, Oliver Knitter, Jonathan Mei, Claudio Girotto, Masako Yamada, Martin Roetteler and Chi Chen.</p></div><a href="https://arxiv.org/abs/2605.11213" target="_blank" rel="noopener noreferrer">READ ORIGINAL PAPER <span>↗</span></a></section>
+</main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+<footer>
+
+    <!-- =====================================================
+         CONNECT WITH US
+         ===================================================== -->
+
+    <div class="footer-social">
+
+        <h3>Connect with us</h3>
+
+        <div class="footer-social-links">
+
+            <a
+                href="https://www.youtube.com/@QCaaSNet"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                YouTube
+            </a>
+
+            <a
+                href="https://x.com/qcaasnet"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                X / Twitter
+            </a>
+
+            <a
+                href="https://www.linkedin.com/company/qcaasnet/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                LinkedIn
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         FOOTER NAVIGATION
+         ===================================================== -->
+
+    <div class="footer-main">
+
+        <div class="footer-brand-column">
+
+            <div class="footer-brand">
+
+                <img
+                    class="brand-mark"
+                    src="/images/qcaas-icon.png"
+                    alt="QCAAS Net quantum logo"
+                >
+
+                <span>
+                    QCAAS<span class="brand-accent">NET</span>
+                </span>
+
+            </div>
+
+            <p>
+                Quantum Computing as a Service Network
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>QCAASNET</h4>
+
+            <a href="/#about">
+                About QCAASNET
+            </a>
+
+            <a href="mailto:Hello@qcaasnet.com">
+                Contact
+            </a>
+
+            <a href="/privacy/">
+                Privacy
+            </a>
+
+            <a href="/terms/">
+                Terms
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Explore</h4>
+
+            <a href="/fundamentals/">
+                Fundamentals of Quantum Computing
+            </a>
+
+            <a href="/latest-research/">
+                Latest Research
+            </a>
+
+            <a href="/be-quantum-ready/">
+                Be Quantum Ready
+            </a>
+
+            <a href="/deep-learning/">
+                Deep Learning
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         FOOTER BOTTOM
+         ===================================================== -->
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 QCAAS Net
+        </span>
+
+        <div class="footer-legal">
+
+            <a href="/terms/">
+                Terms
+            </a>
+
+            <a href="/privacy/">
+                Privacy
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+</div>
+
+</body>
+</html>

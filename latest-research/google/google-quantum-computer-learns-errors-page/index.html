@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <!-- Google tag  -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCRGRVZ3NY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-QCRGRVZ3NY');
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1175538206082589"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Towards a quantum computer that learns from its errors — QCAASNET research summary."
+    >
+
+    <title>
+        Towards a quantum computer that learns from its errors | QCAASNET
+    </title>
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="/images/qcaas-icon.png?v=2"
+    >
+
+    <!-- Reuse Google research page styling -->
+    <link
+        rel="stylesheet"
+        href="../style.css"
+    >
+
+    <!-- Dedicated paper-page styling -->
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+<div class="site-shell">
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="site-header">
+
+        <nav class="main-nav">
+
+            <a class="brand" href="/">
+
+                <img
+                    class="brand-logo"
+                    src="/images/qcaas-icon.png"
+                    alt="QCAASNET"
+                >
+
+                <span class="brand-copy">
+
+                    <span class="brand-name">
+                        QCAAS<span>NET</span>
+                    </span>
+
+                    <span class="brand-tagline">
+                        Quantum Computing as a Service Network
+                    </span>
+
+                </span>
+
+            </a>
+
+
+            <div class="desktop-nav">
+
+                <a href="/">
+                    Home
+                </a>
+
+                <a href="/fundamentals/">
+                    Learn
+                </a>
+
+                <a href="/latest-research/" class="active">
+                    Research
+                </a>
+
+                <a href="/be-quantum-ready/">
+                    Be Quantum Ready
+                </a>
+
+                <a href="/#about">
+                    About
+                </a>
+
+            </div>
+
+
+            <details class="mobile-navigation">
+
+                <summary>
+                    MENU
+                </summary>
+
+                <div class="mobile-menu">
+
+                    <a href="/">
+                        Home
+                    </a>
+
+                    <a href="/fundamentals/">
+                        Learn
+                    </a>
+
+                    <a href="/latest-research/">
+                        Research
+                    </a>
+
+                    <a href="/be-quantum-ready/">
+                        Be Quantum Ready
+                    </a>
+
+                    <a href="/#about">
+                        About
+                    </a>
+
+                </div>
+
+            </details>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         PAPER
+         ===================================================== -->
+
+    <main clas
+        <!-- BREADCRUMBS -->
+
+        <div class="paper-breadcrumbs">
+
+            <a href="/">
+                Home
+            </a>
+
+            <span>›</span>
+
+            <a href="/latest-research/">
+                Latest Research
+            </a>
+
+            <span>›</span>
+
+            <a href="/latest-research/google/">
+                Google
+            </a>
+
+            <span>›</span>
+
+            <span>
+                Towards a quantum computer that learns from its errors
+            </span>
+
+        </div>
+
+
+
+        <!-- HERO -->
+
+        <section class="paper-hero">
+
+            <div class="paper-hero-copy">
+
+                <p class="eyebrow">
+                    GOOGLE QUANTUM AI
+                </p>
+
+                <h1>
+                    Towards a quantum computer that
+                    <span>learns from its errors</span>
+                </h1>
+
+                <p class="paper-lead">
+
+                    A new approach combines reinforcement learning with
+                    quantum error correction so a quantum processor can
+                    continuously adapt to control drift instead of stopping
+                    computation for recalibration.
+
+                </p>
+
+
+                <div class="paper-meta">
+
+                    <span>
+                        JUL 2026
+                    </span>
+
+                    <span>
+                        GOOGLE QUANTUM AI &gt;
+                    </span>
+
+                    <span>
+                        NATURE
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="paper-hero-image">
+
+                <img
+                    src="/images/research/google-quantum-learning-errors.png"
+                    alt="Quantum computer that learns from its errors"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- THE IDEA -->
+
+        <section class="paper-section">
+
+            <p class="section-label">
+                THE IDEA
+            </p>
+
+            <h2>
+                What does it mean for a quantum computer to learn from its errors?
+            </h2>
+
+            <p>
+                Quantum computers are extremely sensitive to changes in their
+                environment and in the analog control signals used to operate
+                their qubits. Frequencies, amplitudes and phases can drift
+                over time, changing how accurately the processor performs its
+                operations.
+            </p>
+
+            <p>
+                Today, dealing with this drift can require stopping a quantum
+                computation and recalibrating the processor. That creates a
+                fundamental problem for future workloads that may need to run
+                continuously for days or months.
+            </p>
+
+            <p>
+                The Google Quantum AI team explored a different idea:
+                use the information already produced by
+                <strong>quantum error correction</strong> as a learning signal
+                for a <strong>reinforcement learning</strong> agent.
+            </p>
+
+            <div class="equation-box">
+
+                <span>
+                    QEC detection events → RL agent → control parameters
+                </span>
+
+            </div>
+
+            <p>
+                Instead of using error-detection events only to identify and
+                correct logical errors, the framework also uses them to learn
+                how the processor is drifting and continuously adjust its
+                control parameters.
+            </p>
+
+            <p>
+                The result is a feedback loop in which the quantum computer
+                can respond to changing conditions while computation continues.
+            </p>
+
+        </section>
+
+
+        <!-- THE PROBLEM -->
+
+        <section class="paper-section">
+
+            <p class="section-label">
+                THE PROBLEM
+            </p>
+
+            <h2>
+                Quantum hardware does not stay perfectly calibrated
+            </h2>
+
+            <p>
+                A useful quantum processor has to maintain accurate control
+                over many physical parameters. Because the machine is
+                fundamentally analog, those parameters can drift as the
+                environment and hardware conditions change.
+            </p>
+
+            <p>
+                This is different from the behavior expected from ordinary
+                digital computers. A classical processor does not normally
+                require its logic gates to be continuously retuned while a
+                program is executing.
+            </p>
+
+            <p>
+                Quantum error correction helps by encoding logical information
+                across multiple physical qubits and repeatedly checking for
+                signatures of errors. But error correction does not automatically
+                explain <strong>why</strong> the errors occurred.
+            </p>
+
+            <div class="concept-grid">
+
+                <article>
+
+                    <span class="concept-number">
+                        01
+                    </span>
+
+                    <h3>
+                        Physical drift
+                    </h3>
+
+                    <p>
+                        Control frequencies, amplitudes and phases can change
+                        over time, moving the processor away from its calibrated
+                        operating point.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span class="concept-number">
+                        02
+                    </span>
+
+                    <h3>
+                        Error detection
+                    </h3>
+
+                    <p>
+                        QEC produces detection events that indicate that an
+                        error occurred within a relevant spacetime region.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span class="concept-number">
+                        03
+                    </span>
+
+                    <h3>
+                        Missing feedback
+                    </h3>
+
+                    <p>
+                        The detection data can correct logical information, but
+                        it can also reveal patterns caused by imperfect control
+                        and hardware drift.
+                    </p>
+
+                </article>
+
+            </div>
+
+            <p>
+                The research asks whether those same detection events can become
+                an additional feedback channel for quantum control.
+            </p>
+
+        </section>
+
+
+        <!-- THE LEARNING LOOP -->
+
+        <section class="paper-section">
+
+            <p class="section-label">
+                THE LEARNING LOOP
+            </p>
+
+            <h2>
+                Turning error signals into a control strategy
+            </h2>
+
+            <p>
+                Reinforcement learning works by allowing an agent to try
+                actions, observe the resulting outcomes and update its
+                behavior. Here, the actions correspond to changes in the
+                control parameters of the quantum processor.
+            </p>
+
+            <p>
+                The QEC system supplies a stream of error-detection events.
+                Instead of treating that stream only as input to a decoder,
+                the framework also gives it to the reinforcement learning
+                controller as information about the state of the hardware.
+            </p>
+
+            <div class="equation-box">
+
+                <span>
+                    Observe → Adjust → Measure → Learn
+                </span>
+
+            </div>
+
+            <div class="concept-grid">
+
+                <article>
+
+                    <span class="concept-number">
+                        01
+                    </span>
+
+                    <h3>
+                        Observe
+                    </h3>
+
+                    <p>
+                        The QEC process generates error-detection events while
+                        the processor is running.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span class="concept-number">
+                        02
+                    </span>
+
+                    <h3>
+                        Adjust
+                    </h3>
+
+                    <p>
+                        The learning agent changes control parameters that
+                        influence the analog operation of the qubits.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span class="concept-number">
+                        03
+                    </span>
+
+                    <h3>
+                        Learn
+                    </h3>
+
+                    <p>
+                        The observed error behavior provides feedback that
+                        helps the agent refine its future control actions.
+                    </p>
+
+                </article>
+
+            </div>
+
+            <p>
+                The important change is therefore not replacing QEC with
+                machine learning. The two systems have different roles:
+                QEC protects the logical information, while reinforcement
+                learning uses the resulting error information to improve the
+                underlying control.
+            </p>
+
+            <p>
+                In this framework, calibration and computation become part of
+                the same continuous process rather than two completely
+                separated stages.
+            </p>
+
+        </section>
+
+
+        <!-- THE EXPERIMENT -->
+
+        <section class="paper-section">
+
+            <p class="section-label">
+                THE EXPERIMENT
+            </p>
+
+            <h2>
+                Tested on Google's Willow processor
+            </h2>
+
+            <p>
+                The researchers experimentally demonstrated the approach on
+                Google's <strong>Willow</strong> superconducting quantum
+                processor. They deliberately injected artificial drift into
+                control parameters and then evaluated whether reinforcement
+                learning could steer the system back toward a more stable
+                operating regime.
+            </p>
+
+            <p>
+                The result was a <strong>3.5-fold improvement</strong> in the
+                logical stability of the surface-code quantum memory against
+                the injected drift.
+            </p>
+
+            <div class="concept-grid">
+
+                <article>
+
+                    <span class="concept-number">
+                        01
+                    </span>
+
+                    <h3>
+                        Injected drift
+                    </h3>
+
+                    <p>
+                        Artificial changes were introduced into control
+                        parameters to create a controlled calibration challenge.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span class="concept-number">
+                        02
+                    </span>
+
+                    <h3>
+                        RL fine-tuning
+                    </h3>
+
+                    <p>
+                        The learning controller used QEC detection information
+                        to steer the processor while it continued operating.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span class="concept-number">
+                        03
+                    </span>
+
+                    <h3>
+                        More stable memory
+                    </h3>
+
+                    <p>
+                        The resulting control reduced the impact of drift on
+                        the logical quantum memory.
+                    </p>
+
+                </article>
+
+            </div>
+
+            <p>
+                The researchers also report that, after extensive
+                human-in-the-loop calibration, additional reinforcement-learning
+                fine-tuning reduced the logical error rate by another
+                <strong>20%</strong>.
+            </p>
+
+            <p>
+                Combining the technologies used in the experiment, the team
+                reports average logical error rates below one error per
+                thousand error-correction cycles for the surface code and
+                roughly one per hundred for the color code.
+            </p>
+
+        </section>
+
+
+        <!-- WHY QEC MATTERS -->
+
+        <section class="paper-section">
+
+            <p class="section-label">
+                WHY QEC MATTERS
+            </p>
+
+            <h2>
+                Error correction becomes more than a repair mechanism
+            </h2>
+
+            <p>
+                Quantum error correction is normally described as a way to
+                protect logical information from physical errors. Repeated
+                measurements produce detection events that a decoder can use
+                to infer the corrections needed to preserve the logical state.
+            </p>
+
+            <p>
+                This research adds a second use for that same information.
+                The detection events also contain evidence about the current
+                condition of the processor and can therefore guide the
+                calibration process.
+            </p>
+
+            <div class="concept-grid">
+
+                <article>
+
+                    <span class="concept-number">
+                        01
+                    </span>
+
+                    <h3>
+                        Detect
+                    </h3>
+
+                    <p>
+                        QEC identifies signatures that indicate physical errors
+                        in the encoded quantum information.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span class="concept-number">
+                        02
+                    </span>
+
+                    <h3>
+                        Decode
+                    </h3>
+
+                    <p>
+                        A decoder uses the detection record to infer logical
+                        corrections and protect the encoded state.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span class="concept-number">
+                        03
+                    </span>
+
+                    <h3>
+                        Learn
+                    </h3>
+
+                    <p>
+                        The same detection stream can also teach an RL agent
+                        how the processor's control is changing.
+                    </p>
+
+                </article>
+
+            </div>
+
+            <p>
+                This dual role is the central conceptual shift: the quantum
+                computer is not only correcting the consequences of errors;
+                it is also learning from the error signals to reduce the
+                conditions that produce them.
+            </p>
+
+        </section>
+
+
+        <!-- DOES IT SCALE -->
+
+        <section class="paper-section paper-highlight">
+
+            <div class="paper-highlight-inner">
+
+                <p class="section-label">
+                    DOES IT SCALE?
+                </p>
+
+                <h2>
+                    The scaling question is as important as the experiment
+                </h2>
+
+                <p>
+                    A reinforcement-learning controller that works on a small
+                    processor would not by itself solve the calibration problem
+                    for future large-scale quantum computers. The researchers
+                    therefore tested the framework in numerical simulations
+                    involving <strong>hundreds of qubits</strong> and
+                    <strong>tens of thousands of control parameters</strong>.
+                </p>
+
+
+                <div class="complexity-box">
+
+                    <div>
+
+                        <span>
+                            QUBITS
+                        </span>
+
+                        <strong>
+                            100s
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            CONTROL PARAMETERS
+                        </span>
+
+                        <strong>
+                            10,000s
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            RL TRAINING
+                        </span>
+
+                        <strong>
+                            SIZE-INDEPENDENT
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <p>
+                    In the simulations, a miscalibrated system began with a
+                    high physical error rate. The reinforcement-learning agent
+                    gradually reduced that error rate by learning improved
+                    control parameters.
+                </p>
+
+                <p>
+                    At the same time, quantum error correction suppressed the
+                    logical error rate exponentially as the number of physical
+                    qubits increased. Crucially, the simulations found that the
+                    number of reinforcement-learning training iterations
+                    required did not grow with system size.
+                </p>
+
+
+                <div class="complexity-note">
+
+                    <strong>
+                        Why this matters
+                    </strong>
+
+                    <p>
+                        The result suggests that the learning process can remain
+                        manageable as the quantum processor grows, because QEC
+                        detection events are locally sensitive to errors rather
+                        than requiring the agent to learn the entire processor
+                        as one undifferentiated system.
+                    </p>
+
+                </div>
+
+
+                <p>
+                    This is a simulation result, not a demonstration that a
+                    future large-scale fault-tolerant processor has already
+                    solved the complete calibration problem.
+                </p>
+
+                <p>
+                    The researchers identify faster communication between the
+                    learning agent and the quantum processor, together with
+                    more advanced machine-learning methods, as important
+                    directions for realizing the framework's full potential.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- WHAT THIS DOES NOT CLAIM -->
+
+        <section class="paper-section">
+
+            <p class="section-label">
+                WHAT THIS DOES NOT CLAIM
+            </p>
+
+            <h2>
+                The result is significant, but it is not a finished fault-tolerant computer
+            </h2>
+
+            <p>
+                The experiment demonstrates a method for adaptive quantum
+                control and reports improved logical stability under injected
+                drift. It does not mean that quantum computers no longer need
+                calibration, or that every source of physical error can be
+                eliminated by reinforcement learning.
+            </p>
+
+            <p>
+                Some errors arise from unavoidable interactions between a
+                quantum system and its environment. Other errors are associated
+                with imperfect control and hardware drift. The learning
+                framework is primarily relevant to the latter class of
+                controllable behavior.
+            </p>
+
+            <p>
+                The large-system evidence also comes from numerical simulations.
+                A future processor would still need an efficient real-time
+                communication path between the quantum hardware, the error
+                correction system and the learning controller.
+            </p>
+
+            <div class="concept-grid">
+
+                <article>
+
+                    <span class="concept-number">
+                        01
+                    </span>
+
+                    <h3>
+                        Not error-free
+                    </h3>
+
+                    <p>
+                        Reinforcement learning reduces errors caused by
+                        imperfect control; it does not remove all physical
+                        sources of quantum noise.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span class="concept-number">
+                        02
+                    </span>
+
+                    <h3>
+                        Not fully autonomous yet
+                    </h3>
+
+                    <p>
+                        The reported experiment builds on extensive calibration
+                        and a human-in-the-loop workflow before RL fine-tuning.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span class="concept-number">
+                        03
+                    </span>
+
+                    <h3>
+                        Not a quantum advantage claim
+                    </h3>
+
+                    <p>
+                        The work addresses quantum control and stability rather
+                        than demonstrating computational speedup for an
+                        application.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- WHERE IT COULD MATTER -->
+
+        <section class="paper-section">
+
+            <p class="section-label">
+                WHERE IT COULD MATTER
+            </p>
+
+            <h2>
+                Why continuous calibration matters for future quantum computing
+            </h2>
+
+            <p>
+                Future fault-tolerant quantum algorithms are expected to require
+                long computations involving large numbers of physical qubits.
+                A processor that must repeatedly stop for full recalibration
+                would introduce interruptions into those workloads.
+            </p>
+
+            <p>
+                An adaptive controller could instead make calibration part of
+                the running system, provided the learning loop can operate
+                quickly and reliably enough.
+            </p>
+
+            <div class="application-grid">
+
+                <article>
+
+                    <h3>
+                        Long-running algorithms
+                    </h3>
+
+                    <p>
+                        Continuous control could reduce the need to terminate
+                        long computations simply because hardware parameters
+                        have drifted.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Fault-tolerant systems
+                    </h3>
+
+                    <p>
+                        As QEC systems become larger, maintaining sufficiently
+                        low physical error rates becomes increasingly important
+                        for preserving logical information.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Automated calibration
+                    </h3>
+
+                    <p>
+                        Learning-based control could reduce dependence on
+                        manually designed models for complex hardware behavior
+                        that is difficult to capture analytically.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Adaptive hardware
+                    </h3>
+
+                    <p>
+                        A processor could respond to changing operating
+                        conditions using information generated during its own
+                        computation.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Machine learning for control
+                    </h3>
+
+                    <p>
+                        The work illustrates a broader interface between
+                        reinforcement learning and the real-time control of
+                        physical quantum systems.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Scalable quantum operations
+                    </h3>
+
+                    <p>
+                        The simulated size-independent training behavior is
+                        relevant to the question of whether adaptive control
+                        can remain practical as quantum processors grow.
+                    </p>
+
+                </article>
+
+            </div>
+
+            <p>
+                These are potential implications of the framework, not
+                demonstrations that each of these applications has already
+                been achieved experimentally.
+            </p>
+
+        </section>
+
+
+        <!-- QCAASNET TAKEAWAY -->
+
+        <section class="paper-section paper-takeaway">
+
+            <p class="section-label">
+                <span class="brand-accent">QCAASNET</span> TAKEAWAY
+            </p>
+
+            <h2>
+                What should you take away from this research?
+            </h2>
+
+            <p>
+                The most important idea is that quantum error correction can
+                provide more than protection after an error has happened.
+                Its detection data can also become a real-time learning signal
+                for improving the physical control of the machine.
+            </p>
+
+            <p>
+                Google's experiment on Willow shows that reinforcement learning
+                can respond to deliberately introduced drift and improve the
+                stability of a logical quantum memory. The reported 3.5-fold
+                improvement demonstrates the concept experimentally, while the
+                simulations address whether the learning process can scale.
+            </p>
+
+            <div class="concept-grid">
+
+                <article>
+
+                    <span class="concept-number">
+                        01
+                    </span>
+
+                    <h3>
+                        Errors become information
+                    </h3>
+
+                    <p>
+                        QEC detection events can reveal information about the
+                        behavior of the physical system that produced them.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span class="concept-number">
+                        02
+                    </span>
+
+                    <h3>
+                        Calibration becomes continuous
+                    </h3>
+
+                    <p>
+                        Reinforcement learning can use the error stream to
+                        continuously adjust control parameters during
+                        computation.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span class="concept-number">
+                        03
+                    </span>
+
+                    <h3>
+                        Scaling is the real test
+                    </h3>
+
+                    <p>
+                        The next challenge is integrating the learning loop
+                        tightly and quickly enough with much larger quantum
+                        processors.
+                    </p>
+
+                </article>
+
+            </div>
+
+            <p>
+                The broader lesson is about the relationship between quantum
+                hardware and intelligent control. As quantum processors become
+                more complex, purely static calibration models may have to give
+                way to systems that continuously learn from the behavior of the
+                hardware itself.
+            </p>
+
+            <div class="complexity-note">
+
+                <strong>
+                    QCAASNET perspective
+                </strong>
+
+                <p>
+                    This research is best understood as a control and error-
+                    correction advance rather than a demonstration of quantum
+                    computational advantage. Its significance lies in making
+                    the quantum processor itself part of a feedback loop:
+                    compute, detect, learn and adapt without necessarily
+                    stopping the computation.
+                </p>
+
+            </div>
+
+            <p>
+                If this approach can be integrated with faster hardware-software
+                communication and more capable learning algorithms, it could
+                become an important component of the control stack required for
+                long-running fault-tolerant quantum computation.
+            </p>
+
+        </section>
+
+
+        <!-- ORIGINAL PAPER -->
+
+        <section class="paper-source">
+
+            <div>
+
+                <p class="section-label">
+                    ORIGINAL RESEARCH
+                </p>
+
+                <h2>
+                    Read the original research
+                </h2>
+
+                <p>
+                    Reinforcement learning control of quantum error correction
+                    by Volodymyr Sivak, Alexis Morvan, Michael Broughton and
+                    collaborators.
+                </p>
+
+            </div>
+
+
+            <a
+                href="https://www.nature.com/articles/s41586-026-10759-2"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                READ ORIGINAL PAPER
+                <span>↗</span>
+            </a>
+
+        </section>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+<footer>
+
+    <!-- =====================================================
+         CONNECT WITH US
+         ===================================================== -->
+
+    <div class="footer-social">
+
+        <h3>Connect with us</h3>
+
+        <div class="footer-social-links">
+
+            <a
+                href="https://www.youtube.com/@QCaaSNet"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                YouTube
+            </a>
+
+            <a
+                href="https://x.com/qcaasnet"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                X / Twitter
+            </a>
+
+            <a
+                href="https://www.linkedin.com/company/qcaasnet/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                LinkedIn
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         FOOTER NAVIGATION
+         ===================================================== -->
+
+    <div class="footer-main">
+
+        <div class="footer-brand-column">
+
+            <div class="footer-brand">
+
+                <img
+                    class="brand-mark"
+                    src="/images/qcaas-icon.png"
+                    alt="QCAAS Net quantum logo"
+                >
+
+                <span>
+                    QCAAS<span class="brand-accent">NET</span>
+                </span>
+
+            </div>
+
+            <p>
+                Quantum Computing as a Service Network
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>QCAASNET</h4>
+
+            <a href="/#about">
+                About QCAASNET
+            </a>
+
+            <a href="mailto:Hello@qcaasnet.com">
+                Contact
+            </a>
+
+            <a href="/privacy/">
+                Privacy
+            </a>
+
+            <a href="/terms/">
+                Terms
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Explore</h4>
+
+            <a href="/fundamentals/">
+                Fundamentals of Quantum Computing
+            </a>
+
+            <a href="/latest-research/">
+                Latest Research
+            </a>
+
+            <a href="/be-quantum-ready/">
+                Be Quantum Ready
+            </a>
+
+            <a href="/deep-learning/">
+                Deep Learning
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         FOOTER BOTTOM
+         ===================================================== -->
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 QCAAS Net
+        </span>
+
+        <div class="footer-legal">
+
+            <a href="/terms/">
+                Terms
+            </a>
+
+            <a href="/privacy/">
+                Privacy
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+</div>
+
+</body>
+</html>

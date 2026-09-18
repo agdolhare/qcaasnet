@@ -1,0 +1,699 @@
+/* =========================================================
+   QUANTUM ALGORITHM — PAPER PAGE
+   ========================================================= */
+
+.paper-page {
+    padding: 42px 0 90px;
+}
+
+
+/* =========================================================
+   BREADCRUMBS
+   ========================================================= */
+
+.paper-breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 48px;
+
+    color: #71849a;
+    font-size: 11px;
+    letter-spacing: .04em;
+}
+
+.paper-breadcrumbs a {
+    color: #91a5bb;
+    text-decoration: none;
+}
+
+.paper-breadcrumbs span:last-child {
+    color: #4e6379;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.paper-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(420px, .9fr);
+    gap: 70px;
+    align-items: center;
+
+    padding: 20px 0 80px;
+
+    border-bottom: 1px solid var(--line);
+}
+
+.paper-hero-copy {
+    max-width: 760px;
+}
+
+.paper-hero .eyebrow {
+    margin-bottom: 22px;
+}
+
+.paper-hero h1 {
+    margin: 0;
+
+    font-size: clamp(48px, 5vw, 78px);
+    line-height: .98;
+    letter-spacing: -.045em;
+    color: #f2f5f8;
+}
+
+.paper-hero h1 span {
+    color: #10c8c8;
+}
+
+.paper-lead {
+    max-width: 690px;
+    margin: 30px 0 28px;
+
+    color: #9eb1c6;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.paper-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 22px;
+
+    color: #10c8c8;
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: .08em;
+}
+
+.paper-meta span + span {
+    color: #8295aa;
+}
+
+
+.paper-hero-image {
+    width: 100%;
+    overflow: hidden;
+
+    border: 1px solid var(--line);
+    border-radius: 12px;
+
+    background: #07111e;
+}
+
+.paper-hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.paper-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 48px 0;
+}
+
+.section-label {
+    margin: 0 0 18px;
+
+    color: #10c8c8;
+    font-family: monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .16em;
+}
+
+.paper-section h2 {
+    margin: 0 0 28px;
+
+    color: #f2f5f8;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.05;
+    letter-spacing: -.035em;
+}
+
+/* =========================================================
+   ARTICLE PARAGRAPH RHYTHM
+   ========================================================= */
+
+.paper-section > p {
+    max-width: 900px !important;
+    margin-top: 0 !important;
+    margin-bottom: 8px !important;
+
+    color: #9eb1c6;
+    font-size: 17px;
+    line-height: 1.65;
+}
+
+.paper-section > p + p {
+    margin-top: 0 !important;
+}
+
+.paper-section p:last-child {
+    margin-bottom: 0;
+}
+
+.paper-section strong {
+    color: #e9f1f8;
+}
+
+
+/* =========================================================
+   EQUATION
+   ========================================================= */
+
+.equation-box {
+    margin: 36px 0;
+    padding: 30px;
+
+    border: 1px solid #155b7b;
+    border-radius: 10px;
+
+    background: rgba(6, 23, 38, .7);
+
+    text-align: center;
+}
+
+.equation-box span {
+    color: #e8f4fb;
+    font-family: Georgia, serif;
+    font-size: clamp(32px, 5vw, 56px);
+    font-style: italic;
+}
+
+
+/* =========================================================
+   CONCEPT GRID
+   ========================================================= */
+
+.concept-grid,
+.application-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+
+    margin-top: 40px;
+}
+
+.concept-grid article,
+.application-grid article {
+    padding: 26px;
+
+    border: 1px solid var(--line);
+    border-radius: 10px;
+
+    background: rgba(7, 17, 30, .65);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.concept-number {
+    color: #10c8c8;
+    font-family: monospace;
+    font-size: 11px;
+}
+
+.concept-grid h3 {
+    margin: 22px 0 10px;
+
+    color: #edf3f8;
+    font-size: 20px;
+}
+
+.application-grid h3 {
+    margin: 22px 0 10px;
+
+    color: #10c8c8;
+    font-size: 20px;
+    line-height: 1.15;
+
+    min-height: 46px;
+}
+
+.concept-grid p,
+.application-grid p {
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   COMPLEXITY
+   ========================================================= */
+
+.paper-highlight {
+    max-width: none;
+
+    padding-left: 40px;
+    padding-right: 40px;
+
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+
+    background: rgba(6, 18, 31, .45);
+}
+
+.complexity-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+
+    margin: 40px 0;
+
+    border: 1px solid var(--line);
+    background: var(--line);
+}
+
+.complexity-box div {
+    padding: 26px;
+    background: #07111e;
+}
+
+.complexity-box span {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #70869d;
+    font-family: monospace;
+    font-size: 10px;
+    letter-spacing: .12em;
+}
+
+.complexity-box strong {
+    color: #10c8c8;
+    font-family: Georgia, serif;
+    font-size: 34px;
+}
+
+
+/* =========================================================
+   TAKEAWAY
+   ========================================================= */
+
+.paper-takeaway {
+    max-width: 900px;
+}
+
+.paper-takeaway p {
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   ORIGINAL PAPER
+   ========================================================= */
+
+.paper-source {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+    margin: 20px 0 30px;
+    padding: 40px;
+
+    border: 1px solid #155b7b;
+    border-radius: 12px;
+
+    background: rgba(7, 17, 30, .75);
+}
+
+.paper-source h2 {
+    margin: 0 0 12px;
+
+    color: #f2f5f8;
+    font-size: 30px;
+}
+
+.paper-source p {
+    margin: 0;
+    color: #8fa5ba;
+}
+
+.paper-source a {
+    flex: 0 0 auto;
+
+    padding: 14px 20px;
+
+    border: 1px solid #155b7b;
+    border-radius: 7px;
+
+    color: #10c8c8;
+    font-family: monospace;
+    font-size: 11px;
+    text-decoration: none;
+    letter-spacing: .08em;
+}
+
+.paper-source a span {
+    margin-left: 8px;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .paper-hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .concept-grid,
+    .application-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .paper-highlight {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .paper-source {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .paper-page {
+        padding-top: 28px;
+    }
+
+    .paper-hero h1 {
+        font-size: 42px;
+    }
+
+    .paper-lead {
+        font-size: 16px;
+    }
+
+    .paper-section {
+        padding: 60px 0;
+    }
+
+    .complexity-box {
+        grid-template-columns: 1fr;
+    }
+
+    .paper-source {
+        padding: 26px;
+    }
+
+}
+/* =========================================================
+   QCAASNET MASTER BACKGROUND
+   MATCH HOMEPAGE
+   ========================================================= */
+
+body {
+    background:
+        radial-gradient(
+            circle at 72% 20%,
+            rgba(25, 199, 183, .1),
+            transparent 26rem
+        ),
+        radial-gradient(
+            circle at 15% 70%,
+            rgba(16, 79, 128, .12),
+            transparent 30rem
+        ),
+        var(--bg);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+
+    opacity: .38;
+
+    background-image:
+        linear-gradient(
+            rgba(64, 105, 139, .16) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(64, 105, 139, .16) 1px,
+            transparent 1px
+        );
+
+    background-size: 120px 120px;
+}
+
+/* =========================================================
+   QCAASNET FOOTER
+   EXACT HOMEPAGE FOOTER SYSTEM
+   ========================================================= */
+
+footer {
+    margin-top: 30px;
+    border-top: 1px solid var(--line);
+    color: #61738a;
+    font-size: .85rem;
+}
+
+
+/* =========================================================
+   SOCIAL
+   ========================================================= */
+
+.footer-social {
+    padding: 38px 0 40px;
+}
+
+.footer-social h3 {
+    margin: 0 0 22px;
+    color: #d4dde8;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.footer-social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-social-links a {
+    width: fit-content;
+    color: #8da0b6;
+    font-weight: 500;
+    transition: color .2s ease;
+}
+
+.footer-social-links a:hover {
+    color: var(--accent);
+}
+
+
+/* =========================================================
+   FOOTER MAIN
+   ========================================================= */
+
+.footer-main {
+    padding: 40px 0 45px;
+    border-top: 1px solid var(--line);
+
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1.4fr;
+
+    gap: 70px;
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.footer-brand-column {
+    max-width: 320px;
+}
+
+.footer-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #d4dde8;
+    font-weight: 800;
+    letter-spacing: .12em;
+}
+
+.footer-brand .brand-mark {
+    width: 42px;
+    height: 42px;
+
+    object-fit: contain;
+    display: block;
+}
+
+.footer-brand-column p {
+    margin: 16px 0 0;
+
+    color: #61738a;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   COLUMNS
+   ========================================================= */
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 13px;
+}
+
+.footer-column h4 {
+    margin: 0 0 8px;
+
+    color: #d4dde8;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.footer-column a {
+    color: #71859c;
+    transition: color .2s ease;
+}
+
+.footer-column a:hover {
+    color: var(--accent);
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+   ========================================================= */
+
+.footer-bottom {
+    padding: 25px 0 35px;
+
+    border-top: 1px solid var(--line);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 25px;
+}
+
+.footer-bottom > span {
+    color: #71859c;
+}
+
+.footer-legal {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-legal a {
+    color: #71859c;
+    transition: color .2s ease;
+}
+
+.footer-legal a:hover {
+    color: var(--accent);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 720px) {
+
+    .footer-social {
+        padding: 32px 0 35px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+}
+/* =========================================================
+   FOOTER WORDMARK — FORCE HOMEPAGE COLORS
+   ========================================================= */
+
+footer .footer-brand > span {
+    color: #d4dde8 !important;
+    font-family: Inter, system-ui, sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 800 !important;
+    letter-spacing: .12em !important;
+}
+
+footer .footer-brand > span .brand-accent {
+    color: #10c8c8 !important;
+}
+
+footer .footer-brand .brand-mark {
+    width: 42px !important;
+    height: 42px !important;
+    object-fit: contain !important;
+    display: block !important;
+}
+
+/* =========================================================
+   COMPLEXITY — FULL WIDTH SECTION,
+   900px CONTENT COLUMN
+   ========================================================= */
+
+.paper-highlight {
+    max-width: none;
+    padding-left: 40px;
+    padding-right: 40px;
+    box-sizing: border-box;
+}
+
+.paper-highlight-inner {
+    width: 100%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   COMPLEXITY BOX
+   ========================================================= */
+
+.complexity-box {
+    width: 100%;
+    margin: 40px 0;
+    box-sizing: border-box;
+}
+.paper-takeaway .section-label .brand-accent {
+    color: #10c8c8;
+}
