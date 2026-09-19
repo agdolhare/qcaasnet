@@ -3068,41 +3068,9 @@ footer {
     text-transform: uppercase;
 }
 
-
-/* Intel */
-
-.research-card:nth-child(5) .research-card-content::before {
-    content: "JAN 2026";
-    display: inline-block;
-    margin-bottom: 13px;
-
-    color: var(--accent);
-
-    font-family: "DM Mono", monospace;
-    font-size: .54rem;
-    letter-spacing: .10em;
-    text-transform: uppercase;
-}
-
-.research-card:nth-child(5) .research-card-content::after {
-    content: "INTEL";
-    position: absolute;
-
-    top: 22px;
-    left: 105px;
-
-    color: var(--muted-2);
-
-    font-family: "DM Mono", monospace;
-    font-size: .58rem;
-    letter-spacing: .09em;
-    text-transform: uppercase;
-}
-
-
 /* NVIDIA */
 
-.research-card:nth-child(6) .research-card-content::before {
+.research-card:nth-child(5) .research-card-content::before {
     content: "SEP 2026";
     display: inline-block;
     margin-bottom: 13px;
@@ -3115,7 +3083,7 @@ footer {
     text-transform: uppercase;
 }
 
-.research-card:nth-child(6) .research-card-content::after {
+.research-card:nth-child(5) .research-card-content::after {
     content: "NVIDIA";
     position: absolute;
 
@@ -3130,6 +3098,36 @@ footer {
     text-transform: uppercase;
 }
 
+
+/* Intel */
+
+.research-card:nth-child(6) .research-card-content::before {
+    content: "JAN 2026";
+    display: inline-block;
+    margin-bottom: 13px;
+
+    color: var(--accent);
+
+    font-family: "DM Mono", monospace;
+    font-size: .54rem;
+    letter-spacing: .10em;
+    text-transform: uppercase;
+}
+
+.research-card:nth-child(6) .research-card-content::after {
+    content: "INTEL";
+    position: absolute;
+
+    top: 22px;
+    left: 105px;
+
+    color: var(--muted-2);
+
+    font-family: "DM Mono", monospace;
+    font-size: .58rem;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+}
 
 /* ---------------------------------------------------------
    CARD CONTENT
