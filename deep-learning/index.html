@@ -1,224 +1,729 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <!-- Google tag  -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCRGRVZ3NY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-QCRGRVZ3NY');
-  </script>
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1175538206082589"
-     crossorigin="anonymous"></script>
+    <!-- Google tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QCRGRVZ3NY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-QCRGRVZ3NY');
+    </script>
+
+    <!-- Google AdSense -->
+    <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1175538206082589"
+        crossorigin="anonymous"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Choose a quantum computing technology path and explore the skills, learning resources, credentials, and career considerations for IBM Qiskit, Google Cirq, or Microsoft Q#.">
     <title>Deep Learning | QCAASNET</title>
-
-    <!-- Keep this path if your favicon is stored here -->
-    <link rel="icon" type="image/png" href="images/qcaasnet-logo.png">
-
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        html, body {
-            margin: 0;
-            min-height: 100%;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            color: #e8eef8;
-            background:
-                linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px),
-                #030914;
-            background-size: 74px 74px;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        .nav {
-            min-height: 74px;
-            padding: 0 5%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 25px;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-            background: rgba(3,9,20,0.88);
-        }
-
-        .brand {
-            font-size: 22px;
-            font-weight: 800;
-            letter-spacing: 2px;
-            white-space: nowrap;
-        }
-
-        .brand span {
-            color: #7dd3fc;
-        }
-
-        .links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-            gap: 18px;
-            font-size: 14px;
-            color: #aebbd0;
-        }
-
-        .links a:hover {
-            color: #ffffff;
-        }
-
-        .hero {
-            min-height: calc(100vh - 74px);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 70px 20px;
-            text-align: center;
-        }
-
-        .content {
-            width: min(850px, 100%);
-        }
-
-        .eyebrow {
-            display: inline-block;
-            margin-bottom: 20px;
-            padding: 8px 14px;
-            border: 1px solid rgba(125,211,252,0.35);
-            border-radius: 999px;
-            color: #7dd3fc;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 2px;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: clamp(44px, 7vw, 82px);
-            line-height: 1.05;
-            letter-spacing: -2px;
-        }
-
-        .line {
-            width: 90px;
-            height: 3px;
-            margin: 28px auto;
-            background: #7dd3fc;
-            border-radius: 10px;
-        }
-
-        .description {
-            max-width: 720px;
-            margin: 0 auto;
-            color: #b8c5d8;
-            font-size: 20px;
-            line-height: 1.75;
-        }
-
-        .coming {
-            margin: 38px auto 0;
-            width: min(620px, 100%);
-            padding: 24px 28px;
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 14px;
-            background: rgba(10,20,36,0.72);
-            box-shadow: 0 20px 70px rgba(0,0,0,0.3);
-        }
-
-        .coming strong {
-            display: block;
-            margin-bottom: 8px;
-            font-size: 18px;
-            color: #ffffff;
-        }
-
-        .coming p {
-            margin: 0;
-            color: #8999b0;
-            line-height: 1.6;
-        }
-
-        .back {
-            display: inline-block;
-            margin-top: 34px;
-            padding: 12px 20px;
-            border: 1px solid rgba(255,255,255,0.16);
-            border-radius: 8px;
-            color: #dce7f5;
-            transition: 0.2s ease;
-        }
-
-        .back:hover {
-            border-color: #7dd3fc;
-            color: #7dd3fc;
-        }
-
-        @media (max-width: 800px) {
-            .nav {
-                padding: 18px 5%;
-                align-items: flex-start;
-                flex-direction: column;
-            }
-
-            .links {
-                justify-content: flex-start;
-                gap: 12px;
-            }
-
-            .hero {
-                min-height: calc(100vh - 130px);
-                padding-top: 50px;
-            }
-
-            .description {
-                font-size: 17px;
-            }
-        }
-    </style>
+    <link rel="icon" type="image/png" href="/images/qcaas-icon.png?v=2">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <nav class="nav">
-        <a class="brand" href="/">QCAAS<span>NET</span></a>
+<div class="site-shell">
 
-        <div class="links">
-            <a href="/fundamentals/">Fundamentals</a>
-            <a href="/latest-research/">Latest Research</a>
-            <a href="/deep-learning/">Deep Learning</a>
-            <a href="/be-quantum-ready/">Be Quantum Ready</a>
-            <a href="/feedback-program/">Feedback Program</a>
-        </div>
-    </nav>
+    <!-- =====================================================
+         NAVIGATION — MATCHES QCAASNET HOMEPAGE
+         ===================================================== -->
+    <header class="nav-wrap">
+        <nav class="nav">
 
-    <main class="hero">
-        <section class="content">
-            <div class="eyebrow">QCAASNET LEARNING</div>
+            <a class="brand" href="/">
+                <img class="brand-mark"
+                     src="/images/qcaas-icon.png"
+                     alt="QCAAS Net quantum logo">
 
-            <h1>Deep Learning</h1>
+                <span class="brand-text">
+                    <span class="brand-name">
+                        QCAAS<span class="brand-accent">NET</span>
+                    </span>
 
-            <div class="line"></div>
+                    <span class="brand-tagline">
+                        Quantum Computing as a Service Network
+                    </span>
+                </span>
+            </a>
 
-            <p class="description">Explore the foundations of deep learning and its connection to modern artificial intelligence, neural networks, computation, and emerging quantum technologies.</p>
-
-            <div class="coming">
-                <strong>Coming Soon</strong>
-                <p>Learning material, explanations, examples, and practical guides are currently being prepared.</p>
+            <div class="content-tabs">
+                <a href="/fundamentals/">Fundamentals of Quantum Computing</a>
+                <a href="/be-quantum-ready/">Be Quantum Ready</a>
+                <a href="/latest-research/">Latest Research</a>
+                <a href="/deep-learning/" class="active">Deep Learning</a>
+                <a href="/#about">About QCAAS NET</a>
             </div>
 
-            <a class="back" href="/fundamentals/">← Back to Fundamentals</a>
+        </nav>
+    </header>
+
+    <details class="mobile-topic-menu">
+        <summary>
+            <span>Explore Topics</span>
+            <span class="mobile-topic-arrow">↓</span>
+        </summary>
+
+        <div class="mobile-topic-links">
+            <a href="/fundamentals/">Fundamentals of Quantum Computing</a>
+            <a href="/be-quantum-ready/">Be Quantum Ready</a>
+            <a href="/latest-research/">Latest Research</a>
+            <a href="/deep-learning/">Deep Learning</a>
+            <a href="/#about">About QCAAS NET</a>
+        </div>
+    </details>
+
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+    <main>
+
+        <section class="deep-hero">
+            <div class="eyebrow">
+                <span></span>
+                DEEP LEARNING CAREER PATHS
+            </div>
+
+            <div class="hero-grid">
+
+                <div class="hero-copy">
+                    <h1>
+                        Choose Your Path<br>
+                        in the <strong>Quantum</strong> Era
+                    </h1>
+
+                    <p>
+                        Quantum computing is developing through different software
+                        ecosystems. Choose a technology path and explore the skills,
+                        learning resources, credentials, and career considerations
+                        connected with it.
+                    </p>
+
+                    <div class="hero-rule"></div>
+
+                    <div class="hero-sequence">
+                        <span>01&nbsp; LEARN</span>
+                        <span>02&nbsp; BUILD</span>
+                        <span>03&nbsp; GET CREDENTIALS</span>
+                        <span>04&nbsp; GROW YOUR CAREER</span>
+                    </div>
+                </div>
+
+                <div class="path-selector">
+
+                    <button class="path-card path-card-ibm"
+        type="button"
+        data-path="ibm"
+        aria-controls="ibm-path"
+        aria-expanded="false">
+                        <div class="card-number">01</div>
+
+<div class="company-name">IBM</div>
+
+<h2>Qiskit</h2>
+
+<div class="path-card-image">
+    <img
+        src="/images/deep-learning/qiskit-career-path.png"
+        alt="IBM Qiskit quantum computing career path"
+    >
+</div>
+
+<p>
+    BUILD WITH QISKIT.<br>
+    LEARN QUANTUM COMPUTING.<br>
+    WORK WITH REAL SYSTEMS.
+</p>
+                        <span class="path-card-action">
+                            Explore This Path <b>→</b>
+                        </span>
+                    </button>
+
+                    <button class="path-card path-card-google"
+                            type="button"
+                            data-path="google"
+                            aria-controls="google-path"
+                            aria-expanded="false">
+                        <div class="card-number">02</div>
+                        <div class="company-name">GOOGLE QUANTUM AI</div>
+                        <h2>Cirq</h2>
+                        <div class="path-card-image">
+    <img
+        src="/images/deep-learning/cirq-card.png"
+        alt="Google Quantum AI Cirq"
+    >
+</div>
+                        <p>
+                            BUILD WITH CIRQ.<br>
+                            EXPLORE QUANTUM CIRCUITS.<br>
+                            FOLLOW RESEARCH.
+                        </p>
+                        <span class="path-card-action">
+                            Explore This Path <b>→</b>
+                        </span>
+                    </button>
+
+                    <button class="path-card path-card-microsoft"
+                            type="button"
+                            data-path="microsoft"
+                            aria-controls="microsoft-path"
+                            aria-expanded="false">
+                        <div class="card-number">03</div>
+                        <div class="company-name">MICROSOFT</div>
+                        <h2>Q#</h2>
+                        <div class="path-card-image">
+    <img
+        src="/images/deep-learning/qsharp-card.png"
+        alt="Microsoft Quantum Q#"
+    >
+</div>
+                        <p>
+                            BUILD WITH Q#.<br>
+                            EXPLORE AZURE QUANTUM.<br>
+                            DEVELOP QUANTUM PROGRAMS.
+                        </p>
+                        <span class="path-card-action">
+                            Explore This Path <b>→</b>
+                        </span>
+                    </button>
+
+                </div>
+            </div>
+
+            <div class="selection-prompt">
+                <span>↓</span>
+                SELECT A PATH TO VIEW THE ROADMAP
+            </div>
         </section>
+
+
+        <!-- =====================================================
+             PATH DETAILS — HIDDEN UNTIL A PATH IS SELECTED
+             ===================================================== -->
+        <section class="path-details" id="path-details" aria-live="polite">
+
+            <div class="path-details-inner">
+
+                <!-- IBM -->
+                <article class="path-panel" id="ibm-path" data-panel="ibm" hidden>
+
+                    <div class="path-panel-header">
+                        <div>
+                            <div class="panel-kicker">
+                                SELECTED PATH <span>01</span>
+                            </div>
+                            <h2>IBM <strong>Qiskit</strong></h2>
+                            <p>
+                                A practical path centered on Qiskit, quantum
+                                programming, algorithms, experimentation, and
+                                IBM Quantum learning resources.
+                            </p>
+                        </div>
+
+                        <div class="panel-status">
+                            <i></i> PATH ACTIVE
+                        </div>
+                    </div>
+
+                    <div class="path-panel-grid">
+
+                        <div class="roadmap-column">
+                            <div class="section-label">YOUR LEARNING PATH</div>
+
+                            <div class="roadmap">
+                                <div class="roadmap-step">
+                                    <span>01</span>
+                                    <strong>Fundamentals</strong>
+                                    <small>Qubits, gates, circuits &amp; math</small>
+                                </div>
+                                <div class="roadmap-line"></div>
+                                <div class="roadmap-step">
+                                    <span>02</span>
+                                    <strong>Qiskit</strong>
+                                    <small>Build and run quantum programs</small>
+                                </div>
+                                <div class="roadmap-line"></div>
+                                <div class="roadmap-step">
+                                    <span>03</span>
+                                    <strong>Projects</strong>
+                                    <small>Algorithms, simulation &amp; hardware</small>
+                                </div>
+                                <div class="roadmap-line"></div>
+                                <div class="roadmap-step">
+                                    <span>04</span>
+                                    <strong>Credentials</strong>
+                                    <small>Build evidence of your skills</small>
+                                </div>
+                                <div class="roadmap-line"></div>
+                                <div class="roadmap-step">
+                                    <span>05</span>
+                                    <strong>Career</strong>
+                                    <small>Portfolio, research &amp; roles</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="info-grid">
+
+                            <div class="info-card">
+                                <span class="info-number">01</span>
+                                <h3>Technical Skills</h3>
+                                <ul>
+                                    <li>Python programming</li>
+                                    <li>Quantum computing fundamentals</li>
+                                    <li>Qiskit and circuit development</li>
+                                    <li>Quantum algorithms</li>
+                                    <li>Linear algebra &amp; probability</li>
+                                    <li>Simulation and hardware workflows</li>
+                                </ul>
+                            </div>
+
+                            <div class="info-card">
+                                <span class="info-number">02</span>
+                                <h3>Learning &amp; Credentials</h3>
+                                <ul>
+                                    <li>IBM Quantum Learning courses</li>
+                                    <li>Hands-on Qiskit projects</li>
+                                    <li>Quantum algorithm coursework</li>
+                                    <li>Relevant cloud / Python credentials</li>
+                                    <li>Portfolio evidence of practical work</li>
+                                </ul>
+                                <p class="info-note">
+                                    Credentials should be checked against current
+                                    IBM offerings before publication.
+                                </p>
+                            </div>
+
+                            <div class="info-card pros-cons">
+                                <span class="info-number">03</span>
+                                <h3>Pros &amp; Cons</h3>
+
+                                <div class="pros">
+                                    <strong>PROS</strong>
+                                    <span>Large Qiskit learning ecosystem</span>
+                                    <span>Hands-on learning resources</span>
+                                    <span>Access to IBM Quantum tooling</span>
+                                </div>
+
+                                <div class="cons">
+                                    <strong>CONSIDERATIONS</strong>
+                                    <span>Requires solid programming foundations</span>
+                                    <span>Qiskit evolves with the platform</span>
+                                    <span>Career outcomes depend on broader skills</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="journey-row">
+                        <div>
+                            <span>OFFICIAL LEARNING RESOURCE</span>
+                            <strong>IBM Quantum Learning</strong>
+                        </div>
+                        <a class="journey-button"
+                           href="https://quantum.cloud.ibm.com/learning/en"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Start IBM Qiskit Journey <b>→</b>
+                        </a>
+                    </div>
+                </article>
+
+
+                <!-- GOOGLE -->
+                <article class="path-panel" id="google-path" data-panel="google" hidden>
+
+                    <div class="path-panel-header">
+                        <div>
+                            <div class="panel-kicker">
+                                SELECTED PATH <span>02</span>
+                            </div>
+                            <h2>Google <strong>Cirq</strong></h2>
+                            <p>
+                                A research-oriented path centered on Python,
+                                quantum circuits, simulation, device-aware
+                                programming, and Google Quantum AI resources.
+                            </p>
+                        </div>
+
+                        <div class="panel-status">
+                            <i></i> PATH ACTIVE
+                        </div>
+                    </div>
+
+                    <div class="path-panel-grid">
+
+                        <div class="roadmap-column">
+                            <div class="section-label">YOUR LEARNING PATH</div>
+
+                            <div class="roadmap">
+                                <div class="roadmap-step">
+                                    <span>01</span>
+                                    <strong>Fundamentals</strong>
+                                    <small>Quantum information &amp; circuits</small>
+                                </div>
+                                <div class="roadmap-line"></div>
+                                <div class="roadmap-step">
+                                    <span>02</span>
+                                    <strong>Cirq</strong>
+                                    <small>Qubits, gates &amp; operations</small>
+                                </div>
+                                <div class="roadmap-line"></div>
+                                <div class="roadmap-step">
+                                    <span>03</span>
+                                    <strong>Algorithms</strong>
+                                    <small>Build and simulate circuits</small>
+                                </div>
+                                <div class="roadmap-line"></div>
+                                <div class="roadmap-step">
+                                    <span>04</span>
+                                    <strong>Research</strong>
+                                    <small>Experiments &amp; device awareness</small>
+                                </div>
+                                <div class="roadmap-line"></div>
+                                <div class="roadmap-step">
+                                    <span>05</span>
+                                    <strong>Career</strong>
+                                    <small>Portfolio, research &amp; roles</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="info-grid">
+
+                            <div class="info-card">
+                                <span class="info-number">01</span>
+                                <h3>Technical Skills</h3>
+                                <ul>
+                                    <li>Python programming</li>
+                                    <li>Quantum computing fundamentals</li>
+                                    <li>Cirq framework</li>
+                                    <li>Quantum circuits and gates</li>
+                                    <li>Simulation and numerical methods</li>
+                                    <li>Quantum algorithms</li>
+                                </ul>
+                            </div>
+
+                            <div class="info-card">
+                                <span class="info-number">02</span>
+                                <h3>Learning &amp; Credentials</h3>
+                                <ul>
+                                    <li>Google Quantum AI Cirq tutorials</li>
+                                    <li>Hands-on notebooks and experiments</li>
+                                    <li>Python / scientific-computing credentials</li>
+                                    <li>Research projects and publications</li>
+                                    <li>Relevant cloud credentials where useful</li>
+                                </ul>
+                                <p class="info-note">
+                                    Google’s Cirq resources are the primary
+                                    technical learning reference here.
+                                </p>
+                            </div>
+
+                            <div class="info-card pros-cons">
+                                <span class="info-number">03</span>
+                                <h3>Pros &amp; Cons</h3>
+
+                                <div class="pros">
+                                    <strong>PROS</strong>
+                                    <span>Strong research-oriented ecosystem</span>
+                                    <span>Python-based quantum development</span>
+                                    <span>Excellent circuit-level learning</span>
+                                </div>
+
+                                <div class="cons">
+                                    <strong>CONSIDERATIONS</strong>
+                                    <span>Requires strong quantum fundamentals</span>
+                                    <span>Some hardware access is restricted</span>
+                                    <span>Career path is broader than Cirq alone</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="journey-row">
+                        <div>
+                            <span>OFFICIAL LEARNING RESOURCE</span>
+                            <strong>Google Quantum AI — Cirq</strong>
+                        </div>
+                        <a class="journey-button"
+                           href="https://quantumai.google/cirq/start/intro"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Start Google Cirq Journey <b>→</b>
+                        </a>
+                    </div>
+                </article>
+
+
+                <!-- MICROSOFT -->
+                <article class="path-panel" id="microsoft-path" data-panel="microsoft" hidden>
+
+                    <div class="path-panel-header">
+                        <div>
+                            <div class="panel-kicker">
+                                SELECTED PATH <span>03</span>
+                            </div>
+                            <h2>Microsoft <strong>Q#</strong></h2>
+                            <p>
+                                A Microsoft-oriented path covering quantum
+                                programming with Q#, the Quantum Development Kit,
+                                and Azure Quantum workflows.
+                            </p>
+                        </div>
+
+                        <div class="panel-status">
+                            <i></i> PATH ACTIVE
+                        </div>
+                    </div>
+
+                    <div class="path-panel-grid">
+
+                        <div class="roadmap-column">
+                            <div class="section-label">YOUR LEARNING PATH</div>
+
+                            <div class="roadmap">
+                                <div class="roadmap-step">
+                                    <span>01</span>
+                                    <strong>Fundamentals</strong>
+                                    <small>Qubits, algorithms &amp; concepts</small>
+                                </div>
+                                <div class="roadmap-line"></div>
+                                <div class="roadmap-step">
+                                    <span>02</span>
+                                    <strong>Q#</strong>
+                                    <small>Write and run quantum programs</small>
+                                </div>
+                                <div class="roadmap-line"></div>
+                                <div class="roadmap-step">
+                                    <span>03</span>
+                                    <strong>QDK</strong>
+                                    <small>Development and simulation tools</small>
+                                </div>
+                                <div class="roadmap-line"></div>
+                                <div class="roadmap-step">
+                                    <span>04</span>
+                                    <strong>Azure</strong>
+                                    <small>Cloud quantum workflows</small>
+                                </div>
+                                <div class="roadmap-line"></div>
+                                <div class="roadmap-step">
+                                    <span>05</span>
+                                    <strong>Career</strong>
+                                    <small>Portfolio, cloud &amp; quantum roles</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="info-grid">
+
+                            <div class="info-card">
+                                <span class="info-number">01</span>
+                                <h3>Technical Skills</h3>
+                                <ul>
+                                    <li>Quantum computing fundamentals</li>
+                                    <li>Q# programming</li>
+                                    <li>Quantum Development Kit</li>
+                                    <li>Quantum algorithms</li>
+                                    <li>Python / classical programming</li>
+                                    <li>Azure Quantum workflows</li>
+                                </ul>
+                            </div>
+
+                            <div class="info-card">
+                                <span class="info-number">02</span>
+                                <h3>Learning &amp; Credentials</h3>
+                                <ul>
+                                    <li>Microsoft Azure Quantum learning path</li>
+                                    <li>Q# and QDK tutorials</li>
+                                    <li>Quantum Katas / hands-on exercises</li>
+                                    <li>Relevant Azure credentials</li>
+                                    <li>Portfolio evidence of quantum projects</li>
+                                </ul>
+                                <p class="info-note">
+                                    Microsoft’s current quantum learning resources
+                                    should be checked before assigning specific
+                                    certification requirements.
+                                </p>
+                            </div>
+
+                            <div class="info-card pros-cons">
+                                <span class="info-number">03</span>
+                                <h3>Pros &amp; Cons</h3>
+
+                                <div class="pros">
+                                    <strong>PROS</strong>
+                                    <span>Strong cloud integration</span>
+                                    <span>Structured Microsoft learning resources</span>
+                                    <span>Connects quantum and classical workflows</span>
+                                </div>
+
+                                <div class="cons">
+                                    <strong>CONSIDERATIONS</strong>
+                                    <span>Requires learning the Microsoft ecosystem</span>
+                                    <span>Azure knowledge can become important</span>
+                                    <span>Career outcomes depend on broader skills</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="journey-row">
+                        <div>
+                            <span>OFFICIAL LEARNING RESOURCE</span>
+                            <strong>Microsoft Learn — Azure Quantum</strong>
+                        </div>
+                        <a class="journey-button"
+                           href="https://learn.microsoft.com/en-us/training/paths/quantum-computing-fundamentals/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Start Microsoft Q# Journey <b>→</b>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- =====================================================
+             CAREER PHILOSOPHY / NON-VENDOR SECTION
+             ===================================================== -->
+        <section class="career-note">
+            <div class="career-note-inner">
+                <div class="eyebrow">
+                    <span></span>
+                    QCAASNET APPROACH
+                </div>
+
+                <h2>Choose a technology path.<br><strong>Build transferable skills.</strong></h2>
+
+                <p>
+                    The platform path is only one part of a quantum career.
+                    Mathematics, programming, algorithms, scientific computing,
+                    research ability, and project experience remain important
+                    across ecosystems.
+                </p>
+            </div>
+        </section>
+
     </main>
+
+
+    <!-- =====================================================
+         FOOTER — MATCHES QCAASNET HOMEPAGE
+         ===================================================== -->
+    <footer>
+
+        <div class="footer-social">
+            <h3>Connect with us</h3>
+
+            <div class="footer-social-links">
+                <a href="https://www.youtube.com/@QCaaSNet"
+                   target="_blank"
+                   rel="noopener noreferrer">YouTube</a>
+
+                <a href="https://x.com/qcaasnet"
+                   target="_blank"
+                   rel="noopener noreferrer">X / Twitter</a>
+
+                <a href="https://www.linkedin.com/company/qcaasnet/"
+                   target="_blank"
+                   rel="noopener noreferrer">LinkedIn</a>
+            </div>
+        </div>
+
+        <div class="footer-main">
+
+            <div class="footer-brand-column">
+                <div class="footer-brand">
+                    <img class="brand-mark"
+                         src="/images/qcaas-icon.png"
+                         alt="QCAAS Net quantum logo">
+                    <span>QCAAS<span class="brand-accent">NET</span></span>
+                </div>
+
+                <p>Quantum Computing as a Service Network</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>QCAASNET</h4>
+                <a href="/#about">About QCAASNET</a>
+                <a href="mailto:Hello@qcaasnet.com">Contact</a>
+                <a href="/privacy/">Privacy</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>Explore</h4>
+                <a href="/fundamentals/">Fundamentals of Quantum Computing</a>
+                <a href="/latest-research/">Latest Research</a>
+                <a href="/be-quantum-ready/">Be Quantum Ready</a>
+                <a href="/deep-learning/">Deep Learning</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <span>© 2026 QCAAS Net</span>
+
+            <div class="footer-legal">
+                <a href="/terms/">Terms</a>
+                <a href="/privacy/">Privacy</a>
+            </div>
+        </div>
+
+    </footer>
+
+</div>
+
+
+<script>
+(function () {
+
+    const buttons = document.querySelectorAll(".path-card");
+    const panels = document.querySelectorAll(".path-panel");
+    const details = document.querySelector("#path-details");
+
+    function openPath(path) {
+
+        buttons.forEach(function (button) {
+            const selected = button.dataset.path === path;
+            button.classList.toggle("is-selected", selected);
+            button.setAttribute("aria-expanded", selected ? "true" : "false");
+        });
+
+        panels.forEach(function (panel) {
+            const selected = panel.dataset.panel === path;
+
+            panel.hidden = !selected;
+            panel.classList.toggle("is-active", selected);
+        });
+
+        /*
+         * Wait one frame so the browser has rendered the newly visible
+         * panel before starting the smooth scroll.
+         */
+        requestAnimationFrame(function () {
+            details.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        });
+    }
+
+    buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            openPath(button.dataset.path);
+        });
+    });
+
+})();
+</script>
+
 </body>
 </html>
