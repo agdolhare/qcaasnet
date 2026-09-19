@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QCRGRVZ3NY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-QCRGRVZ3NY');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1175538206082589" crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Getting the Most from Your Quantum Measurements: Adaptive Shot Allocation on Amazon Braket — QCAASNET research summary.">
+    <title>Getting the Most from Your Quantum Measurements: Adaptive Shot Allocation on Amazon Braket | QCAASNET</title>
+    <link rel="icon" type="image/png" href="/images/qcaas-icon.png?v=2">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="site-shell">
+
+<header class="site-header">
+<nav class="main-nav">
+    <a class="brand" href="/">
+        <img class="brand-logo" src="/images/qcaas-icon.png" alt="QCAASNET">
+        <span class="brand-copy">
+            <span class="brand-name">QCAAS<span>NET</span></span>
+            <span class="brand-tagline">Quantum Computing as a Service Network</span>
+        </span>
+    </a>
+    <div class="desktop-nav">
+        <a href="/">Home</a>
+        <a href="/fundamentals/">Learn</a>
+        <a href="/latest-research/" class="active">Research</a>
+        <a href="/be-quantum-ready/">Be Quantum Ready</a>
+        <a href="/#about">About</a>
+    </div>
+    <details class="mobile-navigation">
+        <summary>MENU</summary>
+        <div class="mobile-menu">
+            <a href="/">Home</a>
+            <a href="/fundamentals/">Learn</a>
+            <a href="/latest-research/">Research</a>
+            <a href="/be-quantum-ready/">Be Quantum Ready</a>
+            <a href="/#about">About</a>
+        </div>
+    </details>
+</nav>
+</header>
+
+<main class="paper-page">
+
+    <div class="paper-breadcrumbs">
+        <a href="/">Home</a><span>›</span>
+        <a href="/latest-research/">Latest Research</a><span>›</span>
+        <a href="/latest-research/amazon/">Amazon</a><span>›</span>
+        <span>Getting the Most from Your Quantum Measurements: Adaptive Shot Allocation on Amazon Braket</span>
+    </div>
+
+    <section class="paper-hero">
+        <div class="paper-hero-copy">
+            <p class="eyebrow">AMAZON WEB SERVICES</p>
+            <h1>Getting the Most from Your Quantum Measurements: Adaptive Shot Allocation on Amazon Braket</h1>
+            <p class="paper-lead">Amazon Braket researchers show how adaptive measurement allocation can reduce estimation error for a fixed shot budget and provide an educational implementation for quantum algorithm developers.</p>
+            <div class="paper-meta">
+                <span>MAR 2026</span>
+                <span>AMAZON WEB SERVICES &gt;</span>
+                <span>AMAZON BRAKET</span>
+            </div>
+        </div>
+
+        <!-- IMAGE WILL BE ADDED LATER -->
+        <div class="paper-hero-image" aria-hidden="true"></div>
+    </section>
+
+        <section class="paper-section">
+            <p class="section-label">THE IDEA</p>
+            <h2>Why do quantum measurements need to be allocated carefully?</h2>
+            <p>Variational quantum algorithms repeatedly estimate expectation values from measurements. Each circuit execution consumes a finite number of shots, so the measurement budget itself becomes a resource.</p>
+            <p>A simple strategy gives every observable term the same number of shots. But different terms can have different weights and variances, so equal allocation does not necessarily minimize the final estimator error.</p>
+            <p>Adaptive allocation instead uses information gathered during the experiment to decide where subsequent shots should be spent.</p>
+            <div class="equation-box">
+                <span>total shots = Σᵢ sᵢ</span>
+            </div>
+        </section>
+        <section class="paper-section">
+            <p class="section-label">MEASUREMENT</p>
+            <h2>From uniform sampling to adaptive allocation</h2>
+            <p>Consider an observable composed of multiple measurement terms. If one term contributes little to the final result or has low variance, spending a large fraction of the shot budget on it may be inefficient.</p>
+            <p>Adaptive allocation estimates the behavior of individual terms and reallocates later measurements toward terms that have a greater influence on the uncertainty of the final quantity.</p>
+            <p>The AWS implementation is based on earlier research on adaptive estimation of quantum observables and is intended as an educational and exploratory starting point.</p>
+            <div class="concept-grid">
+                <article>
+                    <span class="concept-number">01</span>
+                    <h3>INPUT</h3>
+                    <p>Consider an observable composed of multiple measurement terms. If one term contributes little to the final result or has low variance, spending a large fraction of the shot budget on it may be inefficient.</p>
+                </article>
+                <article>
+                    <span class="concept-number">02</span>
+                    <h3>METHOD</h3>
+                    <p>Adaptive allocation estimates the behavior of individual terms and reallocates later measurements toward terms that have a greater influence on the uncertainty of the final quantity.</p>
+                </article>
+                <article>
+                    <span class="concept-number">03</span>
+                    <h3>OUTPUT</h3>
+                    <p>The AWS implementation is based on earlier research on adaptive estimation of quantum observables and is intended as an educational and exploratory starting point.</p>
+                </article>
+            </div>
+        </section>
+        <section class="paper-section">
+            <p class="section-label">AMAZON BRAKET</p>
+            <h2>Making the method accessible</h2>
+            <p>AWS released an implementation in the Amazon Braket Algorithms Library together with two notebooks: an introduction to shot allocation and a hands-on adaptive shot-allocation walkthrough.</p>
+            <p>The implementation demonstrates grouping observable terms, estimating term variance, allocating additional shots and tracking convergence.</p>
+            <p>The goal is not to present the module as a production-optimized library component, but to make the underlying strategy easier to test and adapt.</p>
+            <div class="concept-grid">
+                <article>
+                    <span class="concept-number">01</span>
+                    <h3>INPUT</h3>
+                    <p>AWS released an implementation in the Amazon Braket Algorithms Library together with two notebooks: an introduction to shot allocation and a hands-on adaptive shot-allocation walkthrough.</p>
+                </article>
+                <article>
+                    <span class="concept-number">02</span>
+                    <h3>METHOD</h3>
+                    <p>The implementation demonstrates grouping observable terms, estimating term variance, allocating additional shots and tracking convergence.</p>
+                </article>
+                <article>
+                    <span class="concept-number">03</span>
+                    <h3>OUTPUT</h3>
+                    <p>The goal is not to present the module as a production-optimized library component, but to make the underlying strategy easier to test and adapt.</p>
+                </article>
+            </div>
+        </section>
+        <section class="paper-section">
+            <p class="section-label">RESULTS</p>
+            <h2>A representative reduction in estimation error</h2>
+            <p>The AWS post reports a representative example using a 26-term Hamiltonian for a small molecule. In that example, adaptive allocation reduced estimation error by approximately 40 percent compared with uniform allocation for the same total shot count.</p>
+            <p>The improvement comes with a tradeoff: adaptive strategies typically require multiple rounds of circuit execution and classical processing.</p>
+            <p>The result therefore illustrates an important systems principle: reducing quantum measurement cost can increase classical orchestration and wall-clock overhead.</p>
+        </section>
+        <section class="paper-section">
+            <p class="section-label">WHERE IT COULD MATTER</p>
+            <h2>Potential applications</h2>
+            <p>Measurement allocation is directly relevant to VQE and other variational algorithms that repeatedly estimate expectation values.</p>
+            <p>It can also matter for benchmarking, quantum chemistry experiments and workflows where QPU access is limited or expensive.</p>
+            <p>The broader lesson is that algorithm performance depends not only on the quantum circuit but also on how measurement resources are scheduled around it.</p>
+        </section>
+
+
+    <section class="paper-section paper-takeaway">
+        <p class="section-label"><span class="brand-accent">QCAASNET</span> TAKEAWAY</p>
+        <h2>What should you take away from this research?</h2>
+
+        <div class="concept-grid">
+<article>
+                    <span class="concept-number">01</span>
+                    <h3>The core idea</h3>
+                    <p>Shots are a computational resource, and the same total number of measurements can produce different estimator quality depending on how those shots are allocated.</p>
+                </article><article>
+                    <span class="concept-number">02</span>
+                    <h3>Why it matters</h3>
+                    <p>Adaptive allocation uses intermediate measurement information to concentrate resources where they matter most.</p>
+                </article><article>
+                    <span class="concept-number">03</span>
+                    <h3>What remains open</h3>
+                    <p>The technique does not eliminate the classical overhead of adaptive control; instead, it trades additional orchestration for potentially lower estimation error at the same quantum shot budget.</p>
+                </article>
+        </div>
+
+        <p>
+            This research should be read in the context of current quantum hardware
+            and hybrid computing constraints. The results described here are research
+            demonstrations, models or workflows rather than evidence that quantum
+            processors have already replaced classical methods for general-purpose workloads.
+        </p>
+    </section>
+
+    <section class="paper-source">
+        <div>
+            <p class="section-label">ORIGINAL RESEARCH</p>
+            <h2>Read the original research</h2>
+            <p>Shlosberg et al., Adaptive estimation of quantum observables, Quantum (2023).</p>
+        </div>
+        <a href="https://aws.amazon.com/blogs/quantum-computing/getting-the-most-from-your-quantum-measurements-adaptive-shot-allocation-on-amazon-braket/" target="_blank" rel="noopener noreferrer">
+            READ SOURCE <span>↗</span>
+        </a>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-social">
+        <h3>Connect with us</h3>
+        <div class="footer-social-links">
+            <a href="https://www.youtube.com/@QCaaSNet" target="_blank" rel="noopener noreferrer">YouTube</a>
+            <a href="https://x.com/qcaasnet" target="_blank" rel="noopener noreferrer">X / Twitter</a>
+            <a href="https://www.linkedin.com/company/qcaasnet/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+    </div>
+
+    <div class="footer-main">
+        <div class="footer-brand-column">
+            <div class="footer-brand">
+                <img class="brand-mark" src="/images/qcaas-icon.png" alt="QCAAS Net quantum logo">
+                <span>QCAAS<span class="brand-accent">NET</span></span>
+            </div>
+            <p>Quantum Computing as a Service Network</p>
+        </div>
+
+        <div class="footer-column">
+            <h4>QCAASNET</h4>
+            <a href="/#about">About QCAASNET</a>
+            <a href="mailto:Hello@qcaasnet.com">Contact</a>
+            <a href="/privacy/">Privacy</a>
+            <a href="/terms/">Terms</a>
+        </div>
+
+        <div class="footer-column">
+            <h4>Explore</h4>
+            <a href="/fundamentals/">Fundamentals of Quantum Computing</a>
+            <a href="/latest-research/">Latest Research</a>
+            <a href="/be-quantum-ready/">Be Quantum Ready</a>
+            <a href="/deep-learning/">Deep Learning</a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2026 QCAAS Net</span>
+        <div class="footer-legal">
+            <a href="/terms/">Terms</a>
+            <a href="/privacy/">Privacy</a>
+        </div>
+    </div>
+</footer>
+
+</div>
+</body>
+</html>

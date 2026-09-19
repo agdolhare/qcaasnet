@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QCRGRVZ3NY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-QCRGRVZ3NY');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1175538206082589" crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A Framework for Quantum-Classical Integration Decisions — QCAASNET research summary.">
+    <title>A Framework for Quantum-Classical Integration Decisions | QCAASNET</title>
+    <link rel="icon" type="image/png" href="/images/qcaas-icon.png?v=2">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="site-shell">
+
+<header class="site-header">
+<nav class="main-nav">
+    <a class="brand" href="/">
+        <img class="brand-logo" src="/images/qcaas-icon.png" alt="QCAASNET">
+        <span class="brand-copy">
+            <span class="brand-name">QCAAS<span>NET</span></span>
+            <span class="brand-tagline">Quantum Computing as a Service Network</span>
+        </span>
+    </a>
+    <div class="desktop-nav">
+        <a href="/">Home</a>
+        <a href="/fundamentals/">Learn</a>
+        <a href="/latest-research/" class="active">Research</a>
+        <a href="/be-quantum-ready/">Be Quantum Ready</a>
+        <a href="/#about">About</a>
+    </div>
+    <details class="mobile-navigation">
+        <summary>MENU</summary>
+        <div class="mobile-menu">
+            <a href="/">Home</a>
+            <a href="/fundamentals/">Learn</a>
+            <a href="/latest-research/">Research</a>
+            <a href="/be-quantum-ready/">Be Quantum Ready</a>
+            <a href="/#about">About</a>
+        </div>
+    </details>
+</nav>
+</header>
+
+<main class="paper-page">
+
+    <div class="paper-breadcrumbs">
+        <a href="/">Home</a><span>›</span>
+        <a href="/latest-research/">Latest Research</a><span>›</span>
+        <a href="/latest-research/amazon/">Amazon</a><span>›</span>
+        <span>A Framework for Quantum-Classical Integration Decisions</span>
+    </div>
+
+    <section class="paper-hero">
+        <div class="paper-hero-copy">
+            <p class="eyebrow">AMAZON WEB SERVICES</p>
+            <h1>A Framework for Quantum-Classical Integration Decisions</h1>
+            <p class="paper-lead">AWS, Lawrence Berkeley National Laboratory, NASA and NVIDIA develop a performance model for deciding when tightly integrated quantum-classical infrastructure is useful for hybrid workloads.</p>
+            <div class="paper-meta">
+                <span>JUL 2026</span>
+                <span>AMAZON WEB SERVICES &gt;</span>
+                <span>AWS / LBNL / NASA / NVIDIA</span>
+            </div>
+        </div>
+
+        <!-- IMAGE WILL BE ADDED LATER -->
+        <div class="paper-hero-image" aria-hidden="true"></div>
+    </section>
+
+        <section class="paper-section">
+            <p class="section-label">THE IDEA</p>
+            <h2>When does a quantum computer need to be tightly connected to classical computing?</h2>
+            <p>Quantum processors do not operate independently of classical computers. Control systems, calibration, decoding and hybrid algorithms all require classical computation.</p>
+            <p>The research separates two levels of quantum-classical integration: real-time control and error correction, where latency can be critical, and application-level hybrid algorithms, where the communication requirement depends on the workload.</p>
+            <p>This distinction matters because a fast physical connection is not automatically valuable for every quantum algorithm.</p>
+            <div class="equation-box">
+                <span>Rcc = Tcomm / (TC + TQ)</span>
+            </div>
+        </section>
+        <section class="paper-section">
+            <p class="section-label">TWO LEVELS</p>
+            <h2>Real-time control versus application-level workloads</h2>
+            <p>At the real-time level, classical decoders and control systems must react to quantum hardware quickly enough to keep a logical computation operating. The AWS report describes this as a setting where low-latency coupling can be essential.</p>
+            <p>At the application level, workflows such as variational algorithms repeatedly exchange information between a classical host and a quantum processing unit.</p>
+            <p>The communication requirements of those two layers should therefore be evaluated separately rather than treating quantum-classical integration as a single engineering problem.</p>
+            <div class="concept-grid">
+                <article>
+                    <span class="concept-number">01</span>
+                    <h3>INPUT</h3>
+                    <p>At the real-time level, classical decoders and control systems must react to quantum hardware quickly enough to keep a logical computation operating. The AWS report describes this as a setting where low-latency coupling can be essential.</p>
+                </article>
+                <article>
+                    <span class="concept-number">02</span>
+                    <h3>METHOD</h3>
+                    <p>At the application level, workflows such as variational algorithms repeatedly exchange information between a classical host and a quantum processing unit.</p>
+                </article>
+                <article>
+                    <span class="concept-number">03</span>
+                    <h3>OUTPUT</h3>
+                    <p>The communication requirements of those two layers should therefore be evaluated separately rather than treating quantum-classical integration as a single engineering problem.</p>
+                </article>
+            </div>
+        </section>
+        <section class="paper-section">
+            <p class="section-label">THE MODEL</p>
+            <h2>A communication-to-computation diagnostic</h2>
+            <p>The framework decomposes a hybrid cycle into classical compute time, quantum compute time and communication overhead.</p>
+            <p>The ratio Rcc compares communication time with total classical and quantum computation time. When the ratio is small, communication contributes relatively little to the cycle; when it is large, communication can dominate.</p>
+            <p>This provides a quantitative way to reason about whether co-locating quantum and classical resources is likely to matter for a given workload.</p>
+            <div class="concept-grid">
+                <article>
+                    <span class="concept-number">01</span>
+                    <h3>INPUT</h3>
+                    <p>The framework decomposes a hybrid cycle into classical compute time, quantum compute time and communication overhead.</p>
+                </article>
+                <article>
+                    <span class="concept-number">02</span>
+                    <h3>METHOD</h3>
+                    <p>The ratio Rcc compares communication time with total classical and quantum computation time. When the ratio is small, communication contributes relatively little to the cycle; when it is large, communication can dominate.</p>
+                </article>
+                <article>
+                    <span class="concept-number">03</span>
+                    <h3>OUTPUT</h3>
+                    <p>This provides a quantitative way to reason about whether co-locating quantum and classical resources is likely to matter for a given workload.</p>
+                </article>
+            </div>
+        </section>
+        <section class="paper-section">
+            <p class="section-label">RESULTS</p>
+            <h2>What the framework changes</h2>
+            <p>The framework does not claim that all current hybrid algorithms require tightly coupled infrastructure. Instead, it identifies workload-dependent crossover conditions.</p>
+            <p>The analysis points to future developments that could change the answer, including major reductions in measurement budgets through techniques such as amplitude estimation and the emergence of practical quantum memory.</p>
+            <p>The model therefore acts as an infrastructure-planning tool: as algorithms and hardware change, the integration decision can be reevaluated using measurable workload parameters.</p>
+        </section>
+        <section class="paper-section">
+            <p class="section-label">WHERE IT COULD MATTER</p>
+            <h2>Potential applications</h2>
+            <p>Fault-tolerant quantum computing will require tight classical control and error-correction loops, making latency a fundamental systems concern.</p>
+            <p>HPC centers can use the model when evaluating whether QPUs should be closely integrated with classical supercomputing resources for particular application workloads.</p>
+            <p>Cloud providers and quantum application developers can also use communication-to-computation analysis when designing execution architectures.</p>
+        </section>
+
+
+    <section class="paper-section paper-takeaway">
+        <p class="section-label"><span class="brand-accent">QCAASNET</span> TAKEAWAY</p>
+        <h2>What should you take away from this research?</h2>
+
+        <div class="concept-grid">
+<article>
+                    <span class="concept-number">01</span>
+                    <h3>The core idea</h3>
+                    <p>The paper&#x27;s central contribution is a way to make quantum-classical infrastructure decisions quantitative rather than purely architectural.</p>
+                </article><article>
+                    <span class="concept-number">02</span>
+                    <h3>Why it matters</h3>
+                    <p>Real-time control and application-level hybrid algorithms have different latency requirements, and they should be analyzed separately.</p>
+                </article><article>
+                    <span class="concept-number">03</span>
+                    <h3>What remains open</h3>
+                    <p>As quantum algorithms evolve, the same framework can be reused to determine when tighter integration becomes computationally meaningful.</p>
+                </article>
+        </div>
+
+        <p>
+            This research should be read in the context of current quantum hardware
+            and hybrid computing constraints. The results described here are research
+            demonstrations, models or workflows rather than evidence that quantum
+            processors have already replaced classical methods for general-purpose workloads.
+        </p>
+    </section>
+
+    <section class="paper-source">
+        <div>
+            <p class="section-label">ORIGINAL RESEARCH</p>
+            <h2>Read the original research</h2>
+            <p>Trenev et al., A framework for quantum-classical integration decisions, arXiv:2607.15426 (2026).</p>
+        </div>
+        <a href="https://aws.amazon.com/blogs/quantum-computing/a-framework-for-quantum-classical-integration-decisions/" target="_blank" rel="noopener noreferrer">
+            READ SOURCE <span>↗</span>
+        </a>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-social">
+        <h3>Connect with us</h3>
+        <div class="footer-social-links">
+            <a href="https://www.youtube.com/@QCaaSNet" target="_blank" rel="noopener noreferrer">YouTube</a>
+            <a href="https://x.com/qcaasnet" target="_blank" rel="noopener noreferrer">X / Twitter</a>
+            <a href="https://www.linkedin.com/company/qcaasnet/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+    </div>
+
+    <div class="footer-main">
+        <div class="footer-brand-column">
+            <div class="footer-brand">
+                <img class="brand-mark" src="/images/qcaas-icon.png" alt="QCAAS Net quantum logo">
+                <span>QCAAS<span class="brand-accent">NET</span></span>
+            </div>
+            <p>Quantum Computing as a Service Network</p>
+        </div>
+
+        <div class="footer-column">
+            <h4>QCAASNET</h4>
+            <a href="/#about">About QCAASNET</a>
+            <a href="mailto:Hello@qcaasnet.com">Contact</a>
+            <a href="/privacy/">Privacy</a>
+            <a href="/terms/">Terms</a>
+        </div>
+
+        <div class="footer-column">
+            <h4>Explore</h4>
+            <a href="/fundamentals/">Fundamentals of Quantum Computing</a>
+            <a href="/latest-research/">Latest Research</a>
+            <a href="/be-quantum-ready/">Be Quantum Ready</a>
+            <a href="/deep-learning/">Deep Learning</a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2026 QCAAS Net</span>
+        <div class="footer-legal">
+            <a href="/terms/">Terms</a>
+            <a href="/privacy/">Privacy</a>
+        </div>
+    </div>
+</footer>
+
+</div>
+</body>
+</html>

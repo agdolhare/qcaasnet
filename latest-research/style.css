@@ -2304,6 +2304,10 @@ button {
     height: 50px;
     max-width: 200px;
 }
+.company-pill img[alt="Amazon"] {
+    height: 21px;
+    max-width: 75px;
+}
 /* =========================================================
    RESEARCH HEADER — EXACT HOMEPAGE STYLE
    ========================================================= */
@@ -2979,4 +2983,226 @@ footer {
         flex-shrink: 0;
     }
 
+}
+/* =========================================================
+   FEATURED RESEARCH — NEW COMPANY CARDS
+   MATCH GOOGLE / IBM CARD DESIGN
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   METADATA
+   Move the new cards' date/company information visually
+   into the card content area.
+   --------------------------------------------------------- */
+
+.research-card:nth-child(3) .research-image > .research-date,
+.research-card:nth-child(3) .research-image > .research-company,
+.research-card:nth-child(4) .research-image > .research-date,
+.research-card:nth-child(4) .research-image > .research-company,
+.research-card:nth-child(5) .research-image > .research-date,
+.research-card:nth-child(5) .research-image > .research-company,
+.research-card:nth-child(6) .research-image > .research-date,
+.research-card:nth-child(6) .research-image > .research-company {
+    display: none;
+}
+
+
+/* Microsoft */
+
+.research-card:nth-child(3) .research-card-content::before {
+    content: "AUG 2026";
+    display: inline-block;
+    margin-bottom: 13px;
+
+    color: var(--accent);
+
+    font-family: "DM Mono", monospace;
+    font-size: .54rem;
+    letter-spacing: .10em;
+    text-transform: uppercase;
+}
+
+.research-card:nth-child(3) .research-card-content::after {
+    content: "MICROSOFT";
+    position: absolute;
+
+    top: 22px;
+    left: 105px;
+
+    color: var(--muted-2);
+
+    font-family: "DM Mono", monospace;
+    font-size: .58rem;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+}
+
+
+/* Amazon */
+
+.research-card:nth-child(4) .research-card-content::before {
+    content: "AUG 2026";
+    display: inline-block;
+    margin-bottom: 13px;
+
+    color: var(--accent);
+
+    font-family: "DM Mono", monospace;
+    font-size: .54rem;
+    letter-spacing: .10em;
+    text-transform: uppercase;
+}
+
+.research-card:nth-child(4) .research-card-content::after {
+    content: "AMAZON WEB SERVICES";
+    position: absolute;
+
+    top: 22px;
+    left: 105px;
+
+    color: var(--muted-2);
+
+    font-family: "DM Mono", monospace;
+    font-size: .58rem;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+}
+
+
+/* Intel */
+
+.research-card:nth-child(5) .research-card-content::before {
+    content: "JAN 2026";
+    display: inline-block;
+    margin-bottom: 13px;
+
+    color: var(--accent);
+
+    font-family: "DM Mono", monospace;
+    font-size: .54rem;
+    letter-spacing: .10em;
+    text-transform: uppercase;
+}
+
+.research-card:nth-child(5) .research-card-content::after {
+    content: "INTEL";
+    position: absolute;
+
+    top: 22px;
+    left: 105px;
+
+    color: var(--muted-2);
+
+    font-family: "DM Mono", monospace;
+    font-size: .58rem;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+}
+
+
+/* NVIDIA */
+
+.research-card:nth-child(6) .research-card-content::before {
+    content: "SEP 2026";
+    display: inline-block;
+    margin-bottom: 13px;
+
+    color: var(--accent);
+
+    font-family: "DM Mono", monospace;
+    font-size: .54rem;
+    letter-spacing: .10em;
+    text-transform: uppercase;
+}
+
+.research-card:nth-child(6) .research-card-content::after {
+    content: "NVIDIA";
+    position: absolute;
+
+    top: 22px;
+    left: 105px;
+
+    color: var(--muted-2);
+
+    font-family: "DM Mono", monospace;
+    font-size: .58rem;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+}
+
+
+/* ---------------------------------------------------------
+   CARD CONTENT
+   --------------------------------------------------------- */
+
+.research-card:nth-child(3) .research-card-content,
+.research-card:nth-child(4) .research-card-content,
+.research-card:nth-child(5) .research-card-content,
+.research-card:nth-child(6) .research-card-content {
+    position: relative;
+}
+
+
+/* ---------------------------------------------------------
+   CARD BOTTOM
+   Match the original Google / IBM footer structure
+   --------------------------------------------------------- */
+
+.research-card-bottom {
+    margin-top: auto;
+    padding-top: 18px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+
+/* ---------------------------------------------------------
+   TAGS
+   --------------------------------------------------------- */
+
+.research-card-bottom .research-tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 6px;
+}
+
+.research-card-bottom .research-tags span {
+    padding: 4px 7px;
+
+    border: 1px solid rgba(24,50,78,.85);
+
+    color: var(--muted-2);
+
+    font-family: "DM Mono", monospace;
+    font-size: .49rem;
+
+    letter-spacing: .05em;
+    text-transform: uppercase;
+}
+
+
+/* ---------------------------------------------------------
+   ARROW
+   --------------------------------------------------------- */
+
+.research-card-bottom .card-arrow {
+    flex-shrink: 0;
+
+    color: var(--accent);
+
+    font-size: 1rem;
+
+    transition:
+        transform .2s ease,
+        color .2s ease;
+}
+
+.research-card:hover .research-card-bottom .card-arrow {
+    color: var(--text);
+    transform: translateX(4px);
 }

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QCRGRVZ3NY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-QCRGRVZ3NY');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1175538206082589" crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thermodynamic Sampling of Disordered Materials with an Analog Hamiltonian Rydberg Simulator — QCAASNET research summary.">
+    <title>Thermodynamic Sampling of Disordered Materials with an Analog Hamiltonian Rydberg Simulator | QCAASNET</title>
+    <link rel="icon" type="image/png" href="/images/qcaas-icon.png?v=2">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="site-shell">
+
+<header class="site-header">
+<nav class="main-nav">
+    <a class="brand" href="/">
+        <img class="brand-logo" src="/images/qcaas-icon.png" alt="QCAASNET">
+        <span class="brand-copy">
+            <span class="brand-name">QCAAS<span>NET</span></span>
+            <span class="brand-tagline">Quantum Computing as a Service Network</span>
+        </span>
+    </a>
+    <div class="desktop-nav">
+        <a href="/">Home</a>
+        <a href="/fundamentals/">Learn</a>
+        <a href="/latest-research/" class="active">Research</a>
+        <a href="/be-quantum-ready/">Be Quantum Ready</a>
+        <a href="/#about">About</a>
+    </div>
+    <details class="mobile-navigation">
+        <summary>MENU</summary>
+        <div class="mobile-menu">
+            <a href="/">Home</a>
+            <a href="/fundamentals/">Learn</a>
+            <a href="/latest-research/">Research</a>
+            <a href="/be-quantum-ready/">Be Quantum Ready</a>
+            <a href="/#about">About</a>
+        </div>
+    </details>
+</nav>
+</header>
+
+<main class="paper-page">
+
+    <div class="paper-breadcrumbs">
+        <a href="/">Home</a><span>›</span>
+        <a href="/latest-research/">Latest Research</a><span>›</span>
+        <a href="/latest-research/amazon/">Amazon</a><span>›</span>
+        <span>Thermodynamic Sampling of Disordered Materials with an Analog Hamiltonian Rydberg Simulator</span>
+    </div>
+
+    <section class="paper-hero">
+        <div class="paper-hero-copy">
+            <p class="eyebrow">AMAZON WEB SERVICES</p>
+            <h1>Thermodynamic Sampling of Disordered Materials with an Analog Hamiltonian Rydberg Simulator</h1>
+            <p class="paper-lead">Researchers use a neutral-atom Rydberg processor available through Amazon Braket to sample low-energy configurations of nitrogen-doped graphene and study finite-temperature material behavior.</p>
+            <div class="paper-meta">
+                <span>JUL 2026</span>
+                <span>AMAZON WEB SERVICES &gt;</span>
+                <span>AMAZON BRAKET / NPJ QUANTUM INFORMATION</span>
+            </div>
+        </div>
+
+        <!-- IMAGE WILL BE ADDED LATER -->
+        <div class="paper-hero-image" aria-hidden="true"></div>
+    </section>
+
+        <section class="paper-section">
+            <p class="section-label">THE IDEA</p>
+            <h2>Can a quantum processor sample material configurations?</h2>
+            <p>Disordered materials can have an enormous number of possible atomic configurations. At a finite temperature, the goal is not necessarily to find only the lowest-energy configuration; instead, one wants samples distributed according to thermodynamic weights.</p>
+            <p>The researchers map an energy model derived from classical density functional theory onto a programmable Rydberg-atom Hamiltonian. In the demonstration, carbon and nitrogen occupancy is represented by the two-level states of neutral atoms.</p>
+            <p>The QuEra Aquila device, available through Amazon Braket, is used as an analog quantum sampler for the resulting model.</p>
+            <div class="equation-box">
+                <span>P(z,T) ∝ exp(−E(z)/kBT)</span>
+            </div>
+        </section>
+        <section class="paper-section">
+            <p class="section-label">MAPPING</p>
+            <h2>From graphene energetics to Rydberg atoms</h2>
+            <p>The material example is nitrogen-doped graphene. The energy of a configuration depends not only on how many nitrogen atoms are present but also on how those atoms are arranged.</p>
+            <p>The researchers encode these interactions into distance-dependent Rydberg interactions. Laser detuning controls the energetic bias associated with excitation, while programmable atom spacing controls interaction strengths.</p>
+            <p>Because the physical hardware cannot directly reproduce the full material energy scale, the study introduces a rescaling procedure that connects the hardware sampling distribution to an effective material temperature.</p>
+            <div class="concept-grid">
+                <article>
+                    <span class="concept-number">01</span>
+                    <h3>INPUT</h3>
+                    <p>The material example is nitrogen-doped graphene. The energy of a configuration depends not only on how many nitrogen atoms are present but also on how those atoms are arranged.</p>
+                </article>
+                <article>
+                    <span class="concept-number">02</span>
+                    <h3>METHOD</h3>
+                    <p>The researchers encode these interactions into distance-dependent Rydberg interactions. Laser detuning controls the energetic bias associated with excitation, while programmable atom spacing controls interaction strengths.</p>
+                </article>
+                <article>
+                    <span class="concept-number">03</span>
+                    <h3>OUTPUT</h3>
+                    <p>Because the physical hardware cannot directly reproduce the full material energy scale, the study introduces a rescaling procedure that connects the hardware sampling distribution to an effective material temperature.</p>
+                </article>
+            </div>
+        </section>
+        <section class="paper-section">
+            <p class="section-label">SAMPLING</p>
+            <h2>Why imperfect annealing can be useful</h2>
+            <p>An ideal adiabatic quantum annealer would aim for a ground state. The experiment instead uses the fact that a real analog Rydberg device operates for finite time and interacts weakly with its environment.</p>
+            <p>These non-idealities can make the device behave like a heuristic sampler that preferentially produces low-energy configurations. That behavior is aligned with the thermodynamic sampling problem.</p>
+            <p>The study calibrates an effective temperature and investigates how programmable parameters alter the resulting distribution.</p>
+            <div class="concept-grid">
+                <article>
+                    <span class="concept-number">01</span>
+                    <h3>INPUT</h3>
+                    <p>An ideal adiabatic quantum annealer would aim for a ground state. The experiment instead uses the fact that a real analog Rydberg device operates for finite time and interacts weakly with its environment.</p>
+                </article>
+                <article>
+                    <span class="concept-number">02</span>
+                    <h3>METHOD</h3>
+                    <p>These non-idealities can make the device behave like a heuristic sampler that preferentially produces low-energy configurations. That behavior is aligned with the thermodynamic sampling problem.</p>
+                </article>
+                <article>
+                    <span class="concept-number">03</span>
+                    <h3>OUTPUT</h3>
+                    <p>The study calibrates an effective temperature and investigates how programmable parameters alter the resulting distribution.</p>
+                </article>
+            </div>
+        </section>
+        <section class="paper-section">
+            <p class="section-label">RESULTS</p>
+            <h2>28 sites, 78 sites and temperature control</h2>
+            <p>The work first validates the mapping on a 28-site graphene nanoflake, where exhaustive enumeration provides a classical reference.</p>
+            <p>The researchers then benchmark a 78-site system against classical Monte Carlo sampling and observe preferential sampling of low-energy configurations.</p>
+            <p>The study also demonstrates temperature tuning through programmable atom spacing, providing a route to changing the effective sampling behavior of the quantum device.</p>
+        </section>
+        <section class="paper-section">
+            <p class="section-label">WHERE IT COULD MATTER</p>
+            <h2>Potential applications</h2>
+            <p>The approach is relevant to materials whose finite-temperature properties depend on many interacting configurations, including disordered alloys and doped materials.</p>
+            <p>A quantum sampler could become useful when direct enumeration of configurations becomes too expensive and when the quantities of interest depend on an ensemble rather than a single optimum.</p>
+            <p>The work is a proof of concept: scaling to larger, more realistic models and demonstrating a useful end-to-end advantage remain important research questions.</p>
+        </section>
+
+
+    <section class="paper-section paper-takeaway">
+        <p class="section-label"><span class="brand-accent">QCAASNET</span> TAKEAWAY</p>
+        <h2>What should you take away from this research?</h2>
+
+        <div class="concept-grid">
+<article>
+                    <span class="concept-number">01</span>
+                    <h3>The core idea</h3>
+                    <p>The key shift is to treat an analog quantum processor as a thermodynamic sampler rather than only as a ground-state optimizer.</p>
+                </article><article>
+                    <span class="concept-number">02</span>
+                    <h3>Why it matters</h3>
+                    <p>The experiment connects DFT-derived material models to programmable neutral-atom hardware and uses effective-temperature calibration to interpret the samples.</p>
+                </article><article>
+                    <span class="concept-number">03</span>
+                    <h3>What remains open</h3>
+                    <p>The result shows one concrete route by which quantum hardware could interact with materials modeling without requiring the device to return a perfect ground state every time.</p>
+                </article>
+        </div>
+
+        <p>
+            This research should be read in the context of current quantum hardware
+            and hybrid computing constraints. The results described here are research
+            demonstrations, models or workflows rather than evidence that quantum
+            processors have already replaced classical methods for general-purpose workloads.
+        </p>
+    </section>
+
+    <section class="paper-source">
+        <div>
+            <p class="section-label">ORIGINAL RESEARCH</p>
+            <h2>Read the original research</h2>
+            <p>Camino et al., Thermodynamic sampling of materials using neutral-atom quantum computers, npj Quantum Information (2026).</p>
+        </div>
+        <a href="https://aws.amazon.com/blogs/quantum-computing/thermodynamic-sampling-of-disordered-materials-with-an-analog-hamiltonian-rydberg-simulator-2/" target="_blank" rel="noopener noreferrer">
+            READ SOURCE <span>↗</span>
+        </a>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-social">
+        <h3>Connect with us</h3>
+        <div class="footer-social-links">
+            <a href="https://www.youtube.com/@QCaaSNet" target="_blank" rel="noopener noreferrer">YouTube</a>
+            <a href="https://x.com/qcaasnet" target="_blank" rel="noopener noreferrer">X / Twitter</a>
+            <a href="https://www.linkedin.com/company/qcaasnet/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+    </div>
+
+    <div class="footer-main">
+        <div class="footer-brand-column">
+            <div class="footer-brand">
+                <img class="brand-mark" src="/images/qcaas-icon.png" alt="QCAAS Net quantum logo">
+                <span>QCAAS<span class="brand-accent">NET</span></span>
+            </div>
+            <p>Quantum Computing as a Service Network</p>
+        </div>
+
+        <div class="footer-column">
+            <h4>QCAASNET</h4>
+            <a href="/#about">About QCAASNET</a>
+            <a href="mailto:Hello@qcaasnet.com">Contact</a>
+            <a href="/privacy/">Privacy</a>
+            <a href="/terms/">Terms</a>
+        </div>
+
+        <div class="footer-column">
+            <h4>Explore</h4>
+            <a href="/fundamentals/">Fundamentals of Quantum Computing</a>
+            <a href="/latest-research/">Latest Research</a>
+            <a href="/be-quantum-ready/">Be Quantum Ready</a>
+            <a href="/deep-learning/">Deep Learning</a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2026 QCAAS Net</span>
+        <div class="footer-legal">
+            <a href="/terms/">Terms</a>
+            <a href="/privacy/">Privacy</a>
+        </div>
+    </div>
+</footer>
+
+</div>
+</body>
+</html>
